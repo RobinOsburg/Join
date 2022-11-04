@@ -20,7 +20,7 @@
 
 @media(max-width: 1025px) and (max-height: 600px){
     .allTasks{
-        height: 59vh !important;
+        /* height: 59vh !important; */
     }
 }
 
@@ -37,7 +37,7 @@
 
 @media(max-width: 415px) and (max-height: 915px){
     .allTasks{
-        height: 70vh !important;
+        /* height: 70vh !important; */
     }
 
     
@@ -53,12 +53,12 @@
 
 @media(max-width: 550px) and (max-height: 730px){
     .allTasks{
-        height: 55vh !important;
+        /* height: 55vh !important; */
     }
 
 }
 
-@media(max-width: 770px) and (max-height: 1024px){
+/* @media(max-width: 770px) and (max-height: 1024px){
     .allTasks{
         height: 76vh !important;
     }
@@ -89,7 +89,7 @@
     .allTasks{
         height: 61vh !important;
     }
-}
+} */
 
 
 @media(max-width:1200px){
@@ -111,9 +111,9 @@
     }
 
     
-    .allTasks{
+    /* .allTasks{
         height: 67vh;
-    }
+    } */
 
  
 
@@ -156,7 +156,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        height: 49vh;
+        /* height: 49vh; */
     }
 
     .boardTaskContainer {

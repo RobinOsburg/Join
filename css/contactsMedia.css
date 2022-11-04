@@ -65,6 +65,10 @@
 
 @media(max-width:1200px) {
 
+    .contactsContainer{
+        height: calc(100vh - 55px -84px);
+    }
+
     .contactsBoard {
         width: 100%;
     }

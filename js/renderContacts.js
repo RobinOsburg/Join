@@ -4,8 +4,8 @@ function returnContactSnippetHTML(i, initials, contact, email, colorID) {
         <div class="contactInitialsCircle" style="background-color:${colorID}">
             <span class="contactInitialsLetters">${initials}</span>
         </div>
-        <div class="contactInfo">
-            <span class="contactName" id="contactName${i}" onmouseover="scrollName(${i})" onmouseout="stopScrolling(${i})">${contact}</span>
+        <div class="contactInfo" onmouseover="scrollName(${i})" onmouseout="stopScrolling(${i})">
+            <span class="contactName" id="contactName${i}">${contact}</span>
             <span class="contactMail">${email}</span>
         </div>
     </div>
