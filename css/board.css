@@ -20,7 +20,8 @@
     margin-bottom: 20vh;
     margin-top: 6vh;
     padding-left: 30px;
-    padding-right: 30px
+    padding-right: 30px;
+    height:100px;
 }
 
 
@@ -154,7 +155,7 @@
     display: flex;
     justify-content: space-around;
     padding-left: 5px;
-    height: calc(100vh- 100px- 55px - 84px);
+    height: calc(100vh - 84px - 100px - 55px);
 }
 
 
