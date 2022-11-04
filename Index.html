@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="mini_backend.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/signUp.js"></script>
+    <title>LogIn</title>
+
+
+</head>
+
+
+<body onload="backendLogIn(),showLogInSucces()">
+
+
+    <img class="joinLogoLogIn" src="assets/img/LogIn/logo.png" alt="">
+
+
+    <div class="signUpContainer">
+        <span >Not a Join user?</span>
+        <button onclick="signUp()" class="grayHighlight signUpButton">Sign up</button>
+    </div>
+
+
+
+    <div class="LogIn">
+
+        <h1>Log in</h1>
+        <div class="underline"></div>
+
+        <div class="inputFields">
+            <form onsubmit="">
+                <div class="inputContainer">
+                    <input class="inputField" type="email" placeholder="Email" id="loginEmail">
+                    <img class="inputImageMail" src="assets/img/LogIn/mail.png">
+                </div>
+
+                <div class="inputContainer">
+                    <input class="inputField" type="password" placeholder="Password" id="loginPassword">
+                    <img class="inputImageLock" src="assets/img/LogIn/lock.png">
+                </div>
+
+        </div>
+
+        <div class="rememberPassword">
+            <form class="rememberMe">
+                <input type="checkbox">
+                <p>Rember me</p>
+            </form>
+            <span onclick="moveToForgotPw()" class="forgetPassword">
+                <a href="#">Forgot my password</a>
+            </span>
+        </div>
+
+        <div class="logInButtons">
+            <button onclick="logIn()" class="grayHighlight loginBtn">Log in</button>
+            <button onclick="guestLogin()" class="guestBtn">Guest Log in </button>
+        </div>
+        </form>
+
+        <div id="msgBox" class="d-none"></div>
+    </div>
+
+
+
+</body>
+
+</html>

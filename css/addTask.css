@@ -1,0 +1,30 @@
+.bigContainer{
+    display: flex;
+    height: 100vh;
+}
+
+
+.headerAndTaskContainer {
+    max-width: 100vw;
+    height: 100vh;
+}
+
+
+
+
+
+@media(max-width:1200px){
+
+    .bigContainer{
+        flex-direction: column;
+    }
+    
+.headerAndTaskContainer {
+    flex: 1;
+}
+
+.responsiveNavbar {
+    display: flex;
+    height: 84px;
+}
+}

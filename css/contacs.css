@@ -1,0 +1,758 @@
+/* Contacts */
+
+.headLineContacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 30px;
+    height: 73px;
+}
+
+.backArrowContacts{
+    position: absolute;
+    bottom: 138%;
+    left: 76%;
+    display: none;
+}
+
+
+.headLineContacts h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.responsiveSubHeadline {
+    display: none;
+    margin-left: 7%;
+    font-size: 16px;
+}
+
+
+.responsiveSubHeadlineC {
+    display: none;
+    font-size: 16px;
+}
+
+
+.responsiveSubHeadlineB {
+    display: none;
+    margin-left: 3%;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+
+.blueLineContacts {
+    background-color: #29ABE2;
+    color: #29ABE2;
+    height: 59px;
+    width: 0;
+    border: 1px solid #29ABE2;
+}
+
+
+.blurBackground {
+    position: absolute;
+    top: 0;
+    background-color: rgba(120, 120, 120, 0.2);
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+
+.addTaskToContact {
+    background-color: white;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 87vh;
+    width: 70vw;
+    transition: all 250ms ease-in-out;
+    transform: translateX(100vw);
+    border-radius: 30px;
+    padding-top: 20px;
+}
+
+.headerPlusContent{
+    height: 73vh;
+}
+
+
+.editContactContainer {
+    background-color: white;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 60vh;
+    max-width: 1000px;
+    border-radius: 30px;
+    transition: all 250ms ease-in-out;
+    transform: translate(100vw,0);
+}
+
+
+.innerEditContactContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+
+.greyCrossEditContact {
+    position: absolute;
+    height: 25px;
+    top: 17px;
+    right: 33px;
+}
+
+.whiteCrossEditContact{
+    position: absolute;
+    height: 25px;
+    top: 17px;
+    right: 33px;
+    display: none;
+}
+
+
+.greyCrossEditContact:hover {
+    cursor: pointer;
+}
+
+
+.headBoxEdit {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #2A3647;
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.adjustContentheadBoxEdit {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25%
+}
+
+
+.subHeadlineCreate {
+    color: white;
+}
+
+
+.newContactInterfaceImg {
+    height: 120px;
+}
+
+
+.editContactsLogo {
+    height: auto;
+    width: 54px;
+}
+
+
+.headlineEditC {
+    color: white;
+    font-size: 61px;
+}
+
+
+.blueUnderlineEC {
+    height: 3px;
+    background-color: #29ABE2;
+    width: 30%;
+}
+
+
+.initialsEdit {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.initialsCirle {
+    font-size: 47px;
+    background-color: yellow;
+    color: white;
+    height: 120px;
+    width: 120px;
+    border-radius: 120px;
+    text-align: center;
+    position: relative;
+}
+
+
+.initialsLetters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 55px;
+}
+
+
+.allEditsContact {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 33%;
+    gap: 25px;
+}
+
+
+.createAndCancelBtns {
+    display: flex;
+}
+
+
+.inputEditContainer {
+    position: relative;
+    width: 86%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.inputEditContainer1 {
+    position: relative;
+    width: 80%;
+    margin-top: 62px;
+}
+
+
+.imgEditContact {
+    position: absolute;
+    right: 12px;
+    top: 7px;
+    width: 15px;
+}
+
+
+.imgEditContact1 {
+    position: absolute;
+    right: -6px;
+    top: 7px;
+    height: 17px;
+}
+
+
+.inputfieldEditContact {
+    padding: 8px;
+    border: 1px solid #D1D1D1;
+    color: #D1D1D1;
+    border-radius: 5px;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.inputfieldEditContact:hover {
+    cursor: pointer;
+}
+
+
+.incorrectName {
+    font-size: 14px;
+    color: red;
+}
+
+
+.contentContainerContacts {
+    width: 70vw;
+}
+
+
+.contentContainerContacts {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.contactsContainer {
+    background-color: white;
+    min-width: 375px;
+    box-shadow: 4px 0px 4px rgb(0 0 0 / 10%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 95vh;
+    height: 95vh;
+    overflow-x: hidden;
+}
+
+
+.allPersons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 299px;
+}
+
+
+.innerAllPersonsContainer {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 285px;
+    border-radius: 10px;
+}
+
+
+.innerAllPersonsContainer:hover {
+    background-color: #F9F9F9;
+    cursor: pointer;
+}
+
+
+.choosenContact {
+    background-color: #2A3647;
+    color: white;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.letterContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.letterContainer p {
+    width: 76%;
+    margin-left: 23px;
+    font-size: 21px;
+}
+
+
+.allPersons {
+    margin-top: 10px;
+}
+
+
+.contactInitialsCircle {
+    height: 42px;
+    width: 42px;
+    border-radius: 42px;
+    color: white;
+    position: relative;
+    margin-right: 15px;
+    margin-left: 7px;
+}
+
+
+.contactInitialsLetters {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    height: 22px;
+}
+
+.detailedContact{
+    flex-direction: column;
+}
+
+
+.detailedContactHead {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.dcContactPlusAddTask {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+    width: 66%;
+    height: 106px;
+}
+
+.addTaskToContactBtn{
+    position: absolute;
+    top: 65px;
+}
+
+
+.dcInitialsCircle {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 120px;
+}
+
+
+.dcInitialsLetter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 47px;
+    height: 63px
+}
+
+
+.greyCross {
+    height: 20px;
+    top: 16px;
+    left: 95%;
+}
+
+
+.greyCrossContacts {
+    position: absolute;
+    height: 20px;
+    top: 0px;
+    left: 95%;
+}
+
+
+.greyCrossContacts:hover {
+    cursor: pointer;
+}
+
+
+.detailedContactName {
+    position: absolute;
+    font-size: 47px;
+    font-weight: 500;
+    width: max-content;
+}
+
+
+.addTaskToContactLetters {
+    font-size: 16px;
+    color: #29ABE2;
+}
+
+
+.addTaskToContactLetters {
+    cursor: pointer;
+}
+
+
+.addTaskToContactImg {
+    height: 15px;
+}
+
+
+.addTaskToContactImg:hover {
+    cursor: pointer;
+}
+
+
+.detailedContactEditContainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+
+.contactInformation {
+    font-size: 21px;
+}
+
+
+.editContactInformationBtn:hover {
+    cursor: pointer;
+}
+
+.editContactInformationBtnResponsive:hover{
+    cursor: pointer;
+}
+
+.editContactInformationBtnResponsive{
+    height: 40px;
+    width: 40px;
+    position: relative;
+    bottom: 5%;
+    left: 71%;
+    display: none;
+}
+
+
+.editContact {
+    font-size: 16px;
+}
+
+
+.bluePen {
+    height: 25px;
+}
+
+
+.detailedContactData {
+    margin-top: 40px;
+}
+
+
+.contactCategory {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+
+.contactName {
+    font-size: 21px;
+    position: absolute;
+    width: max-content;
+}
+
+
+.contactMail {
+    font-size: 16px;
+    color: #007CEE;
+    position: absolute;
+    top: 25px;
+}
+
+.showFullName {
+    animation: slide 10s infinite;
+}
+
+@keyframes slide {
+    0% {
+      right: -80%;
+    }
+ 
+    
+    75% {
+      right: 75%;
+    }
+  }
+
+
+.contactPhone {
+    font-size: 16px;
+}
+
+
+.createAndCancelBtns {
+    gap: 10px;
+    transform: translateX(-10px);
+}
+
+
+.saveEditContactBtn {
+    background-color: #2A3647;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 10px;
+    font-size: 21px;
+    font-weight: 700;
+    height: 30px;
+}
+
+
+.saveEditContactBtn {
+    cursor: pointer;
+}
+
+
+.cancelNewContact {
+    height: 30px;
+    border-radius: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border: 1px solid #2A3647;
+    font-size: 21px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cancelNewContact {
+    cursor: pointer;
+}
+
+
+.whiteCheckHookSmall {
+    height: 19px;
+}
+
+
+.greyCrossSmall {
+    height: 19px;
+}
+
+
+.responsiveContainer {
+    display: flex;
+    height: 100vh;
+}
+
+
+.contentPlusContacts {
+    display: flex;
+}
+
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 50px;
+}
+
+
+/* Contact */
+
+
+.newContactBackground {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(94, 80, 80, 0.3);
+    z-index: 1;
+}
+
+
+.newContactBlueLine {
+    background-color: #29ABE2;
+    color: #29ABE2;
+    height: 0px;
+    width: 60px;
+    border: 1px solid #29ABE2;
+}
+
+
+.newContactLeft img {
+    height: 50px;
+    width: 50px;
+}
+
+
+.newContactRight img {
+    height: 80px;
+    width: 80px;
+}
+
+
+.newContactInputContainer input {
+    margin: 10px;
+}
+
+
+.newContactInputContainer button {
+    margin: 10px;
+}
+
+
+.newContactBtn {
+    position: absolute;
+    top: 80vh;
+    right: 10vw;
+    display: flex;
+    align-items: center;
+    background-color: #2A3647;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.newContactBtnResponsive {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    background-color: #2A3647;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    display: none;
+    margin-top: 6px;
+    margin-right: 6px;
+}
+
+.newContactBtnResponsive:hover {
+    cursor: pointer;
+}
+
+
+.newContactBtn:hover {
+    cursor: pointer;
+}
+
+
+.newContactImg {
+    height: 30px;
+}
+
+
+.contactsBoard {
+    flex-direction: column;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+

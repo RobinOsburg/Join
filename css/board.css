@@ -1,0 +1,986 @@
+.boardPopUp {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 15px;
+    gap: 15px;
+}
+
+.contentBoard {
+    width: 82vw;
+}
+
+
+.headlineB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20vh;
+    margin-top: 6vh;
+    padding-left: 30px;
+    padding-right: 30px
+}
+
+
+.searchAndCreate {
+    display: flex;
+    align-items: center;
+}
+
+
+.addTaskBtn {
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 300;
+    margin-right: 10px;
+    margin-left: -20px;
+    font-size: 21px;
+    font-weight: 700;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 190px;
+    gap: 5px;
+}
+
+
+.searchField {
+    padding: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    border: 1px solid #D1D1D1;
+    color: #D1D1D1;
+    border-radius: 5px;
+    height: 37px;
+    margin-top: 12px;
+}
+
+
+.searchField:hover {
+    cursor: pointer;
+}
+
+
+.inputImageLoup {
+    position: absolute;
+    left: 77%;
+    top: 43%;
+    height: auto;
+    width: 16px;
+}
+
+
+.dropLineToDo {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+    left: 1%;
+
+}
+
+.dropLineIP {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+    left: 26%;
+
+}
+
+.dropLineAW {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+
+    left: 51%;
+
+}
+
+.dropLineD {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+    left: 76%;
+
+
+}
+
+.inputContainerBoard {
+    width: 100%;
+    position: relative;
+    margin: 1.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 23px;
+}
+
+.subtasksBPopUpContainer {
+    display: flex;
+    width: 100%;
+}
+
+.subtaskHeadlineBPopUp {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.subtasksSD {
+    line-height: 120%;
+}
+
+
+.grayLineBoard {
+    background-color: #D1D1D1;
+    height: 20px;
+    width: 0;
+    border: 0.5px solid #D1D1D1;
+    top: 19px;
+    left: 72%;
+    position: absolute;
+}
+
+.categoryContainerS {
+    width: 72%;
+}
+
+
+.allTasks {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 5px;
+    height: 61vh;
+}
+
+
+.plusBoard {
+    height: 25px;
+}
+
+
+.plusBoard {
+    cursor: pointer;
+}
+
+
+.plusBoardAW {
+    height: 25px;
+}
+
+
+.plusBoardAW {
+    cursor: pointer;
+}
+
+
+.allTasks span {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+.status {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #F5F5F5;
+    margin-bottom: 10px;
+}
+
+.status span {
+    height: 100%;
+}
+
+
+.boardTaskContainer {
+    position: relative;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    /**/
+}
+
+
+.d-none {
+    display: none;
+}
+
+
+.subtaskList {
+    width: 100%;
+    max-height: 80px;
+    margin-bottom: 5px;
+}
+
+
+.subtask {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.deleteSubtaskBtn {
+    height: 20px;
+}
+
+/* Board */
+
+.rightSideBoard {
+    width: 85vw;
+}
+
+
+.boardPopUpCategory {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 4px 36.5px;
+    gap: 10px;
+    width: 142px;
+    height: 40px;
+    background: #FC71FF;
+    color: white;
+    border-radius: 8px;
+}
+
+
+.boardPopUpCategoryText {
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+
+.boardPopUpDate {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 25px;
+    height: 25px;
+}
+
+
+.boardPopUpDateText {
+    width: 99px;
+    height: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+
+.boardPopUpDateNumbers {
+    width: 122px;
+    height: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+
+.boardPopUpTitel {
+    max-height: 140px;
+    word-break: break-word;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+}
+
+
+.boardPopUpDescrition {
+    max-height: 140px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    word-break: break-word;
+}
+
+
+.boardPopUpPrio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 25px;
+    width: 238px;
+    height: 33px;
+}
+
+
+.boardPopUpPrio img {
+    height: 10px;
+    margin-left: 10px;
+    color: white;
+}
+
+
+.boardPopUpPrioText {
+    width: 82px;
+    height: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+
+.boardPopUpAssignedTo {
+    width: 134px;
+    height: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+
+.boardPopUpPrioInside {
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    font-weight: 400;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statusContainer {
+    width: 100%;
+    height: 100%;
+}
+
+
+.task {
+    background-color: white;
+    box-sizing: border-box;
+    width: 93%;
+    padding: 15px;
+    margin-left: 5px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+
+.task:hover {
+    cursor: pointer;
+}
+
+
+.category {
+    background: orange;
+    padding: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: max-content;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+.title {
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+
+
+.description {
+    color: #a8a8a8;
+    margin-bottom: 17px;
+    word-break: break-word;
+}
+
+
+.assignedAndPrio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.prioBoard {
+    max-width: 20px;
+    height: 12px;
+}
+
+
+.assignedToContainer {
+    display: flex;
+}
+
+
+.newCategoryContainer {
+    position: relative;
+}
+
+
+.newCategory {
+    text-align: start;
+    padding-right: 8px;
+    width: 100%;
+}
+
+
+.newCategoryBoard {
+    text-align: start;
+    padding-right: 8px;
+    width: 100%;
+}
+
+
+.colorContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin-top: 10px;
+}
+
+
+.coloredCircle {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+}
+
+
+.crossNewCategory {
+    height: 21px;
+}
+
+
+.greyLineNewCategory {
+    width: 1px;
+    height: 25px;
+    background-color: rgba(126, 125, 125, 0.8);
+}
+
+.checkNewCategory {
+    height: 21px;
+}
+
+.navNewCategory {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 9px;
+    left: 86%;
+}
+
+
+.navNewCategoryBoard {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    left: 83%;
+}
+
+
+.newCategorySignature {
+    position: relative;
+}
+
+
+.categoryColor {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    top: 11px;
+    left: 83%;
+    display: none;
+}
+
+/* Board Pop Up */
+
+
+.popUp {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(94, 80, 80, 0.3);
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+.editContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.editAiignedTo {
+    margin: 10px;
+}
+
+
+.boardPopUpEditTitel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 5px;
+    height: 81px;
+    width: 80%;
+}
+
+
+.boardPopUpEditTitel input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 21px;
+    gap: 10px;
+    height: 51px;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.boardPopUpEditTitel input:hover {
+    cursor: pointer;
+}
+
+
+.boardPopUpEditDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 5px;
+    width: 80%;
+}
+
+
+.boardPopUpEditDescription textarea {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 18px 21px;
+    gap: 10px;
+    isolation: isolate;
+    height: 119px;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.boardPopUpEditDescription textarea:hover {
+    cursor: pointer;
+}
+
+
+.boardPopUpEditDueDate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 5px;
+    height: 81px;
+    width: 80%;
+
+}
+
+
+.boardPopUpEditDueDate input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 18px 21px;
+    gap: 10px;
+    isolation: isolate;
+    height: 51px;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.boardPopUpEditDueDate input:hover {
+    cursor: pointer;
+}
+
+
+.boardPopUpEditAllPrio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 5px;
+    width: 80%;
+    height: 91px;
+}
+
+
+.boardPopUpEditAllPrioRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    height: 61px;
+    width: 100%;
+}
+
+
+.boardPopUpEditAssignedTo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 5px;
+    width: 80%;
+}
+
+
+.popUpContent {
+    position: relative;
+    background-color: white;
+    height: 92%;
+    width: 80%;
+    padding-top: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+
+.closePopUp {
+    position: absolute;
+    top: 10px;
+    left: 96%;
+    height: 25px;
+}
+
+
+.closePopUp:hover {
+    cursor: pointer;
+}
+
+
+.assignedToPlusEditBtn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.popUpEditContent {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 90%;
+    width: 40%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+}
+
+
+.subtaskContainerPopUp {
+    width: 80%;
+    max-height: 73px;
+    overflow-y: scroll;
+}
+
+
+.insidePopUpPencil {
+    height: 21px;
+}
+
+
+.submitEditBtn {
+    background: #2A3647;
+    border-radius: 10px;
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+    position: absolute;
+    top: 90%;
+    left: 81%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.submitEditBtn:hover {
+    cursor: pointer;
+}
+
+
+.popUpContentPencil {
+    position: absolute;
+    top: 90%;
+    left: 84%;
+    width: 40px;
+}
+
+
+.popUpContentPencil {
+    cursor: pointer;
+}
+
+
+.popUpEditContentArrow {
+    display: none;
+    width: 21.65px;
+    height: 21.65px;
+    position: relative;
+    left: 85%;
+    top: 5px;
+}
+
+
+.popUpEditContentCross {
+    width: 21.65px;
+    height: 21.65px;
+    position: relative;
+    left: 46%;
+    top: 5px;
+}
+
+
+.popUpEditContentCross:hover {
+    cursor: pointer;
+}
+
+
+.popUpEditContentCross1 {
+    width: 21.65px;
+    height: 21.65px;
+    position: relative;
+    left: 95%;
+    top: -15px;
+}
+
+
+.popUpEditContentCross1:hover {
+    cursor: pointer;
+}
+
+
+.allPrioContainer {
+    display: flex;
+}
+
+
+.prioRework {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    height: 35px !important;
+    width: 100%
+}
+
+
+.prioRework:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.prioReworkSelected {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 35px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.subtaskCheckbox:hover {
+    cursor: pointer;
+}
+
+
+.headlinePrio {
+    font-size: 21px;
+}
+
+
+.prioDoubleContainerRework {
+    position: relative;
+    width: 30%;
+    margin: 5px;
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+
+.prioReworkInput {
+    opacity: 0;
+    width: 0 !important;
+}
+
+
+.confirmEditBtn {
+    position: absolute;
+    color: white;
+    background-color: #2A3647;
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    left: 480px;
+    top: 720px;
+}
+
+
+.subtaskWithHookContainer {
+    display: flex;
+    width: 100%;
+}
+
+
+.whiteCheckHookContainer {
+    background-color: green;
+    height: 21px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+
+.whiteCheckHookInDetails {
+    height: 18px;
+}
+
+
+/* Board*/
+
+
+.urgentBackground {
+    background-color: #FF3D00;
+}
+
+
+.mediumBackground {
+    background-color: #FFA800;
+}
+
+
+.lowBackground {
+    background-color: #7AE229;
+}
+
+
+.checkedColor {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.lightblue {
+    background-color: #8AA4FF;
+}
+
+
+.red {
+    background-color: #FF0000;
+}
+
+
+.green {
+    background-color: #2AD300;
+}
+
+
+.purple {
+    background-color: #E200BE;
+}
+
+
+.orange {
+    background-color: #FF8A00;
+}
+
+
+.blue {
+    background-color: #0038FF;
+}
+
+
+.newCategorySignature {
+    position: relative;
+}

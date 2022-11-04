@@ -1,0 +1,190 @@
+.bigContainer{
+    display: flex;
+    height: 100vh;
+}
+
+
+.SummaryContent{
+    display: flex;
+}
+
+
+.summarys {
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    height: 140px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.summarys:hover {
+    cursor: pointer;
+    background-color: #2A3647;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.summarys img {
+    margin: 10px;
+}
+
+
+.headLineSummary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 30px;
+    position: absolute;
+    width: 679px;
+    height: 73px;
+    left: 520px;
+    top: 105px;
+}
+
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 35px;
+    position: absolute;
+    width: 580px;
+    height: 540px;
+    left: 500px;
+    top: 275px;
+}
+
+
+.overview img {
+    width: 50px;
+    height: 50px;
+}
+
+
+.urgentTasks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 18px;
+    width: 130px;
+    height: 140px;
+}
+
+
+.greyLineSummary {
+    width: 0px;
+    height: 102.02px;
+    border: 1px solid #D1D1D1;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+.summaryPosition {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.summaryNumbers {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+
+.summarysFirstLine {
+    display: flex;
+    width: 560px;
+}
+
+
+.summarysSecondLine {
+    background-color: white;
+    height: 150px;
+    width: 520px;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.summarysSecondLine:hover {
+    cursor: pointer;
+    background-color: #2A3647;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.summarysThirdLine {
+    display: flex;
+    width: 560px;
+}
+
+
+.summaryBoard {
+    max-width: 100vw;
+    height: 100vh;
+}
+
+
+.summaryContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.greet {
+    padding: 0px;
+    gap: 3px;
+    position: absolute;
+    width: 385px;
+    height: 136px;
+    left: 1155px;
+    top: 430px;
+}
+
+
+.greetName {
+    font-size: 64px;
+    color: #29ABE2;
+    font-weight: 700;
+}
+
+
+.greetTime {
+    width: 338px;
+    height: 56px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 47px;
+    line-height: 120%;
+}
+
+
+.summaryPositionCointainer {
+    display: flex;
+}
+
+.blueLine {
+    background-color: #29ABE2;
+    color: #29ABE2;
+    height: 59px;
+    width: 0;
+    border: 1px solid #29ABE2;
+}
