@@ -128,4 +128,8 @@
     .dropdownLegalNotice{
         display: unset;
     }
+
+    .SubHeaderContacts{
+        display: none;
+    }
 }

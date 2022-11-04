@@ -5,7 +5,7 @@
     }
 }
 
-@media(max-width: 1200px) and (max-height: 1050px){
+@media(max-width: 1200px) {
     .headlineB{
         margin-top: 0;
     }
@@ -18,15 +18,11 @@
     }
 }
 
-@media(max-width: 1025px) and (max-height: 600px){
-    .allTasks{
-        height: 59vh !important;
-    }
-}
 
 
 
-@media(max-width: 1200px) and (max-height: 1050px){
+
+@media(max-width: 1200px) {
     .addTaskContainer{
         height: 84vh !important;
     }
@@ -35,61 +31,31 @@
 
 }
 
-@media(max-width: 415px) and (max-height: 915px){
-    .allTasks{
-        height: 70vh !important;
-    }
 
     
 
-}
 
-@media(max-width: 400px) and (max-height: 860px){
+
+@media(max-width: 400px){
     .addTaskContainer{
         height: 85vh !important;
     }
 
 }
 
-@media(max-width: 550px) and (max-height: 730px){
-    .allTasks{
-        height: 55vh !important;
-    }
 
-}
 
-@media(max-width: 770px) and (max-height: 1024px){
-    .allTasks{
-        height: 76vh !important;
-    }
 
-}
 
-@media(max-width: 830px) and (max-height: 1200px){
-    .allTasks{
-        height: 70vh;
-    }
 
     
-}
 
-@media(max-width: 415px) and (max-height: 920px){
-    .allTasks{
-        height: 70vh !important;
-    }
-}
 
-@media(max-width: 365px) and (max-height: 745px){
-    .allTasks{
-        height: 66vh !important;
-    }
-}
 
-@media(max-width: 380px) and (max-height: 670px){
-    .allTasks{
-        height: 61vh !important;
-    }
-}
+
+
+
+
 
 
 @media(max-width:1200px){
@@ -111,13 +77,8 @@
     }
 
     
-    .allTasks{
-        height: 67vh;
-    }
-
  
 
-    
 
     .popUpContent{
         margin-bottom: 4%;
@@ -141,7 +102,6 @@
 }
 
 
-
 @media(max-width:800px) {
 
     .allTasks {
@@ -156,7 +116,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        height: 49vh;
     }
 
     .boardTaskContainer {
@@ -186,7 +145,6 @@
         margin-right: 33%;
     }
 
-   
 
     .status {
         justify-content: space-between;
@@ -202,14 +160,15 @@
         height: 37px;
     }
 
-  
 }
+
 
 @media(max-width:530px){
     .inputImageLoup {
         left: 73%;
     }
 }
+
 
 @media(max-width:470px) {
     .boardTaskContainer {
@@ -261,8 +220,6 @@
 
 
 
-
-
 @media(max-width: 1050px) {
     .popUpEditContent {
         top: 0;
@@ -275,5 +232,4 @@
         margin-left: 0;
     }
 
-   
 }
