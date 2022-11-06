@@ -1,4 +1,4 @@
-.bigContainer{
+.bigContainer {
     display: flex;
     height: 100vh !important;
     width: 100vw;
@@ -38,7 +38,7 @@
     gap: 35px;
     width: 65%;
     justify-content: space-between;
-    
+
 }
 
 
@@ -80,9 +80,11 @@
     padding-right: 17px;
     padding-top: 25px;
     padding-bottom: 25px;
+    height: 100px;
+    width: 23.3%;
 }
 
-.summaryPosition span{
+.summaryPosition span {
     text-align: center;
 }
 
@@ -95,7 +97,7 @@
 
 .summarysFirstLine {
     display: flex;
-    width: 100%;
+    width: 70%;
     justify-content: space-between;
     gap: 3%;
 }
@@ -109,8 +111,25 @@
     align-items: center;
     background-color: white;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: 70%;
     border-radius: 10px;
+    height: 135px;
+    margin-bottom: 20px;
+}
+
+.deadLine{
+    display: flex;
+    flex-direction: column;
+}
+
+.dueDateNumbers {
+    width: 178px;
+    height: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
 }
 
 
@@ -127,13 +146,14 @@
     align-items: center;
     justify-content: space-between;
     gap: 3%;
-    width: 100%;
+    width: 70%;
+    height: 90px;
 }
 
-.summaryContent{
+.summaryContent {
     display: flex;
     flex-direction: column;
-    justify-content: center ;
+    justify-content: center;
     align-items: space-evenly;
     height: calc(100vh - 55px);
 }
@@ -152,10 +172,11 @@
     flex-direction: column;
 }
 
-.greet{
+.greet {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: -100px;
 }
 
 .greetName {
@@ -170,7 +191,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 47px;
-    
+
 }
 
 
@@ -178,7 +199,7 @@
     display: flex;
 }
 
-.headLineSummary h1{
+.headLineSummary h1 {
     margin-right: 5%;
     margin-top: 0;
     margin-bottom: 0;
@@ -193,7 +214,7 @@
     margin-right: 4%;
 }
 
-.blueLineResponsive{
+.blueLineResponsive {
     background-color: #29ABE2;
     color: #29ABE2;
     width: 59px;
@@ -204,29 +225,28 @@
 }
 
 
-.headerPlusContent{
+.headerPlusContent {
     width: calc(100vw - 84px);
     height: 100vh;
 }
 
-.overviewPlusGreet{
+.overviewPlusGreet {
     display: flex;
     margin-top: 5%;
     width: 100%;
-    gap: 3%;
 }
 
-.urgentTaskCharacters{
+.urgentTaskCharacters {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.urgentTaskCharacters span{
+.urgentTaskCharacters span {
     text-align: center;
 }
 
-.summaryPositionThirdLine{
+.summaryPositionThirdLine {
     display: flex;
     align-items: center;
     background-color: white;
@@ -243,11 +263,18 @@
     gap: 5px;
 }
 
-.thirdLineCharacters{
+.summaryPositionThirdLine:hover {
+    cursor: pointer;
+    background-color: #2A3647;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.thirdLineCharacters {
     display: flex;
     flex-direction: column;
 }
 
-.summaryPositionThirdLine span{
+.summaryPositionThirdLine span {
     text-align: center;
 }

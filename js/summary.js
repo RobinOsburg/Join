@@ -17,19 +17,19 @@ function prepareSummary(){
   let tasksInProgress = countTasksInProgress();
   let tasksFeedback = countTasksAwaitingFeedback();
   let tasksUrgent = countTasksUrgent();
-//   let nextDeadline = showNextDeadline();
+  let nextDeadline = showNextDeadline();
   let tasksToDo = countTasksTodDo();
   let tasksDone = countTasksDone();
-  renderSummary(tasksTotal,tasksInProgress,tasksFeedback,tasksUrgent,tasksToDo,tasksDone);
+  renderSummary(tasksTotal,tasksInProgress,tasksFeedback,tasksUrgent,tasksToDo,tasksDone,nextDeadline);
 }
 
 
-function renderSummary(tasksTotal,tasksInProgress,tasksFeedback,tasksUrgent,tasksToDo,tasksDone){
+function renderSummary(tasksTotal,tasksInProgress,tasksFeedback,tasksUrgent,tasksToDo,tasksDone,nextDeadline){
     document.getElementById('tasksTotal').innerHTML = /*html*/`${tasksTotal}`;
     document.getElementById('tasksProgress').innerHTML = /*html*/`${tasksInProgress}`;
     document.getElementById('tasksFeedback').innerHTML = /*html*/`${tasksFeedback}`;
     document.getElementById('tasksUrgent').innerHTML = /*html*/`${tasksUrgent}`;
-    // document.getElementById('nextDeadline').innerHTML = /*html*/`${}`;
+    document.getElementById('nextDeadline').innerHTML = /*html*/`${nextDeadline}`;
     document.getElementById('tasksToDo').innerHTML = /*html*/`${tasksToDo}`;
     document.getElementById('tasksDone').innerHTML = /*html*/`${tasksDone}`;
 }
@@ -58,6 +58,15 @@ function renderGreet(currentUser){
     }  
 }
 
+
+// mit if aktuellste Datum rausfinden ?!?!?!?!?!
+
+function showNextDeadline(){
+    for (let i = 0; i < allTasks.length; i++) {
+        let dueDate = allTasks[i]['dueDate'];
+        return dueDate;
+    }
+}
 
 function countTasks(){
     return allTasks.length;

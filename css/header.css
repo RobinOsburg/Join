@@ -132,4 +132,8 @@
     .SubHeaderContacts{
         display: none;
     }
+
+    .imgQuestionmark{
+        display: none;
+    }
 }
