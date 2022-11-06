@@ -59,14 +59,15 @@ function renderGreet(currentUser){
 }
 
 
-// mit if aktuellste Datum rausfinden ?!?!?!?!?!
+
+
+
 
 function showNextDeadline(){
-    for (let i = 0; i < allTasks.length; i++) {
-        let dueDate = allTasks[i]['dueDate'];
-        return dueDate;
-    }
-}
+    currentDate = allTasks.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
+    return currentDate[0]['dueDate'];    
+    };
+
 
 function countTasks(){
     return allTasks.length;
