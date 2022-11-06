@@ -51,10 +51,7 @@
 }
 
 @media(max-width:415px){
-    .navLine{
-        height: 70px;
-    }
-
+   
     .summaryContent {
         height: calc(100vh - 55px - 76px);
     }
@@ -70,7 +67,7 @@
     }
 
     .overview{
-        gap: 3px;
+        gap: 35px;
     }
 
     .summaryNumbers{
