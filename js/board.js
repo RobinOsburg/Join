@@ -13,6 +13,8 @@ async function downloadTasks() {
 }
 
 
+
+
 /**
  * before a task can be rendered, the status of the task decides in which statuscontainer it belongs
  * 
@@ -27,10 +29,10 @@ function divideByStatus() {
       }
     }
   }
-
 }
 
 let subtaskCounterPopUp = 0;
+
 
 
 /**
@@ -61,9 +63,9 @@ function loadAssignedPersons(j) {
   let assignedToContainer = document.getElementById(`assignedToContainer${j}`);
   let allAssignedPersons = allTasks[j]['assignedTo'];
   if (allAssignedPersons.length < 4) {
-      displaySmallAmountOfPersons(allAssignedPersons,assignedToContainer)
+    displaySmallAmountOfPersons(allAssignedPersons, assignedToContainer)
   } else {
-    displayLargeAmountOfPersons(allAssignedPersons,assignedToContainer);
+    displayLargeAmountOfPersons(allAssignedPersons, assignedToContainer);
   }
 }
 
@@ -72,7 +74,7 @@ function loadAssignedPersons(j) {
  * 
  * @param {number} i index of allTasks
  */
-function displaySmallAmountOfPersons(allAssignedPersons,assignedToContainer){
+function displaySmallAmountOfPersons(allAssignedPersons, assignedToContainer) {
   for (let k = 0; k < allAssignedPersons.length; k++) {
     let assignedPerson = allAssignedPersons[k];
     if (assignedPerson == 'You') {
@@ -87,7 +89,7 @@ function displaySmallAmountOfPersons(allAssignedPersons,assignedToContainer){
   }
 }
 
-function displayLargeAmountOfPersons(allAssignedPersons){
+function displayLargeAmountOfPersons(allAssignedPersons) {
   for (let k = 0; k < 2; k++) {
     let assignedPerson = allAssignedPersons[k];
     if (assignedPerson == 'You') {
@@ -128,7 +130,7 @@ let positionDraggedElement;
  * @param {number} id index of allTasks
  * @param {*} event for identifiying the position of the cursor when the task is dragged
  */
-function startDragging(id,event) {
+function startDragging(id, event) {
   currentDraggedElement = id;
   positionDraggedElement = event.clientY;
 }
@@ -139,12 +141,12 @@ function startDragging(id,event) {
  * 
  * @param {*} event 
  */
-function returnPosition(event){
+function returnPosition(event) {
   let newPosition = event.clientY;
-  if(newPosition < positionDraggedElement){
+  if (newPosition < positionDraggedElement) {
     dragAndScrollDown();
   }
-  if(newPosition > positionDraggedElement){
+  if (newPosition > positionDraggedElement) {
     dragAndScrollUp()
   }
 }
@@ -152,11 +154,11 @@ function returnPosition(event){
  * tells the object to scoll down
  * 
  */
-function dragAndScrollDown(){
+function dragAndScrollDown() {
   let scrollContainer = document.getElementById('allTasks')
   scrollContainer.scrollBy({
-    top:-200,
-    behavior:"smooth"
+    top: -200,
+    behavior: "smooth"
   });
 }
 
@@ -164,11 +166,11 @@ function dragAndScrollDown(){
  * tells the object to scroll up
  * 
  */
-function dragAndScrollUp(){
+function dragAndScrollUp() {
   let scrollContainer = document.getElementById('allTasks')
   scrollContainer.scrollBy({
-    top:200,
-    behavior:"smooth"
+    top: 200,
+    behavior: "smooth"
   });
 }
 
@@ -413,7 +415,7 @@ function closePopUp(id) {
  * 
  * @param {string} prio 
  */
- function loadPrio(prio) {
+function loadPrio(prio) {
   let capitalizedPrio = capitalize(prio);
   let firstParameter = "prio" + capitalizedPrio + "ReworkSelected";
   let secondParameter = prio + "Rework";
@@ -545,6 +547,11 @@ function unSelectAllReworkedPrios(i, allPrioSelected) {
   allPrioSelected[i].style.display = "none"
 }
 
-function hideDoneTasks (){
 
-}
+
+
+
+
+
+
+
