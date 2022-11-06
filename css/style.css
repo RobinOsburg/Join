@@ -357,6 +357,11 @@ h1 {
     width: 60px !important;
 }
 
+.subheaderResponsive{
+    display: none;
+    padding-left: 10%;
+}
+
 
 .header span {
     margin-left: 5vw;

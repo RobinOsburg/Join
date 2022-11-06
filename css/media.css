@@ -140,7 +140,15 @@
 
 
 /* NavBar !!!!!!!!!!!! */
+@media(max-width:820px) and(max-height:1180px){
+    .navLine{
+        height: 74px !important;
+    }
 
+    .summaryContent {
+        height: calc(100vh - 55px - 74px);
+    } 
+}
 
 @media (max-width:1200px) {
 
@@ -249,6 +257,13 @@
         background-color: #F5F5F5 !important;
     }
 
+    .subheaderResponsive{
+        display: flex;
+    }
+
+    .SubHeaderContacts{
+        display: none;
+    }
 
     .responsiveHeaderShowDetails {
         display: flex;
@@ -305,6 +320,12 @@
     .selectFieldsPopUp {
         width: 105%;
     }
+
+    .subheaderResponsive{
+        padding-left: 17%;
+    }
+
+    
 }
 
 @media(max-width:825px) {

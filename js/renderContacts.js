@@ -4,7 +4,7 @@ function returnContactSnippetHTML(i, initials, contact, email, colorID) {
         <div class="contactInitialsCircle" style="background-color:${colorID}">
             <span class="contactInitialsLetters">${initials}</span>
         </div>
-        <div class="contactInfo" onmouseover="scrollName(${i})" onmouseout="stopScrolling(${i})">
+        <div class="contactInfo" id="contactInfo${i}" onmouseover="scrollName(${i})" onmouseout="stopScrolling(${i})">
             <span class="contactName" id="contactName${i}">${contact}</span>
             <span class="contactMail">${email}</span>
         </div>
@@ -19,8 +19,8 @@ function returnContactPopUpHTML(colorID, initials, name, i, email, phone) {
             <div class="dcInitialsCircle" style="background-color:${colorID}">
                <span class="dcInitialsLetter">${initials}</span>
             </div>
-            <div class="dcContactPlusAddTask">
-                <span class="detailedContactName" id="contactsNameD${i}" onmouseover="scrollNameD(${i})" onmouseout="stopScrollingD(${i})">${name}</span>
+            <div class="dcContactPlusAddTask" id="dcContactPlusAddTask${i}" onmouseover="scrollNameD(${i})" onmouseout="stopScrollingD(${i})">
+                <span class="detailedContactName" id="contactsNameD${i}" >${name}</span>
                 <div onclick="initAddTaskToContact(${i})" class="addTaskToContactBtn">
                     <img class="addTaskToContactImg"  src="assets/img/Contacts/plusBlue.png" >
                     <span class="addTaskToContactLetters">Add Task</span>

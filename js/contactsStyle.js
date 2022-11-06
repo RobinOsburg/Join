@@ -294,7 +294,7 @@ function checkNormalLayout(){
  */
 function checkNameLength(i){
     let idContact = 'contactName' + `${i}`;
-    let contactElement = document.getElementById(idContact)
+    let contactElement = document.getElementById(`contactInfo${i}`)
     let contactName = document.getElementById(idContact).innerHTML;
     let contactNameLength = contactName.length;
     if(contactNameLength > 16){
@@ -332,6 +332,8 @@ function checkNameLength(i){
     document.getElementById('detailedContact').style.display = 'flex'
     document.getElementById('detailedContact').style.transform = 'translateX(0)'
     prepareHighlight(i);
+    prepareContactInformation(i);
+    checkNameLengthD(i)
 }
 
 /**
@@ -356,14 +358,14 @@ function checkNameLength(i){
  */
  function checkNameLengthD(i){
     let idContact = 'contactsNameD' + `${i}`;
-    let contactElement = document.getElementById(idContact)
     let contactName = document.getElementById(idContact).innerHTML;
     let contactNameLength = contactName.length;
+    let hoverElement = document.getElementById(`dcContactPlusAddTask${i}`)
     if(contactNameLength > 15){
         reduceLength(i,'contactsNameD',15)
      }else{
-        contactElement.removeAttribute("onmouseover");
-        contactElement.removeAttribute("onmouseout");
+        hoverElement.removeAttribute("onmouseover");
+        hoverElement.removeAttribute("onmouseout");
      }
 }
 
