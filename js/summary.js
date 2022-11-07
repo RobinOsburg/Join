@@ -12,19 +12,19 @@ async function downloadSummary() {
 let allTasks;
 
 
-function prepareSummary(){
-  let tasksTotal = countTasks();
-  let tasksInProgress = countTasksInProgress();
-  let tasksFeedback = countTasksAwaitingFeedback();
-  let tasksUrgent = countTasksUrgent();
-  let nextDeadline = showNextDeadline();
-  let tasksToDo = countTasksTodDo();
-  let tasksDone = countTasksDone();
-  renderSummary(tasksTotal,tasksInProgress,tasksFeedback,tasksUrgent,tasksToDo,tasksDone,nextDeadline);
+function prepareSummary() {
+    let tasksTotal = countTasks();
+    let tasksInProgress = countTasksInProgress();
+    let tasksFeedback = countTasksAwaitingFeedback();
+    let tasksUrgent = countTasksUrgent();
+    let nextDeadline = showNextDeadline();
+    let tasksToDo = countTasksTodDo();
+    let tasksDone = countTasksDone();
+    renderSummary(tasksTotal, tasksInProgress, tasksFeedback, tasksUrgent, tasksToDo, tasksDone, nextDeadline);
 }
 
 
-function renderSummary(tasksTotal,tasksInProgress,tasksFeedback,tasksUrgent,tasksToDo,tasksDone,nextDeadline){
+function renderSummary(tasksTotal, tasksInProgress, tasksFeedback, tasksUrgent, tasksToDo, tasksDone, nextDeadline) {
     document.getElementById('tasksTotal').innerHTML = /*html*/`${tasksTotal}`;
     document.getElementById('tasksProgress').innerHTML = /*html*/`${tasksInProgress}`;
     document.getElementById('tasksFeedback').innerHTML = /*html*/`${tasksFeedback}`;
@@ -35,14 +35,14 @@ function renderSummary(tasksTotal,tasksInProgress,tasksFeedback,tasksUrgent,task
 }
 
 
-function renderGreet(currentUser){
-    let today = new Date ();
+function renderGreet(currentUser) {
+    let today = new Date();
     let currHour = today.getHours();
     if (currHour < 12) {
         document.getElementById('greet').innerHTML = /*html*/`
         <span class ="greetTime">Good Morning,</span>
         `
-    } else if( currHour < 18) {
+    } else if (currHour < 18) {
         document.getElementById('greet').innerHTML = /*html*/`
         <span class ="greetTime">Good Afternoon,</span>
         `
@@ -50,12 +50,15 @@ function renderGreet(currentUser){
         document.getElementById('greet').innerHTML = /*html*/`
         <span class ="greetTime">Good Evening,</span>
         `
+    } if (currentUser <= 0) {
+        document.getElementById('greet').innerHTML += /*html*/ `<span class="greetName">Guest</span>`;
     }
-   
+
     for (let i = 0; i < currentUser.length; i++) {
         let user = currentUser[i]['name'];
-        document.getElementById('greet').innerHTML += /*html*/ `<span class="greetName">${user}</span>`;    
-    }  
+        document.getElementById('greet').innerHTML += /*html*/ `<span class="greetName">${user}</span>`;
+
+    }
 }
 
 
@@ -63,22 +66,22 @@ function renderGreet(currentUser){
 
 
 
-function showNextDeadline(){
+function showNextDeadline() {
     currentDate = allTasks.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
-    return currentDate[0]['dueDate'];    
-    };
+    return currentDate[0]['dueDate'];
+};
 
 
-function countTasks(){
+function countTasks() {
     return allTasks.length;
 }
 
 
-function countTasksInProgress(){
+function countTasksInProgress() {
     let totalInProgress = 0;
     for (let i = 0; i < allTasks.length; i++) {
         let taskStatus = allTasks[i]['status']
-        if(taskStatus == 'inProgress'){
+        if (taskStatus == 'inProgress') {
             totalInProgress++
         }
     }
@@ -86,11 +89,11 @@ function countTasksInProgress(){
 }
 
 
-function countTasksAwaitingFeedback(){
+function countTasksAwaitingFeedback() {
     let totalFeedback = 0;
     for (let i = 0; i < allTasks.length; i++) {
         let taskStatus = allTasks[i]['status']
-        if(taskStatus == 'awaitingFeedback'){
+        if (taskStatus == 'awaitingFeedback') {
             totalFeedback++
         }
     }
@@ -98,11 +101,11 @@ function countTasksAwaitingFeedback(){
 }
 
 
-function countTasksUrgent(){
+function countTasksUrgent() {
     let totalUrgent = 0;
     for (let i = 0; i < allTasks.length; i++) {
         let taskPrio = allTasks[i]['prio']
-        if(taskPrio == 'urgent'){
+        if (taskPrio == 'urgent') {
             totalUrgent++
         }
     }
@@ -110,11 +113,11 @@ function countTasksUrgent(){
 }
 
 
-function countTasksTodDo(){
+function countTasksTodDo() {
     let totalToDo = 0;
     for (let i = 0; i < allTasks.length; i++) {
         let taskStatus = allTasks[i]['status']
-        if(taskStatus == 'toDo'){
+        if (taskStatus == 'toDo') {
             totalToDo++
         }
     }
@@ -122,11 +125,11 @@ function countTasksTodDo(){
 }
 
 
-function countTasksDone(){
+function countTasksDone() {
     let totalDone = 0;
     for (let i = 0; i < allTasks.length; i++) {
         let taskStatus = allTasks[i]['status']
-        if(taskStatus == 'done'){
+        if (taskStatus == 'done') {
             totalDone++
         }
     }
@@ -135,29 +138,29 @@ function countTasksDone(){
 
 
 
-function whitePenImg(){
+function whitePenImg() {
     document.getElementById("pen").src = "assets/img/Summary/whitePenSummary.png";
 }
 
 
-function whiteCheckImg(){
+function whiteCheckImg() {
     document.getElementById("check").src = "assets/img/Summary/whiteCheckSummary.png";
 
 }
 
 
-function blackPenImg(){
+function blackPenImg() {
     document.getElementById("pen").src = "assets/img/Summary/penSummary.png";
 }
 
 
-function blackCheckImg(){
+function blackCheckImg() {
     document.getElementById("check").src = "assets/img/Summary/checkSummary.png";
 }
 
 
-function goToBoard(){
-    window.location.href ='board.html'
+function goToBoard() {
+    window.location.href = 'board.html'
 }
 
 

@@ -7,9 +7,7 @@
 }
 
 @media(max-width: 1200px) {
-    .headlineB {
-        margin-top: 0;
-    }
+   
 
     .inputContainerBoard {
         margin-top: 4%;
@@ -24,7 +22,7 @@
     }
 
     .allTasks {
-        height: 69vh;
+        height: 48vh;
         align-items: center;
         justify-content: flex-start;
         overflow: scroll;
@@ -155,7 +153,7 @@
         align-items: center;
         justify-content: flex-start;
         margin-top: 0px;
-        height: 61vh;
+        height: 58vh;
     }
 
 
@@ -223,6 +221,10 @@
     .inputImageLoup {
         left: 73%;
     }
+
+    .allTasks{
+        height: 56vh;
+    }
 }
 
 
@@ -248,6 +250,14 @@
         margin-right: 16%;
         position: relative;
     }
+}
+
+@media(max-width:365px) {
+
+    .allTasks{
+        height: 53vh;
+    }
+
 }
 
 
