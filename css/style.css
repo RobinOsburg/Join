@@ -590,7 +590,6 @@ h1 {
     height: 480px;
     width: 0;
     border: 1px solid #D1D1D1;
-    margin-top: 10%;
     position: absolute;
 }
 
@@ -815,7 +814,7 @@ h1 {
 }
 
 
-.clearBtn {
+.clearBtnOriginal {
     border: 1px solid #2A3647;
     background-color: rgb(246, 247, 248);
     color: #2A3647;
@@ -830,7 +829,7 @@ h1 {
 }
 
 
-.clearBtn:hover {
+.clearBtnOriginal:hover {
     cursor: pointer;
 }
 

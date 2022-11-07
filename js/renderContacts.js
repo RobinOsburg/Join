@@ -186,7 +186,7 @@ function returnTaskContainerContactsHTML(i) {
              <div class="subtaskList" id="subtaskList"></div>
          </div>
          <div class="taskBtns">
-             <button class="clearBtn" onclick="clearBackend()" >
+             <button class="clearBtnOriginal" onclick="clearBackend()" >
                  Clear
                  <img  class="btnImg2" src="assets/img/Add Task/clear.png">
              </button>
