@@ -25,11 +25,6 @@
 
 
 @media(max-width: 1200px) {
-
-    .bigContainer{
-        overflow-x: hidden;
-    }
-
     .addTaskContainer {
         height: 84vh !important;
     }

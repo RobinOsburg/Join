@@ -1375,18 +1375,6 @@ h1 {
 }
 
 
-.status {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #F5F5F5;
-    margin-bottom: 10px;
-}
 
 .status span{
     height: 100%;
