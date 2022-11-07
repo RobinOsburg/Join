@@ -364,11 +364,7 @@
 }
 
 @media (max-width:660px) {
-    .responsviveHeadlineB {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+   
 
     .animationBackground{
         background-color: #2A3647;
@@ -382,17 +378,12 @@
         display: flex;
     }
 
-    .allTasks {
-        overflow-y: auto;
-    }
 
     .allTasks span {
         font-size: 21px !important;
     }
 
-    .responsiveAddTaskBtn {
-        display: flex;
-    }
+  
 
     .addTaskBtn {
         display: none !important;

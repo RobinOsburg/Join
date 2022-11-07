@@ -1294,15 +1294,7 @@ h1 {
 }
 
 
-.headlineB {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0vh !important;
-    margin-top: 6vh;
-    padding-left: 30px;
-    padding-right: 30px
-}
+
 
 
 .searchAndCreate {
