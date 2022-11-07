@@ -1306,15 +1306,7 @@ h1 {
 }
 
 
-.headlineB {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0vh !important;
-    margin-top: 6vh;
-    padding-left: 30px;
-    padding-right: 30px
-}
+
 
 
 .searchAndCreate {
@@ -1459,18 +1451,6 @@ h1 {
 }
 
 
-.status {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #F5F5F5;
-    margin-bottom: 10px;
-}
 
 .status span{
     height: 100%;
