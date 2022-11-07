@@ -1507,11 +1507,7 @@ h1 {
     display: none;
 }
 
-.responsviveHeadlineB{
-    display: flex;
-    align-items: center;
-    gap: 150px;
-}
+
 
 .responsiveAddTaskBtn{
     height: 50px;
