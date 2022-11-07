@@ -370,7 +370,17 @@
         align-items: center;
     }
 
+    .animationBackground{
+        background-color: #2A3647;
+    }
 
+    .joinLogoLogInLP{
+        display: none;
+    }
+
+    .joinLogoLogInLPResponsive{
+        display: flex;
+    }
 
     .allTasks {
         overflow-y: auto;

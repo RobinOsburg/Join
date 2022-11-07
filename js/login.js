@@ -19,6 +19,7 @@ function signUp(){
     window.location.href="signUp.html"
 }
 
+
 function showLogInSucces(){
 const urlParams = new URLSearchParams(window.location.search);
 const msg = urlParams.get('msg');

@@ -93,7 +93,7 @@
     }
 }
 
-@media(max-width:500px) and (max-height: 916px){
+@media(max-width:600px) and (max-height: 916px){
     .overview{
         width: 90%;
     }

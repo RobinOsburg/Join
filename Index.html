@@ -21,7 +21,7 @@
 <body onload="backendLogIn(),showLogInSucces()">
 
 
-    <img class="joinLogoLogIn" src="assets/img/LogIn/logo.png" alt="">
+    <img class="joinLogoLogIn" src="assets/img/LogIn/logo.png">
 
 
     <div class="signUpContainer">
@@ -51,10 +51,10 @@
         </div>
 
         <div class="rememberPassword">
-            <form class="rememberMe">
+            <div class="rememberMe">
                 <input type="checkbox">
                 <p>Rember me</p>
-            </form>
+            </div>
             <span onclick="moveToForgotPw()" class="forgetPassword">
                 <a href="#">Forgot my password</a>
             </span>
@@ -68,7 +68,11 @@
 
         <div id="msgBox" class="d-none"></div>
     </div>
-
+    </div>
+    <div class="animationBackground" id="animationBackground">
+        <img class="joinLogoLogInLP" src="assets/img/LogIn/logo.png">
+        <img class="joinLogoLogInLPResponsive" src="assets/img/Summary/joinLogoSummary.png">
+    </div>
 
 
 </body>
