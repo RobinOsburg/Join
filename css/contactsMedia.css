@@ -78,6 +78,14 @@
     .subHeadlineContacts {
         width: 100%;
     }
+
+    .prio{
+        padding: 9px;
+    }
+
+    .prioSelected{
+        padding: 9px;
+    }
 }
 
 @media(max-width : 1055px) {
@@ -105,6 +113,16 @@
         align-items: center;
     }
 
+    .taskBtns{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .clearBtnOriginal{
+        width: 158px;
+    }
+
     .cancelNewContact {
         width: 169px;
     }
@@ -126,8 +144,10 @@
     .backArrowContacts {
         display: flex;
     }
-
-
+   
+    .workspace{
+        flex-direction: column;
+    }
 
     .letterContainer {
         align-items: flex-start;
