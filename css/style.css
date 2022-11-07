@@ -43,15 +43,15 @@ body {
     right: 0;
     margin: auto;
     animation-name: logo;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 
 .joinLogoLogInLPResponsive{
-    height: 400px;
+    height: 250px;
     width: auto; 
-    display: flex;
+    display: none;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -59,7 +59,7 @@ body {
     right: 0;
     margin: auto;
     animation-name: logo;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -72,7 +72,18 @@ body {
     }
 
     to{
-        transform: translate(-100%,-105%) scale(0.65);   
+        transform: translate(-95vw,-100vh) scale(0.65);   
+        display: none;
+    }
+}
+
+@keyframes logoResponsive{
+    from{
+        transform: translate(0,0) scale(1);
+    }
+
+    to{
+        transform: translate(-95vw,-100vh) scale(0.8 );   
         display: none;
     }
 }
@@ -93,13 +104,14 @@ body {
 
 
 @keyframes hide{
-    from{
+    0%{
         opacity: 1;
+        z-index: 1;
     }
 
-    to{
+    100%{
         opacity: 0;
-        display: none;
+        z-index: -2;
     }
 }
 
@@ -578,7 +590,7 @@ h1 {
     height: 480px;
     width: 0;
     border: 1px solid #D1D1D1;
-    margin-top: 140px;
+    margin-top: 10%;
     position: absolute;
 }
 

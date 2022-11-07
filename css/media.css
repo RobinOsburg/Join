@@ -376,6 +376,7 @@
 
     .joinLogoLogInLPResponsive{
         display: flex;
+        animation-name: logoResponsive;
     }
 
 
