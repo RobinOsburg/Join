@@ -54,19 +54,19 @@
 
 @media(max-width: 415px) and (max-height: 920px) {
     .allTasks {
-        height: 70vh !important;
+        height: 57vh !important;
     }
 }
 
 @media(max-width: 365px) and (max-height: 745px) {
     .allTasks {
-        height: 66vh !important;
+        height: 51vh !important;
     }
 }
 
 @media(max-width: 380px) and (max-height: 670px) {
     .allTasks {
-        height: 61vh !important;
+        height: 46vh !important;
     }
 }
 
