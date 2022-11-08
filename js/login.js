@@ -50,9 +50,7 @@ async function logIn(){
 }
 
 
-function guestLogin(){
-    directToSummary();
-}
+
 
 
 
