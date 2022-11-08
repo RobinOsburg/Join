@@ -306,11 +306,7 @@
     }
 }
 
-@media(max-width:900px) {
-    .allTasks span {
-        font-size: 19px !important;
-    }
-}
+
 
 @media(max-width:880px) {
     .bigAssignedToContainerPopUp {
@@ -335,9 +331,7 @@
 }
 
 @media(max-width:800px) {
-    .closePopUp {
-        left: 90% !important;
-    }
+   
 
     .popUpEditContent {
         height: 100vh !important;
@@ -386,9 +380,7 @@
 
   
 
-    .addTaskBtn {
-        display: none !important;
-    }
+
 
     
 
@@ -396,15 +388,8 @@
 }
 
 @media(max-width:500px) {
-    .popUpContent {
-        width: 100% !important;
-        height: 100vh !important;
-        top: 0;
-        border-radius: 0 !important;
-    }
-
+  
     .addTaskContainer {
-        height: 94vh;
         background-color: #F5F5F5;
         margin-top: 4px;
     }
@@ -421,9 +406,7 @@
         display: flex;
     }
 
-    .taskBtnsResponsive {
-        display: flex;
-    }
+   
 
     .categoryContainerS {
         width: 86% !important;

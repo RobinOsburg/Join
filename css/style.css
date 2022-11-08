@@ -222,11 +222,6 @@ h1 {
 }
 
 
-.grayHighlight {
-    background-color: #2A3647;
-}
-
-
 .loginBtn {
     border-radius: 5px;
     color: white;
@@ -275,19 +270,10 @@ h1 {
 }
 
 
-.inputField {
-    padding: 8px;
-    border: 1px solid #D1D1D1;
-    color: #D1D1D1;
-    border-radius: 5px;
-    width: 66%;
-    font-family: 'Inter', sans-serif;
-}
 
 
-.inputField:hover {
-    cursor: pointer;
-}
+
+
 
 
 .inputImageName {
@@ -492,18 +478,7 @@ h1 {
  
 /* Add Task*/
 
-.createTaskBtn {
-    border-radius: 5px;
-    color: white;
-    font-weight: 400;
-    padding-left: 22px;
-    padding-right: 22px;
-    margin-right: 10px;
-    font-size: 16px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 160px;
-}
+
 
 .createTaskBtn:hover {
     cursor: pointer;
@@ -545,53 +520,22 @@ h1 {
 }
 
 
-.addTaskContainer {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    position: relative;
-}
 
 
-.workSpace {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
 
 
-.leftSide {
-    display: flex;
-    flex-direction: column;
-    padding-top: 14px;
-}
 
 
-.rightSide {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    align-items: center;
-    padding-top: 87px;
-}
 
 
-.upperRightSide {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-}
 
 
-.grayLine {
-    background-color: #D1D1D1;
-    color: #29ABE2;
-    height: 480px;
-    width: 0;
-    border: 1px solid #D1D1D1;
-    position: absolute;
-}
+
+
+
+
+
+
 
 
 .grayLineHorizontal {
@@ -602,14 +546,7 @@ h1 {
 }
 
 
-.textareaField {
-    padding: 8px;
-    border: 1px solid #D1D1D1;
-    color: #D1D1D1;
-    border-radius: 5px;
-    width: 100%;
-    font-family: 'Inter', sans-serif;
-}
+
 
 
 .textareaField:hover {
@@ -624,16 +561,16 @@ h1 {
     width: 66%;
 }
 
-
-.selectOption {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background-color: white;
-    border-left: 1px solid #D1D1D1;
-    border-right: 1px solid #D1D1D1;
+.searchFieldAssignTo{
     padding: 8px;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    width: 100%; 
+    box-sizing: border-box;
 }
+
+
+
 
 
 .selectOption:hover {
@@ -665,35 +602,12 @@ h1 {
 }
 
 
-.selectHeadFieldOriginal {
-    position: relative;
-    background-color: white;
-    padding: 8px;
-    border: 1px solid #D1D1D1;
-    border-radius: 6px;
-    color: #D1D1D1;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    width: 95%;
-    min-height: 15px;
-}
 
 
-.newCategoryOriginal {
-    text-align: start;
-    padding-right: 8px;
-    width: 95%;
-}
 
 
-.navNewCategoryOriginal {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 6px;
-    left: 88%;
-}
+
+
 
 
 .selectHeadFieldContacts {
@@ -734,12 +648,7 @@ h1 {
 }
 
 
-.dropdownImg {
-    position: absolute;
-    height: 8px;
-    left: 93%;
-    top: 13px;
-}
+
 
 
 .dropdownImgPopUp {
@@ -750,26 +659,11 @@ h1 {
 }
 
 
-.selectOptionColor {
-    height: 8px;
-    width: 8px;
-    border-radius: 20px;
-}
-
-.selectOptionC:hover {
-    background: #D1D1D1;
-    cursor: pointer;
-}
 
 
-.chosenCategoryColor {
-    height: 8px;
-    width: 8px;
-    border-radius: 20px;
-    position: absolute;
-    top: 12px;
-    left: 83%;
-}
+
+
+
 
 
 .chosenCategoryColorBoard {
@@ -782,51 +676,22 @@ h1 {
 }
 
 
-.colorChoice {
-    height: 8px;
-    width: 8px;
-    border-radius: 20px;
-}
 
 
-.sales {
-    background-color: #E200BE;
-}
 
 
-.backoffice {
-    background-color: #1fd7c1;
-}
 
 
-.categoryContainer {
-    width: 74%;
-}
 
 
-.categoryContainer:hover {
-    cursor: pointer;
-}
 
 
-.inputWidth3 {
-    width: 98%;
-}
 
 
-.clearBtnOriginal {
-    border: 1px solid #2A3647;
-    background-color: rgb(246, 247, 248);
-    color: #2A3647;
-    border-radius: 5px;
-    font-weight: 400;
-    padding-left: 22px;
-    padding-right: 22px;
-    margin-right: 10px;
-    font-size: 16px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+
+
+
+
 
 
 .clearBtnOriginal:hover {
@@ -847,10 +712,7 @@ h1 {
     align-items: center;
 }
 
-.searchContactContainer{
-    position: relative;
-    width: 95%;
-}
+
 
 .adjustWidth5{
     width: 100%;
@@ -865,14 +727,7 @@ h1 {
    left: 96%;
 }
 
-.prioBox {
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
-    margin-bottom: 34px;
-    height: 33px;
-    gap: 5px;
-}
+
 
 
 .prioDoubleContainer {
@@ -891,13 +746,7 @@ h1 {
 }
 
 
-.subtaskPlusOriginal {
-    position: absolute;
-    left: 97%;
-    top: 69%;
-    height: 18px;
-    width: auto;
-}
+
 
 
 .prioDoubleContainerContacts {
@@ -906,17 +755,7 @@ h1 {
 }
 
 
-.prio {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 16px;
-    border-radius: 10px;
-    width: 100%;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-}
+
 
 
 .prio:hover {
@@ -926,17 +765,6 @@ h1 {
 }
 
 
-.prioSelected {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding: 16px;
-    border-radius: 10px;
-    width: 100%;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
 
 
 .prioSelected:hover {
@@ -944,33 +772,12 @@ h1 {
 }
 
 
-.orange {
-    background-color: #FF3D00;
-}
 
 
-.yellow {
-    background-color: #FFA800;
-}
 
 
-.green {
-    background-color: #7AE229;
-}
 
 
-.prioInput {
-    position: absolute;
-    opacity: 0;
-    width: 1px;
-    height: 1px;
-}
-
-
-.prioImg {
-    height: 12px;
-    margin-left: 4px;
-}
 
 
 .prioImg:nth-child(2) {
@@ -983,15 +790,7 @@ h1 {
 }
 
 
-.subtasks {
-    padding: 8px;
-    color: #D1D1D1;
-    border: 1px solid #D1D1D1;
-    border-radius: 5px;
-    font-family: 'Inter', sans-serif;
-    width: 100%;
-    border-radius: 4px;
-}
+
 
 .subtasksContact{
     padding: 8px;
@@ -1053,15 +852,7 @@ h1 {
 }
 
 
-.subtaskContainer {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 23px;
-    width: 100%;
-}
+
 
 
 .subtasksInputBoard {
@@ -1130,17 +921,7 @@ h1 {
     width: 70%;
 }
 
-.taskBtnsOriginal{
-    display: flex;
-    justify-content: flex-end;
-    width: 70%;
-}
 
-.taskBtnsResponsive{
-    display: none;
-    justify-content: flex-end;
-    width: 70%;
-}
 
 .clearBtnResponsive{
     border: 1px solid #2A3647;
@@ -1229,16 +1010,11 @@ h1 {
     padding-bottom: 10px;
 }
 
-.btnImg {
-    height: 13px;
-    margin-left: 3px;
-}
 
 
-.btnImg2 {
-    height: 11px;
-    margin-left: 3px;
-}
+
+
+
 
 
 .workSpace p {
@@ -1314,22 +1090,7 @@ h1 {
 }
 
 
-.addTaskBtn {
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 300;
-    margin-right: 10px;
-    margin-left: -20px;
-    font-size: 21px;
-    font-weight: 700;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    width: 190px;
-    gap: 5px;
-}
+
 
 .addTaskBtn:hover{
     cursor: pointer;
@@ -1409,15 +1170,7 @@ h1 {
 }
 
 
-.grayLineBoard {
-    background-color: #D1D1D1;
-    height: 20px;
-    width: 0;
-    border: 0.5px solid #D1D1D1;
-    top: 19px;
-    left: 72%;
-    position: absolute;
-}
+
 
 .categoryContainerS{
     width: 72%;
@@ -1444,10 +1197,7 @@ h1 {
 }
 
 
-.allTasks span {
-    font-size: 21px;
-    font-weight: 700;
-}
+
 
 
 
@@ -1456,28 +1206,10 @@ h1 {
 }
 
 
-.d-none {
-    display: none;
-}
 
 
-.subtaskList {
-    width: 100%;
-    max-height: 80px;
-    margin-bottom: 5px;
-}
 
 
-.subtask {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.deleteSubtaskBtn {
-    height: 20px;
-}
 
 /* Board                    Hier ist AssignedTo von AddTask mit drin */
 
@@ -1717,11 +1449,7 @@ h1 {
     height: 12px;
 }
 
-.bigAssignedToContainer{
-   width: 74%;
-   display: flex;
-   flex-direction: column;
-}
+
 
 .bigAssignedToContainerPopUp{
     width: 75%;
@@ -1729,29 +1457,17 @@ h1 {
     flex-direction: column;
  }
 
-.assignedToContainer {
-    width: 100%;
-    display: flex;
-}
 
-.adjustWidth{
-    width: 100%;
-}
+
+
 
 .adjustWidth2{
     width: 95%;
 }
 
-.checkBoxC{
-    height: 16px;
-    position: absolute;
-}
 
-.checkBoxesC{
-    position: relative;
-    top: -9px;
-    right: 19px;
-}
+
+
 
 .checkBoxesC1{
     position: relative;
@@ -1759,30 +1475,9 @@ h1 {
     left: 94%;
 }
 
-.selectOptionC{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6px;
-    background-color: white;
-    border-left: 1px solid #D1D1D1;
-    border-right: 1px solid #D1D1D1;
-    padding: 8px;
-}
 
-.allContactsToAssign{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 6px;
-    background-color: white;
-    border-left: 1px solid #D1D1D1;
-    border-right: 1px solid #D1D1D1;
-    padding: 8px; 
-    height: 43px;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-}
+
+
 
 .contactToAssignContainer{
     display: flex;
@@ -1800,55 +1495,20 @@ h1 {
     cursor: pointer;
 }
 
-.assignedContacts{
-    width: 74%;
-    margin-top: 15px;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.assignToCirle{
-    height: 40px;
-    width: 40px;
-    background-color: rgb(36, 36, 222);
-    position: relative;
-    border-radius: 40px; 
-}
-
-.removeContactCross{
-    position: absolute;
-    height: 16px;
-    top: -8px;
-    left: 30px;
-}
-
-.assignToLetters{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    color: white;
-    text-align: center;
-    height: 17px;
-}
 
 
-.selectOptionC:last-child {
-    border-bottom: 1px solid #D1D1D1;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-}
-
-.inviteImg{
-    height: 22px;
-}
 
 
-.newCategoryContainer {
-    position: relative;
-}
+
+
+
+
+
+
+
+
+
+
 
 
 .newCategory {
@@ -1880,20 +1540,12 @@ h1 {
 }
 
 
-.crossNewCategory {
-    height: 21px;
-}
 
 
-.greyLineNewCategory {
-    width: 1px;
-    height: 25px;
-    background-color: rgba(126, 125, 125, 0.8);
-}
 
-.checkNewCategory {
-    height: 21px;
-}
+
+
+
 
 .navNewCategory {
     display: flex;
@@ -1913,20 +1565,10 @@ h1 {
 }
 
 
-.newCategorySignature {
-    position: relative;
-}
 
 
-.categoryColor {
-    position: absolute;
-    height: 10px;
-    width: 10px;
-    border-radius: 10px;
-    top: 11px;
-    left: 83%;
-    display: none;
-}
+
+
 
 
 .checkedColor {
@@ -1934,39 +1576,7 @@ h1 {
 }
 
 
-.lightblue {
-    background-color: #8AA4FF;
-}
-
-
-.red {
-    background-color: #FF0000;
-}
-
-
-.green {
-    background-color: #2AD300;
-}
-
-
-.purple {
-    background-color: #E200BE;
-}
-
-
-.orange {
-    background-color: #FF8A00;
-}
-
-
-.blue {
-    background-color: #0038FF;
-}
-
-
-.newCategorySignature {
-    position: relative;
-}
+x
 
 /* Board Pop Up                                       Nichts von AddTask mit drin*/
 

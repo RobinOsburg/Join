@@ -37,7 +37,21 @@
 
 
 
+@media(max-width:1060px){ /*adjusting the size of the prio buttons*/
+    .prioDoubleContainerOriginal{
+        width: 30% !important;
+    }
 
+    .prio{
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+
+    .prioSelected{
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+}
 
 
 @media(max-width: 1025px) {
@@ -56,11 +70,23 @@
      }
 }
 
+@media(max-width:895px){
+    .taskBtnsOriginal{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clearBtnOriginal{
+        width: 160px;
+    }
+}
+
 @media(max-width:880px){
     .workspace{
         flex-direction: column;
         align-items: center;
     }
+
 
     .grayLine{
         display: none;
@@ -82,6 +108,27 @@
     .categoryContainerS{
         transform: translateX(1%);
     }
+
+    .formular{ /*making pop up responsive*/
+        flex-direction: column !important;
+         align-items: center !important;
+    }
+
+    .popUpContent{
+        overflow-y: scroll;
+    }
+
+    .leftSide{
+        width: 100% !important;
+    }
+
+    .rightSide{
+        width: 100% !important;
+    }
+
+    .taskBtnsOriginal{
+        flex-direction: row;
+    }
 }
 
 
@@ -92,12 +139,9 @@
 @media(max-width:1200px) {
     .rightSideBoard {
         width: 100vw !important;
+        height: 100vh;
     }
 
-    .contentBoard {
-        width: 100vw !important;
-        flex: 1;
-    }
 
     .submitEditBtn {
         top: 83%;
@@ -119,14 +163,7 @@
     }
 }
 
-@media (max-width:1070px) {
 
-    .plusBoardAW {
-        margin-bottom: 30px;
-    }
-
-
-}
 
 
 
@@ -160,9 +197,6 @@
         height: 30px;
     }
 
-    .inputImageLoup {
-        left: 85%;
-    }
 
     .inputContainerBoard {
         padding-left: 28%;
@@ -189,7 +223,7 @@
     }
 
     .addTaskBtn {
-        width: 250px;
+        width: 37px;
         height: 37px;
     }
 
@@ -222,10 +256,7 @@
         position: relative;
     }
 
-    .addTaskBtn {
-        width: 250px;
-        height: 37px;
-    }
+  
 }
 
 
@@ -241,11 +272,7 @@
         flex-direction: column;
     }
 
-    .addTaskBtn {
-        width: 200px;
-        margin: unset;
-
-    }
+  
 
     .status {
         width: 250px;
@@ -296,9 +323,7 @@
             left: 69%;
         }
 
-        .inputImageLoup {
-            left: 71%;
-        }
+     
 
         .inputContainerBoard {
             padding-left: 12%;
@@ -323,19 +348,12 @@
             margin-bottom: 0;
         }
 
-        .addTaskBtn {
-            width: 250px;
-            height: 37px;
-        }
+       
 
     }
 
 
-    @media(max-width:530px) {
-        .inputImageLoup {
-            left: 73%;
-        }
-    }
+
 
 
     @media(max-width:470px) {
@@ -350,10 +368,7 @@
             gap: 20px;
         }
 
-        .addTaskBtn {
-            width: 250px;
-            height: 37px;
-        }
+        
     }
 
 
@@ -369,11 +384,7 @@
             flex-direction: column;
         }
 
-        .addTaskBtn {
-            width: 200px;
-            margin: unset;
-
-        }
+      
 
         .status {
             width: 250px;
@@ -401,3 +412,116 @@
         }
 
     }
+
+    @media(max-width:500px){
+        .popUpContent {
+            width: 100% !important;
+            height: 100vh !important;
+            top: 0;
+            border-radius: 0 !important;
+            background-color: #F5F5F5;
+            overflow-y: hidden;
+            flex-direction: column;
+        }
+        
+        .headerPlusResponsiveBtn{
+            display: flex !important;
+        }
+
+        .taskBtnsResponsive{
+            display: flex !important;
+        }
+
+        .taskBtnsOriginal{
+            display: none !important;
+        }
+
+        .closePopUp{
+            top: 10%;
+            right: 11%;
+        }
+    }
+
+    @media(max-width:490px){
+        .btnText{
+            display: none !important;
+        }
+
+        .createTaskBtn{
+            width: 90px !important;
+        }
+
+        .clearBtnOriginal{
+            width: 90px !important;   
+        }
+
+        .taskBtnsResponsive{
+            right: 30% !important;
+        }
+    }
+
+    @media(max-width:390px){
+        .createTaskBtn{
+            width: 50px !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .clearBtnOriginal{
+            width: 50px !important;   
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+    @media (max-width:1200px){  /*making the headarea Responsive*/
+        .responsiveSubHeadline{
+            display: flex !important;
+        }
+    }
+
+    @media(max-width:660px){
+        .addTaskBtn span{
+            display: none;
+        }
+
+        .inputContainerBoardResponsive{
+            display: flex;
+        }
+
+        .inputContainerBoard{
+            display: none;
+        }
+
+        .btnImg{
+            margin-left: 0;
+        }
+    }
+
+    /* adjusting the font sizes of the allTasks Spans */
+
+    @media(max-width:1070px) {
+        .allTasks span {
+            font-size: 19px !important;
+        }
+    }
+
+    @media(max-width:900px) {
+        .allTasks span {
+            font-size: 17px !important;
+        }
+    }
+
+    @media(max-width:800px) {
+        .allTasks span {
+            font-size: 15px !important;
+        }
+    }
+
+    @media(max-width:720px) {
+        .allTasks span {
+            font-size: 14px !important;
+        }
+    }
+
+

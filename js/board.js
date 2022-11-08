@@ -204,7 +204,7 @@ function taskPopUpFromBoard() {
   window.scroll(0, 0)
   popUpContainer.style.display = 'flex'
   let popUpContent = document.getElementById('popUpContent');
-  popUpContent.innerHTML = returnPopUpContentOriginalHTML();
+  // popUpContent.innerHTML = returnPopUpContentOriginalHTML();
 }
 
 /**
