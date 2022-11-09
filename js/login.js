@@ -5,10 +5,12 @@ let AllUsersAsString = backend.getItem('users');
   AllUsers = JSON.parse(AllUsersAsString) || [];
 }
 
-let currentUser =[]
+let currentUser =[];
+let comingFromLogIn;
 
 async function backendIntegrationLogin(){
     await backend.setItem('user', JSON.stringify(currentUser));
+    await backend.setItem('comingFromLogIn',JSON.stringify(comingFromLogIn));
 }
 
 function directToSummary(){
@@ -39,6 +41,7 @@ async function logIn(){
     let user = AllUsers.find(u => u.email == email.value && u.password == password.value);
     // let mailName = AllUsers.findIndex(mail);
     if (user) {
+        comingFromLogIn = true;
         for (let i = 0; i < AllUsers.length; i++) {
             if (mail == AllUsers[i]['email']) {
                 currentUser.push(AllUsers[i]);
@@ -49,6 +52,8 @@ async function logIn(){
     }
 }
 
+
+ 
 
 
 
