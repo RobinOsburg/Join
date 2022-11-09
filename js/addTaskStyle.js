@@ -6,7 +6,7 @@
  function resetAlert() {
     document.getElementById('alertTitle').classList.add('d-none');
     document.getElementById('alertDescription').classList.add('d-none');
-    document.getElementById('alertCategory').classList.add('d-none');alertContact
+    document.getElementById('alertCategory').classList.add('d-none');
     document.getElementById('alertContact').classList.add('d-none');
     document.getElementById('alertDate').classList.add('d-none');
     document.getElementById('alertPriority').classList.add('d-none');

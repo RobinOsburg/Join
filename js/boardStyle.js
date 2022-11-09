@@ -1,4 +1,4 @@
-/**
+/**TT
  * clears every statuscontainer before it gets rendered
  * 
  */
@@ -139,7 +139,7 @@ function taskPopUp(id) {
     document.body.style.overflowY = 'hidden';
     popUpContainer.style.display = 'flex'
     let popUpContent = document.getElementById('popUpContent');
-    popUpContent.innerHTML = returnPopUpContentBoardHTML(id)
+    popUpContent.innerHTML += returnPopUpContentBoardHTML(id)
   }
 
   /**

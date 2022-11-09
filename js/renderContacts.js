@@ -49,7 +49,9 @@ function returnContactPopUpHTML(colorID, initials, name, i, email, phone) {
 
 function returnTaskContainerContactsHTML(i) {
     return /*html*/`
+    <img class="closePopUp" src="assets/img/Add Task/cross.png" alt="" onclick="closePopUpAddTaskContacts()">
     <div class="responsiveHeaderPopUp">
+    
             <img  class="responsiveLogoPopUp" src="assets/img/LogIn/responsiveLogo.png">
             <div class="taskBtnsResponsive">
                 <button class="clearBtnResponsive" onclick="clearBackend()" >
@@ -61,145 +63,159 @@ function returnTaskContainerContactsHTML(i) {
                     <img  class="btnImg2" src="assets/img/Add Task/clear.png">
                 </button>
 
-                <button onclick="requestNewTask()" class="createTaskBtnResponsive grayHighlight" type="submit">
+                <button onclick="requestNewTask(${i})" class="createTaskBtnResponsive grayHighlight" type="submit">
                     Create 
                     <img class="btnImg" src="assets/img/Add Task/create.png">
                  </button>
 
-                 <button onclick="requestNewTask()" class="createTaskBtnResponsive2 grayHighlight" type="submit">
+                 <button onclick="requestNewTask(${i})" class="createTaskBtnResponsive2 grayHighlight" type="submit">
                     
                     <img class="btnImg" src="assets/img/Add Task/create.png">
                  </button>
             </div> 
         </div>
-    <div class="addTaskContainer">
- <div id="workSpace" class="workSpace">
-     <div class="leftSide">
-         <img onclick="closePopUpAddTaskContacts()" class="greyCrossContacts" src="assets/img/Contacts/greyCross.png">
-         <h1 class="headlineT">Add Task</h1>
-         <p>Title</p>
-
-         <input id="title"  class="inputField inputWidth" type="text" placeholder="Enter a Title">
-         <div class="alert d-none" id="alertTitle">The Title should have at least two letters</div>
-
-         <p>Description</p>
-         <textarea  class="textareaField inputWidth" name="" id="description" cols="30"rows="10" placeholder="Enter a Description"></textarea>
-         <div class="alert d-none" id="alertDescription">The Description should have at least two letters</div>
-         <p>Category</p>
-         <div class="categoryContainer" id="category">
-             <div onclick="dropdown()" class="selectHeadFieldContacts">
-                 <span id="choiceContainer">Select Task Category</span>
-                 <div class="colorChoice" id="colorChoice" style="background-color: transparent ;"></div>
-                 <img class="dropdownImg" src="assets/img/Add Task/dropdown.png">
-             </div>
-             <div class="selectFields d-none" id="selectFields">
-                 <div onclick="createNewCategory()" class="selectOption">
-                     New Category
-                 </div>
-                 <div onclick="checkButton('Sales','#E200BE')" class="selectOption">
-                     Sales
-                     <div class="selectOptionColor sales"></div>
-                     <input type="radio" name="category" id="Sales" value="#E200BE" style="opacity:0;">
-                 </div>
-                 <div onclick="checkButton('Backoffice','#1fd7c1')" class="selectOption">
-                     Backoffice
-                     <div class="selectOptionColor backoffice"></div>
-                     <input type="radio" name="category" id="Backoffice" value="#1fd7c1"
-                         style="opacity:0;">
-                 </div>
-             </div>
-         </div>
-         <div class="alert d-none" id="alertCategory"></div>
-
-     </div>
-     <div class="grayLine"></div>
-     <div class="rightSide">
-         <div class="upperRightSide">
-             <p>Due date</p>
-             <input id="dueDate"  class="inputField inputWidth3" type="date">
-             <div class="alert d-none" id="alertDate">Set a due date</div>
-             <p>Prio</p>
-             <div class="prioBox">
-                 <!-- in buttons ändern und id geben -->
-
-                 <div class="prioDoubleContainerContacts">
-                     <div onclick="setPrio('prioUrgentHighlight','urgent')" class="prio" id="prioUrgent">
-                         <span>
-                             Urgent
-                         </span>
-                         <img class="prioImg" src="assets/img/Add Task/urgent.png">
-                         <input  value="urgent" class="prioInput" type="radio" name="prio" id="urgent">
-                     </div>
-                     <div onclick="setPrio('prioUrgentHighlight','urgent')"
-                         class="prioSelected orange d-none" id="prioUrgentHighlight">
-                         <span>
-                             Urgent
-                         </span>
-                         <img class="prioImg" src="assets/img/Add Task/urgentPrioWhite.png">
-
-                     </div>
-                 </div>
-                 <div class="prioDoubleContainerContacts">
-                     <div onclick="setPrio('prioMediumHighlight','medium')" class="prio" id="prioMedium">
-                         <span>
-                             Medium
-                         </span>
-                         <img class="prioImg" src="assets/img/Add Task/medium.png">
-                         <input  value="medium" class="prioInput" type="radio" name="prio" id="medium">
-
-                     </div>
-                     <div onclick="setPrio('prioMediumHighlight','medium')"
-                         class="prioSelected yellow d-none" id="prioMediumHighlight">
-                         <span>
-                             Medium
-                         </span>
-                         <img class="prioImg" src="assets/img/Add Task/mediumPrioWhite.png">
-                     </div>
-                 </div>
-                 <div class="prioDoubleContainerContacts">
-                     <div onclick="setPrio('prioLowHighlight','low')" class="prio" id="prioLow">
-                         <span>
-                             Low
-                         </span>
-                         <img class="prioImg" src="assets/img/Add Task/low.png">
-                         <input  value="low" class="prioInput" type="radio" name="prio" id="low">
-                     </div>
-                     <div onclick="setPrio('prioLowHighlight','low')" class="prioSelected green d-none"
-                         id="prioLowHighlight">
-                         <span>
-                             Low
-                         </span>
-                         <img class="prioImg" src="assets/img/Add Task/lowPrioWhite.png">
-
-                     </div>
-                 </div>
-             </div>
-             <div class="alertPriority d-none" id="alertPriority">Set a priority</div>
-             
-             <div class="subtaskContainer">
-                 <p>Subtasks</p>
-                 <input id="subtask"  class="subtasksContact" type="text"
-                     placeholder="Add new subtask">
-                 <img  onclick="addSubtask()" class="subtaskPlusContacts" src="assets/img/Add Task/plus.png">
-             </div>
-             <div class="noSubtask d-none" id="noSubtask">Write a Subtask</div>
-             <div class="subtaskList" id="subtaskList"></div>
-         </div>
-         <div class="taskBtns">
-             <button class="clearBtnOriginal" onclick="clearBackend()" >
-                 Clear
-                 <img  class="btnImg2" src="assets/img/Add Task/clear.png">
-             </button>
+        <div class="addTaskContainer" id="addTaskContainer">
+    <div id="workSpace" class="workSpace">
+        <div class="headArea">
+            <p class="responsiveSubHeadline">Kanban Project Management Tool</p>
+            <h1 class="headlineT">Add Task</h1>
+        </div>
+        <div class="formular">
+            <div class="leftSide">
+                <div class="formularSection">
+                    <p>Title</p>
+                    <input id="title" class="inputField" type="text" placeholder="Enter a Title">
+                    <div class="alert d-none" id="alertTitle">The Title should have at least two letters</div>
+                </div>
+                <div class="formularSection">
+                    <p>Description</p>
+                    <textarea class="textareaField" name="" id="description" cols="30" rows="5"
+                        placeholder="Enter a Description"></textarea>
+                    <div class="alert d-none" id="alertDescription">The Description should have at least two letters
+                    </div>
+                </div>
+                <div class="formularSection">
+                    <p>Category</p>
+                    <div class="categoryContainer" id="category">
+                        <div onclick="dropdown()" class="selectHeadFieldOriginal">
+                            <span id="choiceContainer">Select Task Category</span>
+                            <div class="colorChoice" id="colorChoice" style="background-color: transparent ;"></div>
+                            <img class="dropdownImg" src="assets/img/Add Task/dropdown.png">
+                        </div>
+                        <div class="selectFields d-none" id="selectFields">
+                            <div onclick="createNewCategory()" class="selectOption">
+                                New Category
+                            </div>
+                            <div onclick="checkButton('Sales','#E200BE')" class="selectOption">
+                                Sales
+                                <div class="selectOptionColor sales"></div>
+                                <input type="radio" name="category" id="Sales" value="#E200BE" style="opacity:0;">
+                            </div>
+                            <div onclick="checkButton('Backoffice','#1fd7c1')" class="selectOption">
+                                Backoffice
+                                <div class="selectOptionColor backoffice"></div>
+                                <input type="radio" name="category" id="Backoffice" value="#1fd7c1" style="opacity:0;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert d-none" id="alertCategory">Set a Category</div>
+                </div>
+            </div>
+            <div class="grayLine"></div>
+            <div class="rightSide">
+                <div class="upperRightside">
+                    <div class="formularSection">
+                        <p>Due date</p>
+                        <input id="dueDate" class="inputField inputWidth3" type="date">
+                        <div class="alert d-none" id="alertDate">Set a due date</div>
+                    </div>
+                    <div class="formularSection">
+                        <p>Prio</p>
+                        <div class="prioBox">
 
 
-             <button onclick="requestNewTask(${i})" class="createTaskBtn grayHighlight" type="submit">
-                 Create Task
-                 <img class="btnImg" src="assets/img/Add Task/create.png">
-             </button>
+                            <div class="prioDoubleContainerOriginal">
+                                <div onclick="setPrio('prioUrgentHighlight','urgent')" class="prio" id="prioUrgent">
+                                    <span>
+                                        Urgent
+                                    </span>
+                                    <img class="prioImg" src="assets/img/Add Task/urgent.png">
+                                    <input value="urgent" class="prioInput" type="radio" name="prio" id="urgent">
+                                </div>
+                                <div onclick="setPrio('prioUrgentHighlight','urgent')"
+                                    class="prioSelected orange d-none" id="prioUrgentHighlight">
+                                    <span>
+                                        Urgent
+                                    </span>
+                                    <img class="prioImg" src="assets/img/Add Task/urgentPrioWhite.png">
 
-         </div>
-     </div>
- </div>
+                                </div>
+                            </div>
+                            <div class="prioDoubleContainerOriginal">
+                                <div onclick="setPrio('prioMediumHighlight','medium')" class="prio" id="prioMedium">
+                                    <span>
+                                        Medium
+                                    </span>
+                                    <img class="prioImg" src="assets/img/Add Task/medium.png">
+                                    <input value="medium" class="prioInput" type="radio" name="prio" id="medium">
+
+                                </div>
+                                <div onclick="setPrio('prioMediumHighlight','medium')"
+                                    class="prioSelected yellow d-none" id="prioMediumHighlight">
+                                    <span>
+                                        Medium
+                                    </span>
+                                    <img class="prioImg" src="assets/img/Add Task/mediumPrioWhite.png">
+                                </div>
+                            </div>
+                            <div class="prioDoubleContainerOriginal">
+                                <div onclick="setPrio('prioLowHighlight','low')" class="prio" id="prioLow">
+                                    <span>
+                                        Low
+                                    </span>
+                                    <img class="prioImg" src="assets/img/Add Task/low.png">
+                                    <input value="low" class="prioInput" type="radio" name="prio" id="low">
+                                </div>
+                                <div onclick="setPrio('prioLowHighlight','low')" class="prioSelected green d-none"
+                                    id="prioLowHighlight">
+                                    <span>
+                                        Low
+                                    </span>
+                                    <img class="prioImg" src="assets/img/Add Task/lowPrioWhite.png">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alertPriority d-none" id="alertPriority">Set a priority</div>
+                    </div>
+                    <div class="formularSection">
+                        <div class="subtaskContainer">
+                            <p>Subtasks</p>
+                            <input id="subtask" class="subtasks" type="text" placeholder="Add new subtask">
+                            <img onclick="addSubtask()" class="subtaskPlusOriginal" src="assets/img/Add Task/plus.png">
+                        </div>
+                        <div class="noSubtask d-none" id="noSubtask">Write a Subtask</div>
+                        <div class="subtaskList" id="subtaskList"></div>
+                    </div>
+                    <div class="formularSection">
+                        <div class="taskBtnsOriginal">
+                            <button class="clearBtnOriginal" onclick="clearBackend()" >
+                                Clear
+                                <img  class="btnImg2" src="assets/img/Add Task/clear.png">
+                            </button>
+            
+            
+                            <button onclick="requestNewTask(${i}); return false"  class="createTaskBtn grayHighlight" type="submit" >
+                                Create Task
+                                <img class="btnImg" src="assets/img/Add Task/create.png">
+                            </button>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 `
 }

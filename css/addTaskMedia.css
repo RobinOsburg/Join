@@ -1,35 +1,90 @@
 /*Responsiveness Add task*/
 
-@media(max-width:1200px){
+@media(max-width:1200px){   /*switching from normal layout to responsive layout*/
     .addTaskContainer{
-        height: calc(100vh - 55px - 84px);
+        height: calc(100vh - 55px - 88px) !important;
+        width: 100vw !important;
+    }
+
+    .responsiveSubHeadline{
+        display: flex !important;
     }
 }
 
-
-@media(max-width:820px) and (max-height:1180px){
-   
-     .addTaskContainer{
-        overflow-y: scroll;
-        height: 77vh;
+@media(max-height:720px) and (max-width:1025px){  /*low height high width*/
+    .formular{
+        flex-direction: column;
     }
 
-    .grayLine{
-        display: none;
+    .addTaskContainer{
+        overflow: auto;
     }
 
-    .rightSide{
-        padding-top: 0 !important;
-    }
-    
-    .rightSide{
-        width: 90% !important;
-    }
+   .formular{
+    align-items: center !important;
+   }
 
-    .leftSide{
-        width: 90% !important;
-    }
+   .headlineT{
+    width: 100%;
+    text-align: center;
+   }
+
+   .leftSide{
+      width: 80% !important;
+   }
+
+   .rightSide{
+      width: 80% !important;
+   }
+
+   .grayLine{
+    display: none;
 }
+}
+
+@media(max-width:880px){ /*smartphone / tablet*/
+    .formular{
+        flex-direction: column;
+    }
+
+    .addTaskContainer{
+        overflow: auto;
+    }
+
+   .formular{
+    align-items: center !important;
+   }
+
+   .workSpace{      /*shifting the headline*/
+    align-items: center;
+   }
+
+   .headArea{
+    display: flex;
+    width: 95%;
+    justify-content: flex-start;
+   }
+
+   .headlineT{
+    width: 100%;
+    margin: 0;
+    text-align: left;
+   }
+
+   .leftSide{
+      width: 80% !important;
+   }
+
+   .rightSide{
+      width: 80% !important;
+   }
+
+   .grayLine{
+    display: none;
+} 
+}
+
+
 
 
 @media (max-width:1250px) {
@@ -94,9 +149,7 @@
         font-size: 47px;
     }
 
-    .rightSide{
-        padding-top: 70px;
-    }
+ 
 
     .headlineB {
         font-size: 47px;
@@ -205,11 +258,6 @@
 
 
 
-@media(max-width:885px) {
-    .upperRightSide {
-        width: 75%;
-    }
-}
 
 @media (max-width:800px) {
 
@@ -293,28 +341,50 @@
         width: 80%;
     }
 
-    .rightSide {
-        width: 80%;
-        padding: 0;
-        padding-bottom: 10vh;
-    }
+    
 
     .headerAndTaskContainer {
         width: 100%;
     }
 
-    .upperRightSide {
-        width: 75%;
-    }
-
+   
     .inputWidth3 {
         width: 96%;
     }
 }
 
+@media(max-width:660px){  /*displaying the responsive create and clear btns*/
+    .taskBtnsResponsive{
+        display: flex !important;
+    }
+
+    .taskBtnsOriginal{
+        display: none !important;
+    }
+
+    .workSpace{
+        width: 95% !important;
+    }
+
+    .leftSide{
+        width: 95% !important;
+    }
+
+    .rightSide{
+        width: 95% !important;
+    }
+}
 
 
-@media (max-width:500px) {
+@media (max-width:505px) {
+    .btnText{
+        display: none!important;
+    }
+
+    .createTaskBtn{
+        width: 67px !important;
+    }
+
     .mobileText {
         padding-right: 63px;
     }
@@ -327,9 +397,7 @@
         width: 100%;
     }
 
-    .rightSide {
-        width: 100%;
-    }
+
 
     .inputWidth {
         width: 85%;
@@ -343,9 +411,7 @@
         width: 97%;
     }
 
-    .upperRightSide {
-        width: 89%;
-    }
+   
 
     .workSpace p {
         width: 88%;
@@ -361,15 +427,17 @@
 
 }
 
+@media(max-width:475px){
+    .taskBtnsResponsive{
+        right: 28% !important;
+    }
+}
+
 @media(max-width:460px){
     .taskBtnsOriginal{
         flex-direction: column;
         align-items: center;
         gap: 10px;
-    }
-
-    .clearBtnOriginal{
-        width: 158px;
     }
 }
 
@@ -387,9 +455,30 @@
         text-align: center;
     }
 
-    .headlineT {
-        text-align: center;
-    }
+   
+}
 
+@media(max-width:325px){
+  .clearBtnOriginal{
+    padding-left: 11px !important;
+    padding-right: 11px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+}
+
+@media(max-width:1200px){
+
+    .bigContainer{
+        flex-direction: column;
+    }
+    
+  
+
+
+.responsiveNavbar {
+    display: flex;
+    height: 84px;
+}
 
 }

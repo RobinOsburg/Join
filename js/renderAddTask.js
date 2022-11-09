@@ -158,7 +158,7 @@ function returnAssignToContainer2(i, initials, colorID) {
 function returnSearchContactInterface() {
     return /*html*/`
         <div class="searchContactContainer">
-            <input onkeyup="findContact()" type="text"  id="searchContactInput" placeholder="Contact e-mail" class="selectField adjustWidth5">
+            <input onkeyup="findContact()" type="text"  id="searchContactInput" placeholder="Contact e-mail" class="searchFieldAssignTo">
             <img class="searchNavImg1" src="assets/img/Add Task/clear.png" onclick="returnToNormalContactInterface()">  
         </div>
         <div class="foundContacts" id="foundContacts"></div>

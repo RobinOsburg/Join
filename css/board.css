@@ -1,7 +1,37 @@
+/*board general structure*/
+
 .bigContainer{
     overflow: hidden;
 }
 
+.contentBoard {
+    width: 100%;
+    height: calc(100vh - 55px - 84px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content{
+    width: 95%;
+}
+
+
+.headArea{
+    display: flex;
+    flex-direction: column;
+}
+
+.normalHeadArea h1{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.normalHeadArea{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .boardPopUp {
     height: 100%;
@@ -13,9 +43,153 @@
     gap: 15px;
 }
 
-.contentBoard {
-    width: 82vw;
+.allTasks {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 5px;
+    background-color: blue;
+    height: calc(100vh - 84px - 100px - 5px);
+    overflow: auto;
 }
+
+/* headarea */
+
+.inputContainerBoard {
+    position: relative;
+}
+
+.inputContainerBoardResponsive{
+   position: relative;
+   display: none;
+}
+
+.searchField {
+    padding: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    border: 1px solid #D1D1D1;
+    color: #D1D1D1;
+    border-radius: 5px;
+    height: 37px;
+    margin-top: 12px;
+}
+
+.searchNav{ /*parent*/
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    position: absolute;
+    top: 36%;
+    width: 69px;
+    left: 72%;
+}
+
+.searchNavResponsive{ /*parent*/
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    position: absolute;
+    top: 36%;
+    left: 26%;
+    width: 69px;
+}
+
+.addTaskBtn { /*parent*/
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 300;
+    margin-right: 10px;
+    margin-left: -20px;
+    font-size: 21px;
+    font-weight: 700;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 190px;
+    gap: 5px;
+}
+
+.btnImg {
+    height: 13px;
+    margin-left: 3px;
+}
+
+/*  */
+
+.inputPlusBtn{
+    display: flex;
+    align-items: center;
+}
+
+.grayLineBoard {
+    background-color: #D1D1D1;
+    height: 25px;
+    width: 0;
+    border: 0.5px solid #D1D1D1;
+}
+
+.inputImageLoup {
+    height: 27px;
+    width: auto;
+}
+/*  */
+
+/* middlestructure all tasks */
+
+.allTasks span {
+    font-size: 21px;
+    font-weight: 700;
+    overflow-y: hidden;
+}
+
+.boardTaskContainer {
+    position: relative;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    /**/
+}
+
+.status {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #F5F5F5;
+    margin-bottom: 10px;
+}
+
+.status span {
+    height: 100%;
+}
+
+.statusContainer {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .headlineB {
@@ -54,17 +228,6 @@
 }
 
 
-.searchField {
-    padding: 8px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    font-size: 16px;
-    border: 1px solid #D1D1D1;
-    color: #D1D1D1;
-    border-radius: 5px;
-    height: 37px;
-    margin-top: 12px;
-}
 
 
 .searchField:hover {
@@ -72,13 +235,6 @@
 }
 
 
-.inputImageLoup {
-    position: absolute;
-    left: 77%;
-    top: 43%;
-    height: auto;
-    width: 16px;
-}
 
 
 .dropLineToDo {
@@ -115,15 +271,8 @@
 
 }
 
-.inputContainerBoard {
-    width: 100%;
-    position: relative;
-    margin: 1.5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 23px;
-}
+
+
 
 .subtasksBPopUpContainer {
     display: flex;
@@ -140,28 +289,13 @@
 }
 
 
-.grayLineBoard {
-    background-color: #D1D1D1;
-    height: 20px;
-    width: 0;
-    border: 0.5px solid #D1D1D1;
-    top: 19px;
-    left: 72%;
-    position: absolute;
-}
+
 
 .categoryContainerS {
     width: 72%;
 }
 
 
-.allTasks {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding-left: 5px;
-    height: 60vh;
-}
 
 
 .plusBoard {
@@ -190,33 +324,10 @@
 }
 
 
-.status {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #F5F5F5;
-    margin-bottom: 10px;
-}
-
-.status span {
-    height: 100%;
-}
 
 
-.boardTaskContainer {
-    position: relative;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    /**/
-}
+
+
 
 
 .d-none {
@@ -381,10 +492,6 @@
     align-items: center;
 }
 
-.statusContainer {
-    width: 100%;
-    height: 100%;
-}
 
 
 .task {
@@ -691,15 +798,7 @@
 }
 
 
-.popUpContent {
-    position: relative;
-    background-color: white;
-    height: 92%;
-    width: 80%;
-    padding-top: 10px;
-    border-radius: 30px;
-    overflow: hidden;
-}
+
 
 
 .closePopUp {
@@ -990,3 +1089,45 @@
 .newCategorySignature {
     position: relative;
 }
+
+/*adjusting the add task mask for the board pop up*/
+
+
+.popUpContent {
+    position: relative;
+    background-color: white;
+    height: 92%;
+    width: 80%;
+    padding-top: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-none{
+    display: none;
+}
+
+.closePopUp{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    height: 20px;
+}
+
+.headerPlusResponsiveBtn{
+    display: none;
+}
+
+.taskBtnsResponsive {
+    position: absolute;
+    display: none;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 10px;
+    top: 10%;
+    right: 19%;
+}
+
