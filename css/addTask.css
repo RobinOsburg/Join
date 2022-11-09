@@ -9,20 +9,3 @@
     height: 100vh;
 }
 
-
-
-
-
-@media(max-width:1200px){
-
-    .bigContainer{
-        flex-direction: column;
-    }
-    
-.headerAndTaskContainer {
-    flex: 1;
-}
-
-
-
-}
