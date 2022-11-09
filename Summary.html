@@ -70,7 +70,7 @@
                     <div class="overviewPlusGreet">
                         <div class="overview">
                             <div class="summarysFirstLine ">
-                                <div class="summaryPosition" onclick="goToBoard()" >
+                                <div class="summaryPosition" onclick="goToBoard()">
                                     <span class="summaryNumbers" id="tasksTotal"></span>
                                     <span>Tasks in Board</span>
                                 </div>
@@ -99,15 +99,17 @@
                                 </div>
                             </div>
                             <div class="summarysThirdLine" onclick="goToBoard()">
-                                <div onclick="goToBoard()" onmouseover="whitePenImg()" onmouseout="blackPenImg()" class="summaryPositionThirdLine">
+                                <div onclick="goToBoard()" onmouseover="whitePenImg()" onmouseout="blackPenImg()"
+                                    class="summaryPositionThirdLine">
                                     <img id="pen" src="assets/img/Summary/penSummary.png">
                                     <div class="thirdLineCharacters">
                                         <span class="summaryNumbers" id="tasksToDo"></span>
                                         <span>To Do</span>
                                     </div>
                                 </div>
-                                <div onclick="goToBoard()" onmouseover="whiteCheckImg()" onmouseout="blackCheckImg()" class="summaryPositionThirdLine">
-                                    <img  id="check" src="assets/img/Summary/checkSummary.png">
+                                <div onclick="goToBoard()" onmouseover="whiteCheckImg()" onmouseout="blackCheckImg()"
+                                    class="summaryPositionThirdLine">
+                                    <img id="check" src="assets/img/Summary/checkSummary.png">
                                     <div class="thirdLineCharacters">
                                         <span class="summaryNumbers" id="tasksDone"></span>
                                         <span>Done</span>
@@ -225,3 +227,142 @@
 
 </div>
  -->
+<div class="addTaskContainer">
+    <img onclick="closePopUp()" class="closePopUp" src="assets/img/Add Task/cross.png">
+    <div class="workSpace">
+        <div class="leftSide">
+            <h1 class="headlineT">Add Task</h1>
+            <p class="leftSideP">Title</p>
+
+            <input id="title" class="inputField inputWidth" type="text" placeholder="Enter a Title">
+            <div class="alert d-none" id="alertTitle">The Title should have at least two letters</div>
+
+            <p class="leftSideP">Description</p>
+            <textarea class="textareaField inputWidth" name="" id="description" cols="30" rows="10"></textarea>
+            <div class="alert d-none" id="alertDescription">The Description should have at least two letters</div>
+            <p class="leftSideP">Category</p>
+            <div class="categoryContainer" id="category">
+                <div onclick="dropdown()" class="selectHeadFieldPopUp">
+                    <span id="choiceContainer">Select Task Category</span>
+                    <div class="colorChoice" id="colorChoice" style="background-color: transparent ;"></div>
+                    <img class="dropdownImgPopUp" src="assets/img/Add Task/dropdown.png">
+                </div>
+                <div class="selectFields d-none" id="selectFields">
+                    <div onclick="createNewCategory()" class="selectOption">
+                        New Category
+                    </div>
+                    <div onclick="checkButton('Sales','#E200BE')" class="selectOption">
+                        Sales
+                        <div class="selectOptionColor sales"></div>
+                        <input type="radio" name="category" id="Sales" value="#E200BE" style="opacity:0;">
+                    </div>
+                    <div onclick="checkButton('Backoffice','#1fd7c1')" class="selectOption">
+                        Backoffice
+                        <div class="selectOptionColor backoffice"></div>
+                        <input type="radio" name="category" id="Backoffice" value="#1fd7c1" style="opacity:0;">
+                    </div>
+                </div>
+            </div>
+            <div class="alert d-none" id="alertCategory"></div>
+
+            <p class="leftSideP">Assigned to</p>
+            <select id="assignedTo" required class="selectField inputWidth2">
+                <option value="You">Select Contacts to Assign</option>
+                <option value="You">You</option>
+                <option value="Max Mustermann">Max Mustermann</option>
+                <option value="">Invite new contact</option>
+            </select>
+            <div class="alert d-none" id="alertContact">Assign the task to a contact</div>
+
+        </div>
+        <div class="grayLine"></div>
+        <div class="rightSide">
+            <div class="upperRightSide">
+                <p>Due date</p>
+                <input id="dueDate" class="inputField inputWidth3" type="date">
+                <div class="alert d-none" id="alertDate">Set a due date</div>
+                <p>Prio</p>
+                <div class="prioBox">
+                    <!-- in buttons ändern und id geben -->
+
+                    <div class="prioDoubleContainer">
+                        <div onclick="setPrio('prioUrgentHighlight','urgent')" class="prio" id="prioUrgent">
+                            <span>
+                                Urgent
+                            </span>
+                            <img class="prioImg" src="assets/img/Add Task/urgent.png">
+                            <input value="urgent" class="prioInput" type="radio" name="prio" id="urgent">
+                        </div>
+                        <div onclick="setPrio('prioUrgentHighlight','urgent')" class="prioSelected orange d-none"
+                            id="prioUrgentHighlight">
+                            <span>
+                                Urgent
+                            </span>
+                            <img class="prioImg" src="assets/img/Add Task/urgentPrioWhite.png">
+
+                        </div>
+                    </div>
+                    <div class="prioDoubleContainer">
+                        <div onclick="setPrio('prioMediumHighlight','medium')" class="prio" id="prioMedium">
+                            <span>
+                                Medium
+                            </span>
+                            <img class="prioImg" src="assets/img/Add Task/medium.png">
+                            <input value="medium" class="prioInput" type="radio" name="prio" id="medium">
+
+                        </div>
+                        <div onclick="setPrio('prioMediumHighlight','medium')" class="prioSelected yellow d-none"
+                            id="prioMediumHighlight">
+                            <span>
+                                Medium
+                            </span>
+                            <img class="prioImg" src="assets/img/Add Task/mediumPrioWhite.png">
+                        </div>
+                    </div>
+                    <div class="prioDoubleContainer">
+                        <div onclick="setPrio('prioLowHighlight','low')" class="prio" id="prioLow">
+                            <span>
+                                Low
+                            </span>
+                            <img class="prioImg" src="assets/img/Add Task/low.png">
+                            <input value="low" class="prioInput" type="radio" name="prio" id="low">
+                        </div>
+                        <div onclick="setPrio('prioLowHighlight','low')" class="prioSelected green d-none"
+                            id="prioLowHighlight">
+                            <span>
+                                Low
+                            </span>
+                            <img class="prioImg" src="assets/img/Add Task/lowPrioWhite.png">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="alertPriority d-none" id="alertPriority">Set a priority</div>
+                <p class="subtaskHL">Subtasks</p>
+                <div class="subtaskContainer">
+                    <input id="subtasks" class="subtasks" type="text" placeholder="Add new subtask">
+                    <img onclick="addSubtaskFromBoard()" class="subtaskPlusPopUp" src="assets/img/Add Task/plus.png">
+                    <div class="noSubtask d-none" id="noSubtask">Write a Subtask</div>
+                </div>
+                <div class="subtaskListPopUp" id="subtaskListPopUp"></div>
+            </div>
+            <div class="taskBtns">
+                <button class="clearBtn" onclick="clearBackend()">
+                    Clear
+                    <img class="btnImg2" src="assets/img/Add Task/clear.png">
+                </button>
+
+
+                <button onclick="requestNewTaskFromBoard('${id}')" class="createTaskBtn grayHighlight" type="submit">
+                    Create Task
+                    <img class="btnImg" src="assets/img/Add Task/create.png">
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+`
+}
+
+

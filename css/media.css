@@ -421,28 +421,3 @@
     }
 }
 
-@media (max-width:400px) {
-    .clearBtnResponsive {
-        display: none;
-    }
-
-    .createTaskBtnResponsive {
-        display: none;
-    }
-
-    .clearBtnResponsiveAD {
-        display: none !important;
-    }
-
-    .createTaskBtnResponsiveAD {
-        display: none;
-    }
-
-    .clearBtnResponsive2 {
-        display: flex;
-    }
-
-    .createTaskBtnResponsive2 {
-        display: flex;
-    }
-}

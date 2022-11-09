@@ -571,6 +571,11 @@
     margin-left: 3px;
 }
 
+.btnImg {
+    height: 11px;
+    margin-left: 3px;
+}
+
 .createTaskBtn {
     border-radius: 5px;
     color: white;

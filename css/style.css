@@ -901,18 +901,9 @@ h1 {
     padding-left: 10px;
 }
 
-.responsiveHeaderPopUp{
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 10%);
-    padding-bottom: 10px;
-}
 
-.responsiveLogoPopUp{
-    height: 42px;
-    margin-left: 6%;
-}
+
+
 
 
 .taskBtns {
@@ -968,21 +959,7 @@ h1 {
     padding-bottom: 10px;
 }
 
-.createTaskBtnResponsive{
-    border-radius: 5px;
-    color: white;
-    font-weight: 400;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 10px;
-    font-size: 16px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .createTaskBtnResponsiveAD{
     border-radius: 5px;
@@ -995,20 +972,7 @@ h1 {
     width: 160px;
 }
 
-.createTaskBtnResponsive2{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    color: white;
-    font-weight: 400;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-right: 10px;
-    font-size: 16px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+
 
 
 
@@ -1765,12 +1729,7 @@ x
 }
 
 
-.closePopUp {
-    position: absolute;
-    top: 10px;
-    left: 96%;
-    height: 25px;
-}
+
 
 
 .closePopUp:hover {
