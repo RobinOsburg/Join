@@ -6,6 +6,7 @@ async function downloadSummary() {
     let currentUserAsString = backend.getItem('user');
     currentUser = JSON.parse(currentUserAsString) || [];
     renderGreet(currentUser);
+    
 }
 
 
@@ -36,6 +37,7 @@ function renderSummary(tasksTotal, tasksInProgress, tasksFeedback, tasksUrgent, 
 
 
 function renderGreet(currentUser) {
+    renderGreetMobile(currentUser)
     let today = new Date();
     let currHour = today.getHours();
     if (currHour < 12) {
@@ -62,17 +64,57 @@ function renderGreet(currentUser) {
 }
 
 
+function renderGreetMobile(currentUser) {
+    if (innerWidth < 900) {
+        let today = new Date();
+        let currHour = today.getHours();
+            if (currHour < 12) {
+                document.getElementById('mobileGreet').classList.remove('d-none');
+                document.getElementById('mobileGreet').classList.add('mobileGreet');
+                document.getElementById('mobileGreet').innerHTML = /*html*/`
+            <span class ="greetTime">Good Morning,</span>
+            `
+            } else if (currHour < 18) {
+                document.getElementById('mobileGreet').classList.remove('d-none');
+                document.getElementById('mobileGreet').classList.add('mobileGreet');
+                document.getElementById('mobileGreet').innerHTML = /*html*/`
+            <span class ="greetTime">Good Afternoon,</span>
+            `
+            } else {
+                document.getElementById('mobileGreet').classList.remove('d-none');
+                document.getElementById('mobileGreet').classList.add('mobileGreet');
+                document.getElementById('mobileGreet').innerHTML = /*html*/`
+            <span class ="greetTime">Good Evening,</span>
+            `
+            } if (currentUser <= 0) {
+                document.getElementById('mobileGreet').innerHTML += /*html*/ `<span class="greetName">Guest</span>`;
+            }
+
+            for (let i = 0; i < currentUser.length; i++) {
+                let user = currentUser[i]['name'];
+                document.getElementById('mobileGreet').innerHTML += /*html*/ `<span class="greetName">${user}</span>`;
+
+            }
+            setTimeout(() => {
+             document.getElementById('mobileGreet').classList.remove('mobileGreet');
+             document.getElementById('mobileGreet').classList.add('d-none');
+            }, 2000);
+
+
+        
+    }
+}
 
 
 
 
 function showNextDeadline() {
     if (allTasks.length == 0) {
-       return "0 Deadlines"
-    } else{
-    currentDate = allTasks.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
+        return "0 Deadlines"
+    } else {
+        currentDate = allTasks.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
 
-    return currentDate[0]['dueDate'];
+        return currentDate[0]['dueDate'];
     }
 };
 
