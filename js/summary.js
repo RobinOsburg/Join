@@ -67,8 +67,13 @@ function renderGreet(currentUser) {
 
 
 function showNextDeadline() {
+    if (allTasks.length == 0) {
+       return "0 Deadlines"
+    } else{
     currentDate = allTasks.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
+
     return currentDate[0]['dueDate'];
+    }
 };
 
 
