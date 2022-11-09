@@ -189,6 +189,19 @@
 
 }
 
+.mobileGreet{ 
+    z-index: 3;
+    height: 90vh;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .summaryPositionCointainer {
     display: flex;
@@ -273,4 +286,8 @@
 
 .summaryPositionThirdLine span {
     text-align: center;
+}
+
+.d-none{
+    display: none;
 }
