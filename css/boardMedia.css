@@ -413,10 +413,14 @@
 
     }
 
-    @media(max-width:500px){
+    @media(max-width:500px){  /*making the pop up responsive for smart phone*/
+        .popUp{
+            height: calc(100vh - 84px) !important;
+        }
+
         .popUpContent {
             width: 100% !important;
-            height: 100vh !important;
+            height: calc(100vh - 84px) !important;
             top: 0;
             border-radius: 0 !important;
             background-color: #F5F5F5;
@@ -439,6 +443,14 @@
         .closePopUp{
             top: 10%;
             right: 11%;
+        }
+
+        .responsiveHeaderPopUp {
+            display: flex;
+        }
+
+        .taskBtnsOriginal{
+            display: none;
         }
     }
 
@@ -498,6 +510,32 @@
         }
     }
 
+    @media (max-width:400px) { /*adjusting the Buttons of the add task pop up*/
+        .clearBtnResponsive {
+            display: none;
+        }
+    
+        .createTaskBtnResponsive {
+            display: none;
+        }
+    
+        .clearBtnResponsiveAD {
+            display: none !important;
+        }
+    
+        .createTaskBtnResponsiveAD {
+            display: none;
+        }
+    
+        .clearBtnResponsive2 {
+            display: flex;
+        }
+    
+        .createTaskBtnResponsive2 {
+            display: flex;
+        }
+    }
+
     /* adjusting the font sizes of the allTasks Spans */
 
     @media(max-width:1070px) {
@@ -523,5 +561,7 @@
             font-size: 14px !important;
         }
     }
+
+    
 
 
