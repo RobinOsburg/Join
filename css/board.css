@@ -257,7 +257,6 @@
     padding: 4px 36.5px;
     gap: 10px;
     width: 142px;
-    height: 40px;
     background: #FC71FF;
     color: white;
     border-radius: 8px;
@@ -1382,10 +1381,11 @@
 .prioBox {   /*parent*/
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 97%;
     margin-bottom: 34px;
     height: 33px;
     gap: 5px;
+    margin-left: 9px;
 }
 
 .prioDoubleContainerOriginal {
