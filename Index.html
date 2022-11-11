@@ -40,11 +40,13 @@
                 <div class="inputContainer">
                     <input class="inputFieldLogin" type="email" placeholder="Email" id="loginEmail">
                     <img class="inputImageMail" src="assets/img/LogIn/mail.png">
+                    <span class="redText" id="logInNeededMail"></span>
                 </div>
 
                 <div class="inputContainer">
                     <input class="inputFieldLogin" type="password" placeholder="Password" id="loginPassword">
                     <img class="inputImageLock" src="assets/img/LogIn/lock.png">
+                    <span class="redText" id="logInNeededPw"></span>
                 </div>
 
         </div>
@@ -60,7 +62,7 @@
         </div>
 
         <div class="logInButtons">
-            <button onclick="logIn()" class="grayHighlight loginBtn">Log in</button>
+            <button onclick="confirmLogIn()" class="grayHighlight loginBtn">Log in</button>
             <button onclick=" directToSummary()" class="guestBtn">Guest Log in </button>
         </div>
         </form>

@@ -76,6 +76,29 @@ async function logIn(){
 }
 
 
+function confirmLogIn() {
+    let mail = document.getElementById('loginEmail').value;
+    let password = document.getElementById('loginPassword').value;
+    logInValidation(name, mail, password);
+}
+
+
+
+function logInValidation(mail, password) {
+    if (mail.length < 2) {
+
+        document.getElementById('logInNeededMail').innerHTML = 'Enter your Email adress'
+    }
+    if (password.length < 2) {
+
+        document.getElementById('logInNeededPw').innerHTML = 'Enter your password'
+    }
+    else {
+        logIn();
+    }
+}
+
+
  
 
 
