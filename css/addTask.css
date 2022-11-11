@@ -147,6 +147,18 @@
     box-sizing: border-box;
 }
 
+.selectOption:hover {
+    background: #D1D1D1;
+    cursor: pointer;
+}
+
+
+.selectOption:last-child {
+    border-bottom: 1px solid #D1D1D1;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
 .selectOptionColor {
     height: 8px;
     width: 8px;

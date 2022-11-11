@@ -8,11 +8,11 @@ function openSection(target){
 }
 
 function logOut(){
-    window.location.href='https://gruppe-335.developerakademie.net/join/join2/index.html?msg=Du hast dich erfolgreich registriert';
+    window.location.href='https://gruppe-335.developerakademie.net/join/join2/index.html';
 }
 
 function returnTo(){
-    window.location.href= "https://gruppe-335.developerakademie.net/join/join2/Summary.html"
+    window.location.href= "https://gruppe-335.developerakademie.net/join/join2/summary.html"
 }
 
 function moveToForgotPw(){
@@ -20,7 +20,7 @@ function moveToForgotPw(){
 }
 
 function moveToLogIn(){
-    window.location.href= "https://gruppe-335.developerakademie.net/join/join2/Index.html"
+    window.location.href= "https://gruppe-335.developerakademie.net/join/join2/index.html"
 }
 
 function moveToResetPw(){

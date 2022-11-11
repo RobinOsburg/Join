@@ -20,7 +20,7 @@ async function addUser(){
     let password = document.getElementById('signUpPassword');
     allUsers.push({name:name.value, email:email.value,password:password.value})
     await backendIntegrationSignUp();
-    window.location.href='index.html?msg=Du hast dich erfolgreich registriert';
+    window.location.href='https://gruppe-335.developerakademie.net/join/join2/index.html?msg=Du hast dich erfolgreich registriert';
 }
 
 /**
@@ -33,7 +33,7 @@ async function backendIntegrationSignUp(){
 
 
 function backToLogIn(){
-    window.location.href='index.html?msg=Du hast dich erfolgreich registriert';
+    window.location.href='https://gruppe-335.developerakademie.net/join/join2/index.html';
 }
 
 
