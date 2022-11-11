@@ -26,15 +26,15 @@ async function backendIntegrationLogin(){
  * 
  */
 function directToSummary(){
-    window.location.href="https://gruppe-335.developerakademie.net/join/join2/summary.html"
+    window.location.href="https://gruppe-335.developerakademie.net/Join-1/summary.html"
 }
 
-/**
+/**   
  * directs to sign up
  * 
  */
 function signUp(){
-    window.location.href="https://gruppe-335.developerakademie.net/join/join2/signUp.html"
+    window.location.href="https://gruppe-335.developerakademie.net/Join-1/signUp.html"
 }
 
 /**
