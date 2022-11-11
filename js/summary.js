@@ -11,7 +11,7 @@ async function downloadSummary() {
 
 
 let allTasks;
-
+let comingFromLogIn;
 
 function prepareSummary() {
     let tasksTotal = countTasks();
@@ -68,31 +68,28 @@ async function renderGreetMobile(comingFromLogIn) {
     if (innerWidth < 900 && comingFromLogIn == true) {
         let today = new Date();
         let currHour = today.getHours();
-            if (currHour < 12) {
-                document.getElementById('mobileGreet').classList.remove('d-none');
-                document.getElementById('mobileGreet').classList.add('mobileGreet');
-                document.getElementById('mobileGreet').innerHTML = /*html*/`
+        if (currHour < 12) {
+            removeAndAddClass()
+            document.getElementById('mobileGreet').innerHTML = /*html*/`
             <span class ="greetTime">Good Morning,</span>
             `
-            } else if (currHour < 18) {
-                document.getElementById('mobileGreet').classList.remove('d-none');
-                document.getElementById('mobileGreet').classList.add('mobileGreet');
-                document.getElementById('mobileGreet').innerHTML = /*html*/`
+        } else if (currHour < 18) {
+            removeAndAddClass()
+            document.getElementById('mobileGreet').innerHTML = /*html*/`
             <span class ="greetTime">Good Afternoon,</span>
             `
-            } else {
-                document.getElementById('mobileGreet').classList.remove('d-none');
-                document.getElementById('mobileGreet').classList.add('mobileGreet');
-                document.getElementById('mobileGreet').innerHTML = /*html*/`
+        } else {
+            removeAndAddClass()
+            document.getElementById('mobileGreet').innerHTML = /*html*/`
             <span class ="greetTime">Good Evening,</span>
             `
-            } if (currentUser <= 0) {
-                document.getElementById('mobileGreet').innerHTML += /*html*/ `<span class="greetName">Guest</span>`;
-            }
+        } if (currentUser <= 0) {
+            document.getElementById('mobileGreet').innerHTML += /*html*/ `<span class="greetName">Guest</span>`;
+        }
 
-            for (let i = 0; i < currentUser.length; i++) {
-                let user = currentUser[i]['name'];
-                document.getElementById('mobileGreet').innerHTML += /*html*/ `<span class="greetName">${user}</span>`;
+        for (let i = 0; i < currentUser.length; i++) {
+            let user = currentUser[i]['name'];
+            document.getElementById('mobileGreet').innerHTML += /*html*/ `<span class="greetName">${user}</span>`;
 
             }
             setTimeout(() => {
