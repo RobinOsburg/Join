@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    height:calc(100vh - 84px);
+    height: 100vh;
 }
 
 .helpHeadline {

@@ -36,7 +36,7 @@ function renderSummary(tasksTotal, tasksInProgress, tasksFeedback, tasksUrgent, 
 }
 
 
-function renderGreet(currentUser,comingFromLogIn) {
+function renderGreet(currentUser, comingFromLogIn) {
     renderGreetMobile(comingFromLogIn)
     let today = new Date();
     let currHour = today.getHours();
@@ -69,7 +69,7 @@ async function renderGreetMobile(comingFromLogIn) {
         let today = new Date();
         let currHour = today.getHours();
         if (currHour < 12) {
-            removeAndAddClass()
+            removeAndAddClass();
             document.getElementById('mobileGreet').innerHTML = /*html*/`
             <span class ="greetTime">Good Morning,</span>
             `
@@ -91,16 +91,21 @@ async function renderGreetMobile(comingFromLogIn) {
             let user = currentUser[i]['name'];
             document.getElementById('mobileGreet').innerHTML += /*html*/ `<span class="greetName">${user}</span>`;
 
-            }
-            setTimeout(() => {
-             document.getElementById('mobileGreet').classList.remove('mobileGreet');
-             document.getElementById('mobileGreet').classList.add('d-none');
-            }, 2000);
-    await noMoreGreeting()
+        }
+        setTimeout(() => {
+            document.getElementById('mobileGreet').classList.remove('mobileGreet');
+            document.getElementById('mobileGreet').classList.add('d-none');
+        }, 2000);
+        await noMoreGreeting()
     }
 }
 
-async function noMoreGreeting(){
+function removeAndAddClass() {
+    document.getElementById('mobileGreet').classList.remove('d-none');
+    document.getElementById('mobileGreet').classList.add('mobileGreet');
+}
+
+async function noMoreGreeting() {
     let comingFromLogIn = false;
     await backend.setItem('comingFromLogIn', JSON.stringify(comingFromLogIn));
 }
