@@ -264,28 +264,29 @@ h1 {
     margin: 1vh;
     display: flex;
     justify-content: center;
-    margin-bottom: 23px;
+    flex-direction: column;
+    align-items: center;
 }
-
-
-
-
 
 
 
 
 .inputImageName {
     position: absolute;
-    left: 80%;
+    left: 78%;
     top: 22%;
     height: 18px;
     width: auto;
 }
 
+.redText{
+    color: red;
+}
+
 
 .inputImageLock {
     position: absolute;
-    left: 80%;
+    left: 78%;
     top: 22%;
     height: 18px;
     width: auto;
@@ -294,7 +295,7 @@ h1 {
 
 .inputImageMail {
     position: absolute;
-    left: 80%;
+    left: 78%;
     top: 22%;
     height: auto;
     width: 16px;

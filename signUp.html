@@ -28,28 +28,31 @@
         <div class="underline"></div>
 
         <div class="inputFields">
-            <form onsubmit="addUser(); return false" ;>
+            
                 <div class="inputContainer">
                     <input class="inputField" id="signUpName" type="text" placeholder="Firstname Lastname" required>
                     <img class="inputImageName" src="assets/img/Sign Up/person.png">
+                    <span class="redText" id="signUpNeededName"></span>
                 </div>
 
                 <div class="inputContainer">
                     <input class="inputField" id="signUpEmail" type="email" placeholder="Email" required>
                     <img class="inputImageMail" src="assets/img/LogIn/mail.png">
+                    <span class="redText" id="signUpNeededMail"></span>
                 </div>
 
                 <div class="inputContainer">
                     <input class="inputField" id="signUpPassword" type="password" placeholder="Password" required>
                     <img class="inputImageLock" src="assets/img/LogIn/lock.png">
+                    <span class="redText" id="signUpNeededPw"></span>
                 </div>
 
         </div>
 
         <div class="logInButtons">
-            <button class="grayHighlight loginBtn">Sign Up</button>
+            <button onclick="confirmSignUp()" class="grayHighlight loginBtn">Sign Up</button>
         </div>
-        </form>
+        
     </div>
 
 </body>

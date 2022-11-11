@@ -32,6 +32,10 @@
     gap: 15px;
 }
 
+.helpContacts:hover{
+    cursor: pointer;
+}
+
 
 .help :hover {
     cursor: pointer;

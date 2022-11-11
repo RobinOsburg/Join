@@ -139,7 +139,7 @@
 }
 
 .addTaskBtn { /*parent*/
-    border-radius: 5px;
+    /* border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,8 +151,8 @@
     font-weight: 700;
     padding-top: 3px;
     padding-bottom: 3px;
-    width: 190px;
-    gap: 5px;
+    width: 192px;
+    gap: 5px; */
 }
 
 .btnImg {
