@@ -18,11 +18,7 @@ let comingFromLogIn;
  */
 async function backendIntegrationLogin(){
     await backend.setItem('user', JSON.stringify(currentUser));
-<<<<<<< HEAD
     await backend.setItem('comingFromLogIn', JSON.stringify(comingFromLogIn));
-=======
-    await backend.setItem('comingFromLogIn',JSON.stringify(comingFromLogIn));
->>>>>>> 2a6a4f94f403deec0c8414b5abb933d3b1ba4dc1
 }
 
 /**

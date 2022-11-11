@@ -62,11 +62,7 @@
         flex: 1;
     }
 
-    .responsiveNavbar {
-        display: flex;
-        height: 84px;
-    }
-
+   
     .LegalNoticeHeadline {
         top: 100px;
         left: 100px;
