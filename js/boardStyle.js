@@ -286,7 +286,7 @@ function renderSubtasksInPopUp(i) {
     let subtasks = allTasks[i]['subtasks'];
     for (let j = 0; j < subtasks.length; j++) {
       let subtask = subtasks[j]['subtaskName'];
-      subtaskContainer.innerHTML += returnSubtaskContainerHTML(j, subtask);
+      subtaskContainer.innerHTML += returnSubtaskDetailedHTML(j, subtask);
       loadGreenCheckbox(i, j)
     }
   }

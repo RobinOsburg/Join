@@ -23,6 +23,70 @@ function requestNewTask() {
     initValidation();
 }
 
+/**
+ * clears the formular
+ * 
+ */
+function clearFormular(){
+    clearAllInputFields();
+    returnToNormal();
+    removeAllAssignedContacts();
+    returnToNormalContactInterface();
+    clearPrios();
+    clearSubtasks();
+}
+
+/**
+ * clears the inputfields of the formular
+ * 
+ */
+function clearAllInputFields(){
+    document.getElementById('title').value = "";
+    document.getElementById('description').value = "";
+    document.getElementById('dueDate').value = "";
+}
+
+
+/**
+ * removes all assigned persons
+ * 
+ */
+function  removeAllAssignedContacts(){
+   let allAssignedPersons = document.querySelectorAll('.assignToCirle');
+   for (let i = 0; i < allAssignedPersons.length; i++) {
+    let assignedPersonID = allAssignedPersons[i].id;
+    removeContactAndToggle(assignedPersonID)
+   }
+}
+
+/**
+ * prepares clearing of priotity section
+ * 
+ */
+function clearPrios(){
+    let buttons = document.querySelectorAll('.prioInput');
+    let priorityFields = document.querySelectorAll('.prioSelected')
+    for (let i = 0; i < buttons.length; i++) {
+        clearPrio(i,buttons,priorityFields);
+    }
+}
+
+/**
+ * clears prios
+ * 
+ * @param {number} i 
+ * @param {array} buttons 
+ * @param {array} priorityFields 
+ */
+function clearPrio(i,buttons,priorityFields){
+    buttons[i].checked = false;
+    priorityFields[i].classList.add('d-none');
+}
+
+function clearSubtasks(){
+    document.getElementById('subtaskList').innerHTML = "";
+}
+
 
 /**
  * prepares validation by selecting all relevant elements

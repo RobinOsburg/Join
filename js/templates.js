@@ -3,6 +3,10 @@ async function init(navID) {
     highlight(navID);
 }
 
+/**
+ * function which downloads all html templates
+ * 
+ */
 async function includeHTML() {
     let includeElements = document.querySelectorAll('[w3-include-html]');
     for (let i = 0; i < includeElements.length; i++) {
@@ -17,6 +21,10 @@ async function includeHTML() {
     }
 }
 
+/**
+ * 
+ * @param {string} navID every main site has an Id
+ */
 function highlight(navID){
 
     if (navID == 1) {
@@ -41,6 +49,11 @@ function highlight(navID){
 }
 
 
+/**
+ * some text or list elements can become too long, so that the need a scroll function
+ * 
+ * @param {string} id 
+ */
 function installScrollBar(id){
     let subtaskContainer = document.getElementById(`${id}`);
     let containerHeight = document.getElementById(`${id}`).offsetHeight;

@@ -1,3 +1,7 @@
+/**
+ * on top of every main site, the intitials of the user are displayed. This function creates these initials
+ * 
+ */
 function initalsCurrentUser(){
     let name = AllUsers[currentUser]['name']
     let nameArray = name.split(/\s+/);

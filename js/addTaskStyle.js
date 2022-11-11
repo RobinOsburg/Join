@@ -74,7 +74,7 @@
  * 
  */
  function createNewCategory() {    
-    newCategoryInterface = true;
+    // newCategoryInterface = true;
     let input = document.getElementById('category');
     input.innerHTML = returnInputInnerHTML()
 }
@@ -95,7 +95,7 @@
  * 
  */
 function returnToNormal() {
-    newCategoryInterface == false;
+    // newCategoryInterface == false;
     let input = document.getElementById('category');
     input.innerHTML = returnNormalInputInnerHTML()
 }
@@ -311,7 +311,9 @@ function hideCross(object){
         subtaskList.innerHTML += returnSubtaskContainerHTML(subtaskCounter,newSubtask);
         document.getElementById('subtask').value = "";
         subtaskCounter++;
-        scrollDown();
+        if(window.innerWidth <= 880) {
+            scrollDown();
+        }
     }
     installScrollBar('subtaskList')
 }

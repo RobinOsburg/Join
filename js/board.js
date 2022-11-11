@@ -288,7 +288,7 @@ function checkSubtasksFromBoard() {
  * 
  * @returns an array with the assigned persons
  */
-function checkAssignedPersons() {
+function checkAssignedPersonsEdit() {
   let newAssignedPersons = [];
   let allAssignedPersons = document.querySelectorAll('.assignedCircleEdit');
   for (let i = 0; i < allAssignedPersons.length; i++) {
@@ -474,7 +474,7 @@ function initEdit(i) {
   let newDescription = document.getElementById('newDescription').value;
   let newDueDate = document.getElementById('newDueDate').value;
   let newPrio = checkPrioAfterEdit();
-  let newAssignedPersons = checkAssignedPersons();
+  let newAssignedPersons = checkAssignedPersonsEdit();
   checkSubtasksProgress(i);
   updateTask(i, newTitle, newDescription, newDueDate, newPrio, newAssignedPersons)
 }

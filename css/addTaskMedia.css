@@ -1,6 +1,25 @@
 /*Responsiveness Add task*/
+@media (max-width:1250px) {
+    .prio {
+        padding: 16px;
+    }
+}
+
+.prioSelected {
+    padding: 16px;
+}
+
 
 @media(max-width:1200px){   /*switching from normal layout to responsive layout*/
+    .bigContainer{
+        flex-direction: column;
+    }
+
+    .responsiveNavbar {
+    display: flex;
+    height: 84px;
+    }
+
     .addTaskContainer{
         height: calc(100vh - 55px - 88px) !important;
         width: 100vw !important;
@@ -61,7 +80,7 @@
 
    .headArea{
     display: flex;
-    width: 95%;
+    width: 80%;
     justify-content: flex-start;
    }
 
@@ -84,191 +103,11 @@
 } 
 }
 
-
-
-
-@media (max-width:1250px) {
-    .prio {
-        padding: 16px;
-    }
-}
-
-.prioSelected {
-    padding: 16px;
-}
-
-@media (max-width:1033px) {
-    .prio {
-        padding: 8px;
-        min-width: 68px
-    }
-
-    .prioSelected {
-        padding: 8px;
-        min-width: 68px
-    }
-}
-
-@media (max-width:1080px) {
-    .taskBtns {
-        flex-direction: column;
-        width: 169px;
-    }
-
-    .clearBtn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 5px;
-    }
-}
-
-@media(max-width:1055px) {
-    .LogInHeadline {
-        font-size: 47px;
-    }
-
-    .headlineFP {
-        font-size: 47px;
-    }
-
-    .headLineContacts {
-        font-size: 47px;
-        align-items: flex-start;
-    }
-
-    .headLine {
-        font-size: 47px;
-    }
-
-    .headLine h1 {
-        font-size: 47px;
-    }
-
-    .headlineT {
-        font-size: 47px;
-    }
-
- 
-
-    .headlineB {
-        font-size: 47px;
-    }
-}
-
-@media(max-width:870px) {
-    .LogInHeadline {
-        font-size: 44px;
-    }
-
-    .headlineFP {
-        font-size: 44px;
-    }
-
-    .headLine {
-        font-size: 44px;
-    }
-
-    .headLine h1 {
-        font-size: 44px;
-    }
-
-    .headlineT {
-        font-size: 44px;
-        
-    }
-
-    .headlineB {
-        font-size: 44px;
-    }
-}
-
-@media(max-width:800px) {
-    .responsiveBtn {
-        display: flex;
-    
-        position: fixed;
-       
-    }
-    .addTaskContainer{
-        display: block;
-    }
-
-    .subtasks{
-        width: 95%;
-    }
-
-    .subtaskPlusOriginal {
-        left: 94% ;
-    }
-
-    .LogInHeadline {
-        font-size: 47px;
-    }
-
-    .headlineFP {
-        font-size: 47px;
-    }
-
-    .headLine {
-        font-size: 47px;
-    }
-
-    .headLine h1 {
-        font-size: 47px;
-    }
-
-    .headlineT {
-        font-size: 47px;
-        
-        
-    }
-
-    .headlineB {
-        font-size: 47px;
-    }
-}
-
-@media(max-width:340px) {
-    .LogInHeadline {
-        font-size: 42px;
-    }
-
-    .headlineFP {
-        font-size: 42px;
-    }
-
-    .headLine {
-        font-size: 42px;
-    }
-
-    .headLine h1 {
-        font-size: 42px;
-    }
-
-    .headlineT {
-        font-size: 42px;
-    }
-
-    .headlineB {
-        font-size: 42px;
-    }
-}
-
-
-
-
-
 @media (max-width:800px) {
 
 
-    .bigContainer {
-        flex-direction: column-reverse;
-    }
-
-
-   
-  
+    
+/* 
     .mobileText {
         display: flex;
     }
@@ -278,14 +117,9 @@
         display: flex;
         margin-top: 4vh;
         width: 73%;
-    }
-
-    .adjustImgNav {
-        margin-left: 0;
-    }
+    } */
 
     
-
     .clearBtn {
         margin-bottom: 0;
     }
@@ -293,49 +127,6 @@
     .createTaskBtn {
         width: 160px;
     }
-
-    .taskBtns{
-        gap: 10px;
-    }
-
-    .header span {
-        display: none;
-    }
-
-   
-    
-    .navbarJoinLogo {
-        display: none;
-    }
-
-
-
-    .legalNotice {
-        display: none;
-    }
-
-    .bigContainer {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-
-    .navbarSidebar {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-        height: 74px;
-    }
-
-
-    .navLine .navImg {
-        margin-left: 0;
-    }
-
-    .grayLine {
-        display: none;
-    }
-
 
     .leftSide {
         width: 80%;
@@ -353,7 +144,7 @@
     }
 }
 
-@media(max-width:660px){  /*displaying the responsive create and clear btns*/
+@media(max-width:660px){  /*general structure at smartphone screen*/
     .taskBtnsResponsive{
         display: flex !important;
     }
@@ -373,6 +164,10 @@
     .rightSide{
         width: 95% !important;
     }
+
+    .headArea{
+        width: 95% !important;
+    }
 }
 
 
@@ -385,80 +180,38 @@
         width: 67px !important;
     }
 
-    .mobileText {
+    /* .mobileText {
         padding-right: 63px;
-    }
-
-    .headlineT {
-        padding-right: 83px;
-    }
-
-    .leftSide {
-        width: 100%;
-    }
+    } */
 
 
-
-    .inputWidth {
+    /* .inputWidth {
         width: 85%;
-    }
+    } */
 
-    .inputWidth2 {
-        width: 90%;
-    }
+  
 
-    .inputWidth3 {
+    .inputWidth3 { /*linked with due date input*/ 
         width: 97%;
     }
-
-   
-
-    .workSpace p {
-        width: 88%;
-    }
-
-    .bigAssignedToContainer{
-        width: 90%;
-    }
-
-    .categoryContainer{
-        width: 90%;
-    }
-
 }
 
-@media(max-width:475px){
+@media(max-width:475px){  /*transfering the responsive add tasks btns more central*/
     .taskBtnsResponsive{
         right: 28% !important;
     }
 }
 
-@media(max-width:460px){
+/* @media(max-width:460px){
     .taskBtnsOriginal{
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
-}
-
-@media(max-width:415px) {
+} */
 
 
-
-    .clearBtn {
-        width: 77px;
-    }
-
-
-    .mobileText {
-        margin-top: 8vh;
-        text-align: center;
-    }
-
-   
-}
-
-@media(max-width:325px){
+@media(max-width:325px){ /*making space*/
   .clearBtnOriginal{
     padding-left: 11px !important;
     padding-right: 11px !important;
@@ -467,18 +220,28 @@
   }
 }
 
-@media(max-width:1200px){
-
-    .bigContainer{
-        flex-direction: column;
+/* @media (max-width:1033px) {  
+    .prio {
+        padding: 8px;
+        min-width: 68px
     }
-    
-  
 
+    .prioSelected {
+        padding: 8px;
+        min-width: 68px
+    }
+} */
 
-.responsiveNavbar {
-    display: flex;
-    height: 84px;
-}
+/* @media (max-width:1080px) {
+    .taskBtns {
+        flex-direction: column;
+        width: 169px;
+    }
 
-}
+    .clearBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+} */

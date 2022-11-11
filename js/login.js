@@ -1,3 +1,7 @@
+/**
+ * downloads all registered users
+ * 
+ */
 async function backendLogIn(){
 setURL('https://gruppe-335.developerakademie.net/smallest_backend_ever')
 await downloadFromServer();
@@ -5,21 +9,38 @@ let AllUsersAsString = backend.getItem('users');
   AllUsers = JSON.parse(AllUsersAsString) || [];
 }
 
-let currentUser =[]
+let currentUser =[];
+let comingFromLogIn;
 
+/**
+ * uploads the current user and gives the summary the info to prepare the greet for the user 
+ * 
+ */
 async function backendIntegrationLogin(){
     await backend.setItem('user', JSON.stringify(currentUser));
+    await backend.setItem('comingFromLogIn', JSON.stringify(comingFromLogIn));
 }
 
+/**
+ * directs to summary
+ * 
+ */
 function directToSummary(){
-    window.location.href="summary.html"
+    window.location.href="https://gruppe-335.developerakademie.net/summary.html"
 }
 
+/**
+ * directs to sign up
+ * 
+ */
 function signUp(){
-    window.location.href="signUp.html"
+    window.location.href="https://gruppe-335.developerakademie.net/signUp.html"
 }
 
-
+/**
+ * messages the user that his registration was successful
+ * 
+ */
 function showLogInSucces(){
 const urlParams = new URLSearchParams(window.location.search);
 const msg = urlParams.get('msg');
@@ -31,8 +52,11 @@ if (msg) {
 }
 
 
-
-async function logIn(){
+/**
+ * checks if there is an account with a matching email and password
+ * 
+ */
+async function logIn(){ 
     let email = document.getElementById('loginEmail');
     let password = document.getElementById('loginPassword');
     let mail = email.value;
@@ -42,6 +66,7 @@ async function logIn(){
         for (let i = 0; i < AllUsers.length; i++) {
             if (mail == AllUsers[i]['email']) {
                 currentUser.push(AllUsers[i]);
+                comingFromLogIn = true;
                 await backendIntegrationLogin();
             }
             }

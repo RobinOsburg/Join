@@ -55,6 +55,7 @@
     }
 }
 
+// are already documented at the addTask.js or addTaskStyle.js
 function setPrio(prio, input) {
     choosenPrio = true;
     let button = document.getElementById(input);
@@ -141,23 +142,34 @@ function categoryValidation(nameOfCategory, chosenColor) {
     }
 }
 
+
+
 function addSubtask() {
     let newSubtask = document.getElementById('subtask').value;
     let subtaskList = document.getElementById('subtaskList');
     if (newSubtask.length < 2) {
-        document.getElementById('noSubtask').classList.remove('d-none')
+        document.getElementById('noSubtask').classList.remove('d-none');/*alert invalid subtask */
     } else {
-        document.getElementById('noSubtask').classList.add('d-none')
-        subtaskList.innerHTML += /*html*/ `
-        <div class="subtask" id="${subtaskCounter}">
-            <div class="subtaskName" >${newSubtask} </div>
-            <img class="deleteSubtaskBtn" onclick="deleteSubtask(${subtaskCounter})" src="assets/img/Add Task/cross.png" >
-        </div>
-    `
+        document.getElementById('noSubtask').classList.add('d-none');/* remove alert*/
+        subtaskList.innerHTML += returnSubtaskToContactHTML(subtaskCounter,newSubtask) ;
         document.getElementById('subtask').value = "";
         subtaskCounter++;
+        if(window.innerWidth <= 880){
+            scrollDown(); 
+        }
     }
     installScrollBar('subtaskList');
+}
+
+/**
+ * scrolls a bit down after adding a subtask
+ * 
+ */
+function scrollDown() {
+    if(subtaskCounter< 6){
+    window.scrollBy(0, 25);
+    document.getElementById('addTaskContainer').scrollBy(0,25);
+    }
 }
 
 
@@ -166,6 +178,8 @@ function deleteSubtask(taskID) {
     elementToRemove.remove();
     installScrollBar();
 }
+
+// are already documented at the addTask.js or addTaskStyle.js(end)
 
 /**
  * the section for a new contact is opened

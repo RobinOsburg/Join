@@ -335,6 +335,15 @@ h1 {
     align-self: center;
 }
 
+.inputField {
+    padding: 8px;
+    width: 71%;
+    border: 1px solid #D1D1D1;
+    color: #D1D1D1;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
 
 .headerSignUp {
     display: flex;
@@ -468,6 +477,20 @@ h1 {
 
 .navLine span::before {
     box-sizing: unset !important;
+}
+
+.inputFieldLogin {
+    padding: 8px;
+    width: 71%;
+    border: 1px solid #D1D1D1;
+    color: #D1D1D1;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.grayHighlight {
+    background-color: #2A3647;
 }
 
 

@@ -49,35 +49,37 @@ function returnContactPopUpHTML(colorID, initials, name, i, email, phone) {
 
 function returnTaskContainerContactsHTML(i) {
     return /*html*/`
-    <img class="closePopUp" src="assets/img/Add Task/cross.png" alt="" onclick="closePopUpAddTaskContacts()">
-    <div class="responsiveHeaderPopUp">
-    
-            <img  class="responsiveLogoPopUp" src="assets/img/LogIn/responsiveLogo.png">
-            <div class="taskBtnsResponsive">
-                <button class="clearBtnResponsive" onclick="clearBackend()" >
+        <img class="closePopUp" src="assets/img/Add Task/cross.png" alt="" onclick="closePopUpAddTaskContacts()">
+        <div class="responsiveHeaderPopUp">
+            <img class="responsiveLogoPopUp" src="assets/img/LogIn/responsiveLogo.png">
+            <div class="taskBtnsResponsiveContacts">
+                <button class="clearBtnResponsive" onclick="clearFormular()">
                     Clear
-                    <img  class="btnImg2" src="assets/img/Add Task/clear.png">
+                    <img class="btnImg2" src="assets/img/Add Task/clear.png">
                 </button>
-                <button class="clearBtnResponsive2" onclick="clearBackend()" >
-                    
-                    <img  class="btnImg2" src="assets/img/Add Task/clear.png">
+                <button class="clearBtnResponsive2" onclick="clearFormular()">
+
+                    <img class="btnImg2" src="assets/img/Add Task/clear.png">
                 </button>
 
                 <button onclick="requestNewTask(${i})" class="createTaskBtnResponsive grayHighlight" type="submit">
-                    Create 
+                    Create
                     <img class="btnImg" src="assets/img/Add Task/create.png">
-                 </button>
+                </button>
+        
+                <button onclick="requestNewTask(${i})" class="createTaskBtnResponsive2 grayHighlight" type="submit">
 
-                 <button onclick="requestNewTask(${i})" class="createTaskBtnResponsive2 grayHighlight" type="submit">
-                    
                     <img class="btnImg" src="assets/img/Add Task/create.png">
-                 </button>
-            </div> 
+                </button>
+            </div>
         </div>
-        <div class="addTaskContainer" id="addTaskContainer">
+        
+    
+    
+    <div class="addTaskContainerPopUp" id="addTaskContainer">
     <div id="workSpace" class="workSpace">
         <div class="headArea">
-            <p class="responsiveSubHeadline">Kanban Project Management Tool</p>
+            
             <h1 class="headlineT">Add Task</h1>
         </div>
         <div class="formular">
@@ -199,7 +201,7 @@ function returnTaskContainerContactsHTML(i) {
                     </div>
                     <div class="formularSection">
                         <div class="taskBtnsOriginal">
-                            <button class="clearBtnOriginal" onclick="clearBackend()" >
+                            <button class="clearBtnOriginal" onclick="clearFormular()" >
                                 Clear
                                 <img  class="btnImg2" src="assets/img/Add Task/clear.png">
                             </button>
@@ -301,4 +303,13 @@ function returncreateNewContactContainerHTML() {
        <img src="assets/img/Contacts/whitCross.png"onclick="closePopUpEditContacts()" class="whiteCrossEditContact" class="greyCross"  alt="">
    </div>
     `
+}
+
+function returnSubtaskToContactHTML(subtaskCounter,newSubtask) {
+    return /*html*/ `
+    <div class="subtask" id="${subtaskCounter}">
+        <div class="subtaskName" >${newSubtask} </div>
+        <img class="deleteSubtaskBtn" onclick="deleteSubtask(${subtaskCounter})" src="assets/img/Add Task/cross.png" >
+    </div>
+`
 }

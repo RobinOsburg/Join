@@ -2,6 +2,7 @@
 
 .bigContainer{
     overflow: hidden;
+    display: flex;
 }
 
 .contentBoard {
@@ -54,6 +55,46 @@
 }
 
 /* headarea */
+.headlineB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20vh;
+    margin-top: 6vh;
+    padding-left: 30px;
+    padding-right: 30px;
+    height:50px;
+}
+
+
+.searchAndCreate {
+    display: flex;
+    align-items: center;
+}
+
+.searchField:hover {
+    cursor: pointer;
+}
+
+
+
+.addTaskBtn {
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 300;
+    margin-right: 10px;
+    margin-left: -20px;
+    font-size: 21px;
+    font-weight: 700;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 194px;
+    gap: 5px;
+}
+
 
 .inputContainerBoard {
     position: relative;
@@ -62,6 +103,7 @@
 .inputContainerBoardResponsive{
    position: relative;
    display: none;
+   width: 215px
 }
 
 .searchField {
@@ -92,7 +134,7 @@
     width: fit-content;
     position: absolute;
     top: 36%;
-    left: 26%;
+    left: 75%;
     width: 69px;
 }
 
@@ -179,134 +221,10 @@
     min-height: 200px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.headlineB {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20vh;
-    margin-top: 6vh;
-    padding-left: 30px;
-    padding-right: 30px;
-    height:50px;
-}
-
-
-.searchAndCreate {
-    display: flex;
-    align-items: center;
-}
-
-
-.addTaskBtn {
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 300;
-    margin-right: 10px;
-    margin-left: -20px;
-    font-size: 21px;
-    font-weight: 700;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 194px;
-    gap: 5px;
-}
-
-
-
-
-.searchField:hover {
-    cursor: pointer;
-}
-
-
-
-
-.dropLineToDo {
-    position: absolute;
-    width: 1%;
-    height: 100%;
-    left: 1%;
-
-}
-
-.dropLineIP {
-    position: absolute;
-    width: 1%;
-    height: 100%;
-    left: 26%;
-
-}
-
-.dropLineAW {
-    position: absolute;
-    width: 1%;
-    height: 100%;
-
-    left: 51%;
-
-}
-
-.dropLineD {
-    position: absolute;
-    width: 1%;
-    height: 100%;
-    left: 76%;
-
-
-}
-
-
-
-
-.subtasksBPopUpContainer {
-    display: flex;
-    width: 100%;
-}
-
-.subtaskHeadlineBPopUp {
-    font-size: 21px;
-    font-weight: 700;
-}
-
-.subtasksSD {
-    line-height: 120%;
-}
-
-
-
-
-.categoryContainerS {
-    width: 72%;
-}
-
-
-
-
 .plusBoard {
     height: 25px;
-}
-
-
-.plusBoard {
     cursor: pointer;
 }
-
 
 .plusBoardAW {
     height: 25px;
@@ -316,44 +234,13 @@
 .plusBoardAW {
     cursor: pointer;
 }
-
 
 .allTasks span {
     font-size: 21px;
     font-weight: 700;
 }
 
-
-
-
-
-
-
-
-.d-none {
-    display: none;
-}
-
-
-.subtaskList {
-    width: 100%;
-    max-height: 80px;
-    margin-bottom: 5px;
-}
-
-
-.subtask {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.deleteSubtaskBtn {
-    height: 20px;
-}
-
-/* Board */
+/* display task detailed */
 
 .rightSideBoard {
     width: 85vw;
@@ -493,6 +380,7 @@
     align-items: center;
 }
 
+/* display task on board */
 
 
 .task {
@@ -551,6 +439,18 @@
     height: 12px;
 }
 
+.subtasksBPopUpContainer {
+    display: flex;
+    width: 100%;
+}
+
+.subtaskHeadlineBPopUp {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+/* create new task at board */
 
 .assignedToContainer {
     display: flex;
@@ -623,12 +523,6 @@
     left: 83%;
 }
 
-
-.newCategorySignature {
-    position: relative;
-}
-
-
 .categoryColor {
     position: absolute;
     height: 10px;
@@ -639,9 +533,27 @@
     display: none;
 }
 
-/* Board Pop Up */
+.subtaskList {
+    width: 100%;
+    max-height: 80px;
+    margin-bottom: 5px;
+}
 
 
+.subtask {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.deleteSubtaskBtn {
+    height: 20px;
+}
+
+
+
+/* Board general structure*/
 .popUp {
     position: absolute;
     display: flex;
@@ -657,6 +569,110 @@
 }
 
 
+
+
+/* .checkedColor {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+} */
+
+/* Show Details of Task */
+
+/* priority */
+
+.allPrioContainer {
+    display: flex;
+}
+
+.prioRework {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    height: 35px !important;
+    width: 100%
+}
+
+
+.prioRework:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.prioReworkSelected {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 35px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.headlinePrio {
+    font-size: 21px;
+}
+
+
+.prioDoubleContainerRework {
+    position: relative;
+    width: 30%;
+    margin: 5px;
+}
+
+.prioReworkInput {
+    opacity: 0;
+    width: 0 !important;
+}
+
+.urgentBackground {
+    background-color: #FF3D00;
+}
+
+
+.mediumBackground {
+    background-color: #FFA800;
+}
+
+
+.lowBackground {
+    background-color: #7AE229;
+}
+
+/* subtasks */
+.whiteCheckHookInDetails {
+    height: 18px;
+}
+
+.whiteCheckHookContainer {
+    background-color: green;
+    height: 21px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.subtaskWithHookContainer {
+    display: flex;
+    width: 100%;
+}
+
+.subtaskCheckbox:hover {
+    cursor: pointer;
+}
+
+
+/* edit task */
 .editContainer {
     display: flex;
     justify-content: center;
@@ -664,9 +680,9 @@
 }
 
 
-.editAiignedTo {
+/* .editAiignedTo {
     margin: 10px;
-}
+} */
 
 
 .boardPopUpEditTitel {
@@ -928,74 +944,6 @@
     cursor: pointer;
 }
 
-
-.allPrioContainer {
-    display: flex;
-}
-
-
-.prioRework {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    height: 35px !important;
-    width: 100%
-}
-
-
-.prioRework:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-
-.prioReworkSelected {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 35px;
-    border-radius: 10px;
-    width: 100%;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-
-.subtaskCheckbox:hover {
-    cursor: pointer;
-}
-
-
-.headlinePrio {
-    font-size: 21px;
-}
-
-
-.prioDoubleContainerRework {
-    position: relative;
-    width: 30%;
-    margin: 5px;
-}
-
-
-.d-flex {
-    display: flex;
-}
-
-
-.prioReworkInput {
-    opacity: 0;
-    width: 0 !important;
-}
-
-
 .confirmEditBtn {
     position: absolute;
     color: white;
@@ -1010,86 +958,6 @@
     top: 720px;
 }
 
-
-.subtaskWithHookContainer {
-    display: flex;
-    width: 100%;
-}
-
-
-.whiteCheckHookContainer {
-    background-color: green;
-    height: 21px;
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    margin-right: 4px;
-}
-
-
-.whiteCheckHookInDetails {
-    height: 18px;
-}
-
-
-/* Board*/
-
-
-.urgentBackground {
-    background-color: #FF3D00;
-}
-
-
-.mediumBackground {
-    background-color: #FFA800;
-}
-
-
-.lowBackground {
-    background-color: #7AE229;
-}
-
-
-.checkedColor {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-
-.lightblue {
-    background-color: #8AA4FF;
-}
-
-
-.red {
-    background-color: #FF0000;
-}
-
-
-.green {
-    background-color: #2AD300;
-}
-
-
-.purple {
-    background-color: #E200BE;
-}
-
-
-.orange {
-    background-color: #FF8A00;
-}
-
-
-.blue {
-    background-color: #0038FF;
-}
-
-
-.newCategorySignature {
-    position: relative;
-}
 
 /*adjusting the add task mask for the board pop up*/
 
@@ -1112,7 +980,6 @@
     width: 95%;
     height: 95% ;
     align-items: center;
-    background-color: blue;
     justify-content: center;
     overflow-x: hidden;
     overflow-y: auto;
@@ -1365,9 +1232,6 @@
 }
 
 
-.newCategorySignature {
-    position: relative;
-}
 
 /* drop down End category section end*/
 /*Assigned To */
@@ -1755,5 +1619,15 @@
     font-size: 16px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+/* general */
+
+.d-flex {
+    display: flex;
+}
+
+.d-none {
+    display: none;
 }
 

@@ -234,11 +234,11 @@ function returnPopUpContentBoardHTML(id) {
 <div class="responsiveHeaderPopUp">
     <img class="responsiveLogoPopUp" src="assets/img/LogIn/responsiveLogo.png">
     <div class="taskBtnsResponsive">
-        <button class="clearBtnResponsive" onclick="clearBackend()">
+        <button class="clearBtnResponsive" onclick="clearFormular()">
             Clear
             <img class="btnImg2" src="assets/img/Add Task/clear.png">
         </button>
-        <button class="clearBtnResponsive2" onclick="clearBackend()">
+        <button class="clearBtnResponsive2" onclick="clearFormular()">
 
             <img class="btnImg2" src="assets/img/Add Task/clear.png">
         </button>
@@ -409,7 +409,7 @@ function returnPopUpContentBoardHTML(id) {
                     </div>
                     <div class="formularSection">
                         <div class="taskBtnsOriginal">
-                            <button class="clearBtnOriginal" onclick="clearBackend()" >
+                            <button class="clearBtnOriginal" onclick="clearFormular()" >
                                 Clear
                                 <img  class="btnImg2" src="assets/img/Add Task/clear.png">
                             </button>
@@ -440,11 +440,11 @@ function returnPopUpContentOriginalHTML() {
         <div class="responsiveHeaderPopUp">
     <img class="responsiveLogoPopUp" src="assets/img/LogIn/responsiveLogo.png">
     <div class="taskBtnsResponsive">
-        <button class="clearBtnResponsive" onclick="clearBackend()">
+        <button class="clearBtnResponsive" onclick="clearFormular()">
             Clear
             <img class="btnImg2" src="assets/img/Add Task/clear.png">
         </button>
-        <button class="clearBtnResponsive2" onclick="clearBackend()">
+        <button class="clearBtnResponsive2" onclick="clearFormular()">
 
             <img class="btnImg2" src="assets/img/Add Task/clear.png">
         </button>
@@ -464,6 +464,7 @@ function returnPopUpContentOriginalHTML() {
     <div id="workSpace" class="workSpace">
         <div class="headArea">
             <h1 class="headlineT">Add Task</h1>
+            <img class="closePopUp" src="assets/img/Add Task/cross.png" onclick="closePopUp('popUp')">
         </div>
         <div class="formular">
             <div class="leftSide">
@@ -614,7 +615,7 @@ function returnPopUpContentOriginalHTML() {
                     </div>
                     <div class="formularSection">
                         <div class="taskBtnsOriginal">
-                            <button class="clearBtnOriginal" onclick="clearBackend()" >
+                            <button class="clearBtnOriginal" onclick="clearFormular()" >
                                 Clear
                                 <img  class="btnImg2" src="assets/img/Add Task/clear.png">
                             </button>
@@ -728,20 +729,14 @@ function returnAssignedToDetailed(k, contactsInitials, contactsColor,contactsNam
 
 
 
-function returnSubtaskContainerHTML(j, subtask) {
+function returnSubtaskDetailedHTML(j, subtask) {
     return /*html*/`
           <div class="subtaskWithHookContainer" >
-              <div id="greenCheckBox${j}" class="whiteCheckHookContainer"><img class="whiteCheckHookInDetails" src="assets/img/Board/whiteCheckHook.png"></div>
+              <div id="greenCheckBox${j}" class="whiteCheckHookContainer">
+              <img class="whiteCheckHookInDetails" src="assets/img/Board/whiteCheckHook.png">
+            </div>
               ${subtask}
           </div>
       `
 }
 
-function returnSubtaskContainerHTML(j, subtask) {
-    return /*html*/`
-          <div class="subtaskWithHookContainer" >
-              <div id="greenCheckBox${j}" class="whiteCheckHookContainer"><img class="whiteCheckHookInDetails" src="assets/img/Board/whiteCheckHook.png"></div>
-              ${subtask}
-          </div>
-      `
-}

@@ -421,3 +421,150 @@
     }
 }
 
+@media(max-width:1055px) {  /*adjusting all headlines*/
+    .LogInHeadline {
+        font-size: 47px;
+    }
+
+    .headlineFP {
+        font-size: 47px;
+    }
+
+    .headLineContacts {
+        font-size: 47px;
+        align-items: flex-start;
+    }
+
+    .headLine {
+        font-size: 47px;
+    }
+
+    .headLine h1 {
+        font-size: 47px;
+    }
+
+    .headlineT {
+        font-size: 47px;
+    }
+    
+    .headlineB {
+        font-size: 47px;
+    }
+}
+
+@media(max-width:870px) { /*adjusting all headlines*/
+    .LogInHeadline {
+        font-size: 44px;
+    }
+
+    .headlineFP {
+        font-size: 44px;
+    }
+
+    .headLine {
+        font-size: 44px;
+    }
+
+    .headLine h1 {
+        font-size: 44px;
+    }
+
+    .headlineT {
+        font-size: 44px;
+        
+    }
+
+    .headlineB {
+        font-size: 44px;
+    }
+}
+
+@media(max-width:800px) { /*adjusting all headlines*/
+
+    .subtaskPlusOriginal {
+        left: 94% ;
+    }
+
+    .LogInHeadline {
+        font-size: 47px;
+    }
+
+    .headlineFP {
+        font-size: 47px;
+    }
+
+    .headLine {
+        font-size: 47px;
+    }
+
+    .headLine h1 {
+        font-size: 47px;
+    }
+
+    .headlineT {
+        font-size: 47px;
+        
+        
+    }
+
+    .headlineB {
+        font-size: 47px;
+    }
+}
+
+@media(max-width:340px) { /*adjusting all headlines*/
+    .LogInHeadline {
+        font-size: 42px;
+    }
+
+    .headlineFP {
+        font-size: 42px;
+    }
+
+    .headLine {
+        font-size: 42px;
+    }
+
+    .headLine h1 {
+        font-size: 42px;
+    }
+
+    .headlineT {
+        font-size: 42px;
+    }
+
+    .headlineB {
+        font-size: 42px;
+    }
+}
+
+/* responsiveness navbar */
+
+@media (max-width:800px){
+    .navbarJoinLogo {
+        display: none;
+    }
+
+    .adjustImgNav {
+        margin-left: 0;
+    }
+
+    .legalNotice {
+        display: none;
+    }
+
+    .navbarSidebar {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        height: 74px;
+    }
+
+    .navLine .navImg {
+        margin-left: 0;
+    }
+
+    .grayLine {
+        display: none;
+    }
+}

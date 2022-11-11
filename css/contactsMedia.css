@@ -1,8 +1,6 @@
 /* contacts responsive */
 @media(max-width:1200px) and (max-height:610px) {
     .contactsBoard {
-        
-        
         overflow-x: hidden !important;
     }
 
@@ -53,6 +51,10 @@
     .headerPlusContent {
         width: 100vw !important;
         flex: 1;
+    }
+
+    .responsiveSubHeadlineC{
+        display: flex;
     }
 }
 
@@ -167,9 +169,7 @@
         width: 95%;
     }
 
-    .categoryContainer{
-        transform: translateX(1%);
-    }
+ 
 
     .letterContainer {
         align-items: flex-start;
@@ -271,8 +271,11 @@
 @media(max-width:500px) {
     .addTaskToContact {
         width: 100vw;
-        height: 100vh;
+        height: calc(100vh - 84px);
         top: 0vh;
+        bottom: unset;
+        left: unset;
+        right: unset;
         border-radius: 0;
         flex-direction: column;
     }

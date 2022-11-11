@@ -5,8 +5,8 @@ async function downloadSummary() {
     prepareSummary()
     let currentUserAsString = backend.getItem('user');
     currentUser = JSON.parse(currentUserAsString) || [];
-    renderGreet(currentUser);
-    
+    comingFromLogIn = JSON.parse(backend.getItem('comingFromLogIn')) || [];
+    renderGreet(currentUser, comingFromLogIn);
 }
 
 
@@ -36,8 +36,8 @@ function renderSummary(tasksTotal, tasksInProgress, tasksFeedback, tasksUrgent, 
 }
 
 
-function renderGreet(currentUser) {
-    renderGreetMobile(currentUser)
+function renderGreet(currentUser,comingFromLogIn) {
+    renderGreetMobile(comingFromLogIn)
     let today = new Date();
     let currHour = today.getHours();
     if (currHour < 12) {
@@ -64,8 +64,8 @@ function renderGreet(currentUser) {
 }
 
 
-function renderGreetMobile(currentUser) {
-    if (innerWidth < 900) {
+async function renderGreetMobile(comingFromLogIn) {
+    if (innerWidth < 900 && comingFromLogIn == true) {
         let today = new Date();
         let currHour = today.getHours();
             if (currHour < 12) {
@@ -99,12 +99,14 @@ function renderGreetMobile(currentUser) {
              document.getElementById('mobileGreet').classList.remove('mobileGreet');
              document.getElementById('mobileGreet').classList.add('d-none');
             }, 2000);
-
-
-        
+    await noMoreGreeting()
     }
 }
 
+async function noMoreGreeting(){
+    let comingFromLogIn = false;
+    await backend.setItem('comingFromLogIn', JSON.stringify(comingFromLogIn));
+}
 
 
 
