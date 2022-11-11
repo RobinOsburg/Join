@@ -2,8 +2,6 @@ html {
     font-family: 'Inter', sans-serif;
 }
 
-
-
 body {
     margin: 0;
     background-color: rgb(246, 247, 248);
@@ -502,12 +500,6 @@ h1 {
 /* Add Task*/
 
 
-
-.createTaskBtn:hover {
-    cursor: pointer;
-}
-
-
 .alert {
     width: 70%;
     font-size: 14px;
@@ -543,24 +535,6 @@ h1 {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .grayLineHorizontal {
     background-color: #D1D1D1;
     height: 1px;
@@ -569,43 +543,11 @@ h1 {
 }
 
 
-
-
-
-.textareaField:hover {
-    cursor: pointer;
-}
-
-
 .selectField {
     padding: 8px;
     border: 1px solid #D1D1D1;
     border-radius: 5px;
     width: 66%;
-}
-
-.searchFieldAssignTo{
-    padding: 8px;
-    border: 1px solid #D1D1D1;
-    border-radius: 5px;
-    width: 100%; 
-    box-sizing: border-box;
-}
-
-
-
-
-
-.selectOption:hover {
-    background: #D1D1D1;
-    cursor: pointer;
-}
-
-
-.selectOption:last-child {
-    border-bottom: 1px solid #D1D1D1;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
 }
 
 
@@ -623,15 +565,6 @@ h1 {
     width: 99%;
     min-height: 15px;
 }
-
-
-
-
-
-
-
-
-
 
 .selectHeadFieldContacts {
     position: relative;
@@ -670,24 +603,12 @@ h1 {
     opacity: 0;
 }
 
-
-
-
-
 .dropdownImgPopUp {
     position: absolute;
     height: 8px;
     left: 93%;
     top: 14px;
 }
-
-
-
-
-
-
-
-
 
 .chosenCategoryColorBoard {
     height: 8px;
@@ -698,29 +619,9 @@ h1 {
     left: 80%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .clearBtnOriginal:hover {
     cursor: pointer;
 }
-
 
 .inputWidth {
     width: 70%;
@@ -735,13 +636,9 @@ h1 {
     align-items: center;
 }
 
-
-
 .adjustWidth5{
     width: 100%;
 }
-
-
 
 .searchNavImg1{
    height: 16px;
@@ -749,9 +646,6 @@ h1 {
    top: 9px;
    left: 96%;
 }
-
-
-
 
 .prioDoubleContainer {
     position: relative;
@@ -768,17 +662,10 @@ h1 {
     width: 26%;
 }
 
-
-
-
-
 .prioDoubleContainerContacts {
     position: relative;
     width: 26%;
 }
-
-
-
 
 
 .prio:hover {
@@ -787,21 +674,9 @@ h1 {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-
-
-
 .prioSelected:hover {
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
 
 .prioImg:nth-child(2) {
     height: 8px;
@@ -811,9 +686,6 @@ h1 {
 .subtaskHL {
     margin-top: 20px;
 }
-
-
-
 
 .subtasksContact{
     padding: 8px;
@@ -873,9 +745,6 @@ h1 {
 .subtaskPlusOriginal:hover {
     cursor: pointer;
 }
-
-
-
 
 
 .subtasksInputBoard {
@@ -994,15 +863,6 @@ h1 {
     font-size: 16px;
     width: 160px;
 }
-
-
-
-
-
-
-
-
-
 
 .workSpace p {
     width: 70%;
@@ -1183,20 +1043,9 @@ h1 {
     cursor: pointer;
 }
 
-
-
-
-
-
 .status span{
     height: 100%;
 }
-
-
-
-
-
-
 
 /* Board                    Hier ist AssignedTo von AddTask mit drin */
 
@@ -1440,27 +1289,15 @@ h1 {
     flex-direction: column;
  }
 
-
-
-
-
 .adjustWidth2{
     width: 95%;
 }
-
-
-
-
 
 .checkBoxesC1{
     position: relative;
     top: -19px;
     left: 94%;
 }
-
-
-
-
 
 .contactToAssignContainer{
     display: flex;
@@ -1477,22 +1314,6 @@ h1 {
     background: #D1D1D1;
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .newCategory {
     text-align: start;
@@ -1522,14 +1343,6 @@ h1 {
     border-radius: 15px;
 }
 
-
-
-
-
-
-
-
-
 .navNewCategory {
     display: flex;
     align-items: center;
@@ -1546,13 +1359,6 @@ h1 {
     top: 8px;
     left: 83%;
 }
-
-
-
-
-
-
-
 
 .checkedColor {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
