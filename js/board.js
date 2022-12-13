@@ -3,7 +3,7 @@
  * 
  */
 async function downloadTasks() {
-  setURL('https://gruppe-335.developerakademie.net/smallest_backend_ever');
+  setURL('https://robin-osburg.developerakademie.net/smallest_backend_ever');
   await downloadFromServer();
   let allTasksAsString = backend.getItem('allTasks');
   allTasks = JSON.parse(allTasksAsString) || [];
