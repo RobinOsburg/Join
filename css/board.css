@@ -18,6 +18,10 @@
 }
 
 
+.responsiveSubHeadline{
+    display: none;
+}
+
 .headArea{
     display: flex;
     flex-direction: column;

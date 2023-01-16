@@ -1,5 +1,5 @@
 async function downloadSummary() {
-    setURL('https://robin-osburg.developerakademie.net/smallest_backend_ever');
+    setURL('http://robinosburg.com/smallest_backend_ever');
     await downloadFromServer();
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
     prepareSummary()

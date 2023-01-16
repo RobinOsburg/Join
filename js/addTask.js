@@ -3,7 +3,7 @@
  * 
  */
 async function initServer() {
-    setURL('https://robin-osburg.developerakademie.net/smallest_backend_ever');
+    setURL('http://robinosburg.com/smallest_backend_ever');
     await downloadFromServer();
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
     allContactsSorted = JSON.parse(backend.getItem('allContactsSorted')) || [];
@@ -274,10 +274,13 @@ function restructureCategorySelect(nameOfCategory, chosenColor) {
  * all contacts are displayed in a scrollmenu
  * 
  */
+
+
 function loadAllContacts(){
-    for (let i = 0; i < allContactsSorted.length; i++) {
+    for (let i = 0; i <= allContactsSorted.length; i++) {
         let contactsName = allContactsSorted[i]['name'];
         renderContact(i,contactsName);
+        
     }
 }
 

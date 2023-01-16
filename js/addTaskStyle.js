@@ -3,7 +3,7 @@
  * 
  * 
  */
- function resetAlert() {
+function resetAlert() {
     document.getElementById('alertTitle').classList.add('d-none');
     document.getElementById('alertDescription').classList.add('d-none');
     document.getElementById('alertCategory').classList.add('d-none');
@@ -24,7 +24,7 @@
  * @param {*} assignedContacts 
  * @param {*} dueDate 
  */
- function executeValidation(titleField, descriptionField, categoryField, customizedCategory, colorOfCategory,assignedContacts, dueDate) {
+function executeValidation(titleField, descriptionField, categoryField, customizedCategory, colorOfCategory, assignedContacts, dueDate) {
     if (titleField.value.length < 2) {
         document.getElementById('alertTitle').classList.remove('d-none');
     }
@@ -46,7 +46,7 @@
     else if (colorOfCategory == 'transparent') {
         document.getElementById('alertCategory').classList.remove('d-none');
         document.getElementById('alertCategory').innerHTML = 'Choose a Color';
-    }else if(assignedContacts.innerHTML == ""){
+    } else if (assignedContacts.innerHTML == "") {
         document.getElementById('alertContact').classList.remove('d-none');
     }
     else if (dueDate.value == "") {
@@ -64,7 +64,7 @@
  * activates and deactivates the dropdown menu of the category section
  * 
  */
- function dropdown() {
+function dropdown() {
     let dropdownContainer = document.getElementById('selectFields');
     dropdownContainer.classList.toggle('d-none')
 }
@@ -73,7 +73,7 @@
  * the innerHTML of the categoryContainer will be changed, so that you can see the interface for the customized category
  * 
  */
- function createNewCategory() {    
+function createNewCategory() {
     // newCategoryInterface = true;
     let input = document.getElementById('category');
     input.innerHTML = returnInputInnerHTML()
@@ -84,7 +84,7 @@
  * 
  * @param {string} color an rgb(...)
  */
- function showColor(color) {
+function showColor(color) {
     let colorToChange = document.getElementById('colorChoice');
     colorToChange.style.backgroundColor = color;
 }
@@ -105,7 +105,7 @@ function returnToNormal() {
  * 
  * @param {string} color 
  */
- function showColorInInput(color) {
+function showColorInInput(color) {
     let colorSignature = document.getElementById('chosenCategoryColor');
     colorSignature.style.backgroundColor = color;
 }
@@ -125,7 +125,7 @@ function showChoice(choice) {
  * confirms the customized category with the linked color choice
  * 
  */
- function confirmNewCategory() {
+function confirmNewCategory() {
     resetAlertForCategory();
     let nameOfCategory = document.getElementById('newCategory').value;
     let chosenColor = identifyChosenColor();
@@ -137,7 +137,7 @@ function showChoice(choice) {
  * 
  * @returns an rgb code
  */
- function identifyChosenColor() {
+function identifyChosenColor() {
     return document.getElementById('chosenCategoryColor').style.backgroundColor;
 }
 
@@ -147,7 +147,7 @@ function showChoice(choice) {
  * @param {string} nameOfCategory 
  * @param {string} chosenColor 
  */
- function categoryValidation(nameOfCategory, chosenColor) {
+function categoryValidation(nameOfCategory, chosenColor) {
     if (nameOfCategory.length < 2) {
         document.getElementById('alertCategory').classList.remove('d-none');
         document.getElementById('alertCategory').innerHTML = 'The Category should have at least two letters.'
@@ -165,11 +165,24 @@ function showChoice(choice) {
  * dropdown menu of Contact Assignment is activated
  * 
  */
- function dropdownAT(){
+
+
+
+function dropdownAT() {
+    // test=false;
+
+
     let dropdownContacts = document.getElementById('selectFieldsAT');
     dropdownContacts.classList.toggle('d-none');
     loadAllContacts();
+
 }
+
+
+
+
+
+
 
 /**
  * each contact has an index in the array allContactsSorted
@@ -177,9 +190,10 @@ function showChoice(choice) {
  * @param {number} i 
  * @param {string} contactsName 
  */
- function renderContact(i,contactsName){
+
+function renderContact(i, contactsName) {
     let contactMenu = document.getElementById('allContactsToAssign');
-    contactMenu.innerHTML += returnContactMenuHTML(i,contactsName);
+    contactMenu.innerHTML += returnContactMenuHTML(i, contactsName);
 }
 
 /**
@@ -187,7 +201,7 @@ function showChoice(choice) {
  * 
  * @param {string} i 
  */
- function displayYou(i){
+function displayYou(i) {
     let assignToContainer = document.getElementById('assignedContacts')
     assignToContainer.innerHTML += returnAssignToContainerHTML(i);
 }
@@ -197,7 +211,7 @@ function showChoice(choice) {
  * 
  * @param {string} i 
  */
-function removeYou(i){
+function removeYou(i) {
     let elementToRemove = document.getElementById(`${i}`);
     elementToRemove.remove();
 }
@@ -207,11 +221,11 @@ function removeYou(i){
  * 
  * @param {number} i is the id of the circle with the initials of the contact you want to select or reselct
  */
- function displayContact(i){
+function displayContact(i) {
     let assignToContainer = document.getElementById('assignedContacts')
     let initials = allContactsUnsorted[i]['initials'];
     let colorID = allContactsUnsorted[i]['colorID'];
-    assignToContainer.innerHTML += returnAssignToContainer2(i,initials,colorID);
+    assignToContainer.innerHTML += returnAssignToContainer2(i, initials, colorID);
 }
 
 
@@ -220,7 +234,7 @@ function removeYou(i){
  * 
  * @param {number} i 
  */
-function removeContact(i){
+function removeContact(i) {
     let elementToRemove = document.getElementById(`${i}`);
     elementToRemove.remove();
 }
@@ -230,9 +244,9 @@ function removeContact(i){
  * 
  * @param {number} i is the id of the the circle 
  */
-function removeContactAndToggle(i){
+function removeContactAndToggle(i) {
     let elementToRemove = document.getElementById(`${i}`);
-    elementToRemove.remove(); 
+    elementToRemove.remove();
     let assigned = document.getElementById(`assigned${i}`);
     let notAassigned = document.getElementById(`notAssigned${i}`);
     assigned.classList.toggle('d-none');
@@ -244,8 +258,8 @@ function removeContactAndToggle(i){
  * 
  * @param {string} object is the id of the cross which shall be displayed
  */
- function showCross(object){
-    document.getElementById(object).style.display= "flex";
+function showCross(object) {
+    document.getElementById(object).style.display = "flex";
 }
 
 /**
@@ -253,15 +267,15 @@ function removeContactAndToggle(i){
  * 
  * @param {string} object 
  */
-function hideCross(object){
-    document.getElementById(object).style.display= "none";
+function hideCross(object) {
+    document.getElementById(object).style.display = "none";
 }
 
 /**
  * changes the innerHTML of the contacts menu. Now it is a search menu
  * 
  */
- function activateSearchContact(){
+function activateSearchContact() {
     let interface = document.getElementById('assignedTo');
     interface.innerHTML = returnSearchContactInterface();
 }
@@ -270,7 +284,7 @@ function hideCross(object){
  * the old search is deleted
  * 
  */
- function clearSearchContainer(){
+function clearSearchContainer() {
     let searchContainer = document.getElementById('foundContacts');
     searchContainer.innerHTML = "";
 }
@@ -280,10 +294,10 @@ function hideCross(object){
  * 
  * @param {*} i  index of contact
  */
- function renderContactAccordingToMail(i){
+function renderContactAccordingToMail(i) {
     let foundContacts = document.getElementById('foundContacts');
     let name = allContactsUnsorted[i]['name'];
-    foundContacts.innerHTML += returnFoundContactsInnerHtml(i,name);
+    foundContacts.innerHTML += returnFoundContactsInnerHtml(i, name);
 }
 
 /**
@@ -291,7 +305,7 @@ function hideCross(object){
  * 
  * @param {html} prio 
  */
- function removeHighlightPrio(prio) {
+function removeHighlightPrio(prio) {
     let button = document.getElementById(prio);
     button.classList.add('d-none');
 }
@@ -301,17 +315,17 @@ function hideCross(object){
  * If the subtasks reach an amout, a scrollbar is installed
  * 
  */
- function addSubtask() {
+function addSubtask() {
     let newSubtask = document.getElementById('subtask').value;
     let subtaskList = document.getElementById('subtaskList');
     if (newSubtask.length < 2) {
         document.getElementById('noSubtask').classList.remove('d-none')
     } else {
         document.getElementById('noSubtask').classList.add('d-none')
-        subtaskList.innerHTML += returnSubtaskContainerHTML(subtaskCounter,newSubtask);
+        subtaskList.innerHTML += returnSubtaskContainerHTML(subtaskCounter, newSubtask);
         document.getElementById('subtask').value = "";
         subtaskCounter++;
-        if(window.innerWidth <= 880) {
+        if (window.innerWidth <= 880) {
             scrollDown();
         }
     }

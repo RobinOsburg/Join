@@ -115,6 +115,7 @@ function returnCategorySelectInnerHTML(nameOfCategory) {
  */
 function returnContactMenuHTML(i, contactsName) {
     return /*html*/`
+
         <div onclick="assignTo(${i})" class="contactToAssignContainer">
            <span lass="contactToAssignName">${contactsName}</span> 
            <div class="checkBoxesC1">
@@ -173,7 +174,7 @@ function returnNormalContactInterface() {
                 </div>
             </div>
             <div class="selectFields d-none adjustWidth" id="selectFieldsAT">
-                <div onclick="assignYou()"class="selectOptionC adjustWidth2">
+                <!-- <div onclick="assignYou()"class="selectOptionC adjustWidth2">
                      <span class="personToAssign">
                         You
                     </span>
@@ -181,10 +182,10 @@ function returnNormalContactInterface() {
                       <img class="checkBoxC d-none" src="assets/img/Add Task/checked.png" id="assigned">
                       <img class="checkBoxC" src="assets/img/Add Task/unchecked.png" id="notAssigned">
                     </div>
-                 </div>
+                 </div> -->
                 <div class="allContactsToAssign adjustWidth2" id="allContactsToAssign"></div>
                 <div class="selectOptionC adjustWidth2" onclick="activateSearchContact()">
-                    <span>Invite New Contact</span>
+                    <span>Search Contact</span>
                     <img class="inviteImg" src="assets/img/Add Task/invite.png">
                 </div>
     `
@@ -199,6 +200,7 @@ function returnNormalContactInterface() {
  */
 function returnFoundContactsInnerHtml(i, contactsName) {
     return /*html*/ `
+    
         <div onclick="assignTo(${i})" class="contactToAssignContainer">
            <span lass="contactToAssignName">${contactsName}</span> 
            <div class="checkBoxesC1">

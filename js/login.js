@@ -3,7 +3,7 @@
  * 
  */
 async function backendLogIn(){
-setURL('https://robin-osburg.developerakademie.net/smallest_backend_ever')
+setURL('http://robinosburg.com/smallest_backend_ever')
 await downloadFromServer();
 let AllUsersAsString = backend.getItem('users');
   AllUsers = JSON.parse(AllUsersAsString) || [];
@@ -26,7 +26,7 @@ async function backendIntegrationLogin(){
  * 
  */
 function directToSummary(){
-    window.location.href="https://robin-osburg.developerakademie.net/Join-1/summary.html"
+    window.location.href="http://robinosburg.com/Join-1/summary.html"
 }
 
 /**   
@@ -34,7 +34,7 @@ function directToSummary(){
  * 
  */
 function signUp(){
-    window.location.href="https://robin-osburg.developerakademie.net/Join-1/signUp.html"
+    window.location.href="http://robinosburg.com/Join-1/Join-1/signUp.html"
 }
 
 /**

@@ -118,7 +118,6 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    width: 100%;
     min-height: 15px;
 }
 
@@ -140,8 +139,6 @@
     align-items: center;
     gap: 6px;
     background-color: white;
-    border-left: 1px solid #D1D1D1;
-    border-right: 1px solid #D1D1D1;
     padding: 8px;
     width: 100%;
     box-sizing: border-box;
@@ -155,8 +152,6 @@
 
 .selectOption:last-child {
     border-bottom: 1px solid #D1D1D1;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
 }
 
 .selectOptionColor {
@@ -278,33 +273,18 @@
     position: relative;
 }
 
-/* drop down End category section end*/
-/*Assigned To */
-.bigAssignedToContainer{ /*parent*/
-    width: 100%;
-    display: flex;
-    flex-direction: column;
- }
 
- /* before dropdown */
- .assignedToContainer {
-    width: 100%;
-    display: flex;
-}
 
-.adjustWidth{
-    width: 100%;
-}
 
 .selectOptionC{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 6px;
     background-color: white;
-    border-left: 1px solid #D1D1D1;
-    border-right: 1px solid #D1D1D1;
     padding: 8px;
+    width: calc(100% - 16px);
+    border-bottom: 1px solid #D1D1D1;
+  
 }
 
 .selectOptionC:hover {
@@ -312,11 +292,7 @@
     cursor: pointer;
 }
 
-.selectOptionC:last-child {
-    border-bottom: 1px solid #D1D1D1;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-}
+
 
 .checkBoxesC{
     position: relative;
@@ -331,27 +307,21 @@
 
 .allContactsToAssign{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     gap: 6px;
     background-color: white;
-    border-left: 1px solid #D1D1D1;
-    border-right: 1px solid #D1D1D1;
-    padding: 8px; 
-    height: 43px;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.assignedContacts{
-    width: 74%;
-    margin-top: 15px;
-    display: flex;
-    justify-content: flex-start;
-}
+
 
 .inviteImg{
     height: 22px;
+    margin-right: 9px;
 }
 
 /* render assigned contacts */
