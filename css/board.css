@@ -1113,8 +1113,8 @@
     align-items: center;
     gap: 6px;
     background-color: white;
-    border-left: 1px solid #D1D1D1;
-    border-right: 1px solid #D1D1D1;
+    /* border-left: 1px solid #D1D1D1;
+    border-right: 1px solid #D1D1D1; */
     padding: 8px;
     width: 100%;
     box-sizing: border-box;
@@ -1128,8 +1128,7 @@
 
 .selectOption:last-child {
     border-bottom: 1px solid #D1D1D1;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+  
 }
 
 .selectOptionColor {
@@ -1262,19 +1261,14 @@
     display: flex;
 }
 
-.adjustWidth{
-    width: 100%;
-}
 
 .selectOptionC{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 6px;
     background-color: white;
-    border-left: 1px solid #D1D1D1;
-    border-right: 1px solid #D1D1D1;
     padding: 8px;
+    border-bottom: 1px solid #D1D1D1;
 }
 
 .selectOptionC:hover {
@@ -1283,9 +1277,9 @@
 }
 
 .selectOptionC:last-child {
-    border-bottom: 1px solid #D1D1D1;
+    /* border-bottom: 1px solid #D1D1D1;
     border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+    border-bottom-right-radius: 6px; */
 }
 
 .checkBoxesC{
@@ -1305,10 +1299,10 @@
     flex-direction: column;
     gap: 6px;
     background-color: white;
-    border-left: 1px solid #D1D1D1;
-    border-right: 1px solid #D1D1D1;
+    /* border-left: 1px solid #D1D1D1;
+    border-right: 1px solid #D1D1D1; */
     padding: 8px; 
-    height: 43px;
+    min-height: 15px;
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
@@ -1322,6 +1316,7 @@
 
 .inviteImg{
     height: 22px;
+    margin-right: 9px;
 }
 
 /* render assigned contacts */

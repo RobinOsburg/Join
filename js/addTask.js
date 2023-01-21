@@ -277,10 +277,10 @@ function restructureCategorySelect(nameOfCategory, chosenColor) {
 
 
 function loadAllContacts(){
-    for (let i = 0; i <= allContactsSorted.length; i++) {
+    document.getElementById('allContactsToAssign'). innerHTML = "";
+    for (let i = 0; i < allContactsSorted.length; i++) {  
         let contactsName = allContactsSorted[i]['name'];
         renderContact(i,contactsName);
-        
     }
 }
 

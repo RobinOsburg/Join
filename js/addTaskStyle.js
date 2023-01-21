@@ -169,13 +169,10 @@ function categoryValidation(nameOfCategory, chosenColor) {
 
 
 function dropdownAT() {
-    // test=false;
-
-
+   
     let dropdownContacts = document.getElementById('selectFieldsAT');
     dropdownContacts.classList.toggle('d-none');
     loadAllContacts();
-
 }
 
 
