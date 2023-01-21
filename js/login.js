@@ -26,7 +26,7 @@ async function backendIntegrationLogin(){
  * 
  */
 function directToSummary(){
-    window.location.href="http://robinosburg.com/Join-1/summary.html"
+    window.location.href="http://robinosburg.com/Join/summary.html"
 }
 
 /**   
@@ -34,7 +34,7 @@ function directToSummary(){
  * 
  */
 function signUp(){
-    window.location.href="http://robinosburg.com/Join-1/Join-1/signUp.html"
+    window.location.href="http://robinosburg.com/Join/signUp.html"
 }
 
 /**
