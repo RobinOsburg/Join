@@ -22,10 +22,11 @@ body{
     padding: 0px;
     gap: 35px;
     position: absolute;
-    width: 969px;
-    height: 309px;
-    left: 500px;
-    top: 292px;
+    width: 1000px;
+    height: 860px;
+    left: 330px;
+    top: 70px;
+    overflow-x: scroll;
 }
 
 
@@ -62,7 +63,6 @@ body{
     padding: 0px;
     gap: 10px;
     width: 969px;
-    height: 137px;
 }
 
 

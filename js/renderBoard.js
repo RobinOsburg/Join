@@ -310,7 +310,7 @@ function returnPopUpContentBoardHTML(id) {
                             </div>
                         </div>
                         <div class="selectFields d-none adjustWidth" id="selectFieldsAT">
-                            <div onclick="assignYou('You')" class="selectOptionC adjustWidth2">
+                            <!-- <div onclick="assignYou('You')" class="selectOptionC adjustWidth2">
                                 <span class="personToAssign">
                                     You
                                 </span>
@@ -319,7 +319,7 @@ function returnPopUpContentBoardHTML(id) {
                                         id="assignedYou">
                                     <img class="checkBoxC" src="assets/img/Add Task/unchecked.png" id="notAssignedYou">
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="allContactsToAssign adjustWidth2" id="allContactsToAssign"></div>
                             <div class="selectOptionC adjustWidth2" onclick="activateSearchContact()">
                                 <span>Invite New Contact</span>
@@ -516,7 +516,7 @@ function returnPopUpContentOriginalHTML() {
                             </div>
                         </div>
                         <div class="selectFields d-none adjustWidth" id="selectFieldsAT">
-                            <div onclick="assignYou('You')" class="selectOptionC adjustWidth2">
+                            <!-- <div onclick="assignYou('You')" class="selectOptionC adjustWidth2">
                                 <span class="personToAssign">
                                     You
                                 </span>
@@ -525,7 +525,7 @@ function returnPopUpContentOriginalHTML() {
                                         id="assignedYou">
                                     <img class="checkBoxC" src="assets/img/Add Task/unchecked.png" id="notAssignedYou">
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="allContactsToAssign adjustWidth2" id="allContactsToAssign"></div>
                             <div class="selectOptionC adjustWidth2" onclick="activateSearchContact()">
                                 <span>Invite New Contact</span>
