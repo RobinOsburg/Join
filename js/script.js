@@ -8,21 +8,21 @@ function openSection(target){
 }
 
 function logOut(){
-    window.location.href='http://robinosburg.com/Join/index.html';
+    window.location.href='https://robinosburg.com/Join/index.html';
 }
 
 function returnTo(){
-    window.location.href= "http://robinosburg.com/Join/summary.html"
+    window.location.href= "https://robinosburg.com/Join/summary.html"
 }
 
 function moveToForgotPw(){
-    window.location.href= "http://robinosburg.com/Join/forgetPassword.html"
+    window.location.href= "https://robinosburg.com/Join/forgetPassword.html"
 }
 
 function moveToLogIn(){
-    window.location.href= "http://robinosburg.com/Join/index.html"
+    window.location.href= "https://robinosburg.com/Join/index.html"
 }
 
 function moveToResetPw(){
-    window.location.href= "http://robinosburg.com/Join/resetPassword.html"
+    window.location.href= "https://robinosburg.com/Join/resetPassword.html"
 }

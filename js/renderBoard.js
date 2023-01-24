@@ -322,7 +322,7 @@ function returnPopUpContentBoardHTML(id) {
                             </div> -->
                             <div class="allContactsToAssign adjustWidth2" id="allContactsToAssign"></div>
                             <div class="selectOptionC adjustWidth2" onclick="activateSearchContact()">
-                                <span>Invite New Contact</span>
+                                <span>Search Contact</span>
                                 <img class="inviteImg" src="assets/img/Add Task/invite.png">
                             </div>
                         </div>
@@ -528,7 +528,7 @@ function returnPopUpContentOriginalHTML() {
                             </div> -->
                             <div class="allContactsToAssign adjustWidth2" id="allContactsToAssign"></div>
                             <div class="selectOptionC adjustWidth2" onclick="activateSearchContact()">
-                                <span>Invite New Contact</span>
+                                <span>Search Contact</span>
                                 <img class="inviteImg" src="assets/img/Add Task/invite.png">
                             </div>
                         </div>

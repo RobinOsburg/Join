@@ -3,7 +3,7 @@
  * 
  */
 async function initServer() {
-    setURL('http://robinosburg.com/smallest_backend_ever');
+    setURL('https://robinosburg.com/smallest_backend_ever');
     await downloadFromServer();
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
     allContactsSorted = JSON.parse(backend.getItem('allContactsSorted')) || [];

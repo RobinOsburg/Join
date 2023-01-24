@@ -3,7 +3,7 @@
  * 
  */
 async function backendSignUp() {
-    setURL('http://robinosburg.com/smallest_backend_ever');
+    setURL('https://robinosburg.com/smallest_backend_ever');
     await downloadFromServer();
     allUsers = JSON.parse(backend.getItem('users')) || [];
 }
@@ -20,7 +20,7 @@ async function addUser() {
     let password = document.getElementById('signUpPassword');
     allUsers.push({ name: name.value, email: email.value, password: password.value })
     await backendIntegrationSignUp();
-    window.location.href = 'http://robinosburg.com/Join/index.html?msg=Du hast dich erfolgreich registriert';
+    window.location.href = 'https://robinosburg.com/Join/index.html?msg=Du hast dich erfolgreich registriert';
 }
 
 function confirmSignUp() {
@@ -68,7 +68,7 @@ async function backendIntegrationSignUp() {
 
 
 function backToLogIn() {
-    window.location.href = 'http://robinosburg.com/Join-1/index.html';
+    window.location.href = 'https://robinosburg.com/Join/index.html';
 }
 
 
