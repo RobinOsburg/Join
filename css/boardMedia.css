@@ -1,3 +1,5 @@
+
+
 /* Board Responsive */
 @media(max-width:1280px) {
     .addTaskBtn {
@@ -5,7 +7,18 @@
     }
 }
 
-@media(max-width: 1200px) { /*switching to responsive layout*/
+@media(max-width: 1200px) {
+
+    /*switching to responsive layout*/
+    .popUp {
+        top: -40px ;
+       
+    }
+
+    .responsiveHeaderShowDetails{
+        transform: translateX(-1.5%);
+    }
+
     .headlineB {
         margin-top: 0;
     }
@@ -18,19 +31,19 @@
         margin-top: 0;
     }
 
-    .bigContainer{
+    .bigContainer {
         overflow-x: hidden;
     }
 
-    .allTasks{
+    .allTasks {
         height: calc(100vh - 84px - 55px - 150px);
     }
 
-    .prio{
+    .prio {
         padding: 9px;
     }
 
-    .prioSelected{
+    .prioSelected {
         padding: 9px;
     }
 
@@ -63,17 +76,19 @@
 
 
 
-@media(max-width:1060px){ /*adjusting the size of the prio buttons*/
-    .prioDoubleContainerOriginal{
+@media(max-width:1060px) {
+
+    /*adjusting the size of the prio buttons*/
+    .prioDoubleContainerOriginal {
         width: 30% !important;
     }
 
-    .prio{
+    .prio {
         padding-left: 35px !important;
         padding-right: 35px !important;
     }
 
-    .prioSelected{
+    .prioSelected {
         padding-left: 35px !important;
         padding-right: 35px !important;
     }
@@ -81,85 +96,88 @@
 
 /* adjust the add task btns when pop up is open */
 @media(max-width: 1025px) {
-     .taskBtns{
+    .taskBtns {
         flex-direction: column;
         align-items: center;
         gap: 10px;
-     }
+    }
 
-     .clearBtn{
+    .clearBtn {
         width: 158px;
-     }
+    }
 
-     .headlineT{
+    .headlineT {
         font-size: 47px;
-     }
+    }
 }
 
-@media(max-width:895px){
-    .taskBtnsOriginal{
+@media(max-width:895px) {
+    .taskBtnsOriginal {
         flex-direction: column;
         align-items: center;
     }
 
-    .clearBtnOriginal{
+    .clearBtnOriginal {
         width: 160px;
     }
 }
 
-@media(max-width:880px){  /*switches the pop up to a column layout*/
-    .workspace{
+@media(max-width:880px) {
+
+    /*switches the pop up to a column layout*/
+    .workspace {
         flex-direction: column;
         align-items: center;
     }
 
 
-    .grayLine{
+    .grayLine {
         display: none;
     }
 
-    .leftside{
+    .leftside {
         width: 95%;
     }
 
-    .rightside{
+    .rightside {
         width: 95%;
         padding-top: 0;
     }
 
-    .popUpContent{
+    .popUpContent {
         overflow-y: scroll;
     }
 
-    .categoryContainerS{
+    .categoryContainerS {
         transform: translateX(1%);
     }
 
-    .formular{ /*making pop up responsive*/
+    .formular {
+        /*making pop up responsive*/
         flex-direction: column !important;
-         align-items: center !important;
+        align-items: center !important;
     }
 
-    .popUpContent{
+    .popUpContent {
         overflow-y: scroll;
     }
 
-    .leftSide{
+    .leftSide {
         width: 100% !important;
     }
 
-    .rightSide{
+    .rightSide {
         width: 100% !important;
     }
 
-    .taskBtnsOriginal{
+    .taskBtnsOriginal {
         flex-direction: row;
         justify-content: center;
     }
 }
 
 
-@media(max-width:800px) { 
+@media(max-width:800px) {
 
     .allTasks {
         width: 100%;
@@ -167,7 +185,8 @@
 }
 
 
-@media(max-width:660px) {  /*switches the task overview to a column layout*/
+@media(max-width:660px) {
+    /*switches the task overview to a column layout*/
 
 
     .boardTaskContainer {
@@ -221,8 +240,8 @@
 
 }
 
-    @media(max-width: 380px) and (max-height: 670px) {
-       
+@media(max-width: 380px) and (max-height: 670px) {
+
 
 
     .boardTaskContainer {
@@ -236,7 +255,7 @@
         position: relative;
     }
 
-  
+
 }
 
 
@@ -252,7 +271,7 @@
         flex-direction: column;
     }
 
-  
+
 
     .status {
         width: 250px;
@@ -272,7 +291,6 @@
         top: 0;
         left: 0;
         width: 100vw;
-        height: 90Vh;
     }
 
     .adjustImgNav {
@@ -280,123 +298,139 @@
     }
 
 }
-    @media(max-width:660px) {
 
-        .allTasks {
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            margin-top: 10px;
-        }
+@media(max-width:660px) {
 
-        .boardTaskContainer {
-            width: 400px;
-            align-items: center;
-            justify-content: center;
-        }
+    .boardPopUpTitel {
+        font-size: 36px}
 
-        .backArrowContacts {
-            bottom: 128%;
-        }
+    .allTasks {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
 
-        .grayLineBoard {
-            left: 69%;
-        }
+    .boardTaskContainer {
+        width: 400px;
+        align-items: center;
+        justify-content: center;
+    }
 
-     
+    .backArrowContacts {
+        bottom: 128%;
+    }
 
-        .inputContainerBoard {
-            padding-left: 12%;
-        }
-
-        .searchAndCreate {
-            width: 100%;
-            margin-right: 33%;
-        }
-
-
-        .status {
-            justify-content: space-between;
-        }
-
-        .headlineB {
-            margin-bottom: 2vh;
-            flex-direction: column;
-        }
-
-        .headlineB h1{
-            margin-bottom: 0;
-        }
-
-       
-
+    .grayLineBoard {
+        left: 69%;
     }
 
 
 
+    .inputContainerBoard {
+        padding-left: 12%;
+    }
 
-
-    @media(max-width:470px) {
-        .boardTaskContainer {
-            width: 300px;
-            /* top: 150px; */
-        }
-
-        .searchAndCreate {
-            width: 420px;
-            height: 55px;
-            gap: 20px;
-        }
-
-        
+    .searchAndCreate {
+        width: 100%;
+        margin-right: 33%;
     }
 
 
-    @media(max-width:281px) {
-        .headlineB {
-            margin-top: 15vh;
-        }
+    .status {
+        justify-content: space-between;
+    }
 
-        .searchAndCreate {
-            width: 250px;
-            height: unset;
-            gap: unset;
-            flex-direction: column;
-        }
+    .headlineB {
+        margin-bottom: 2vh;
+        flex-direction: column;
+    }
 
-      
-
-        .status {
-            width: 250px;
-        }
-
-        .task {
-            width: 90%;
-            align-items: center;
-            margin-left: 11px;
-        }
+    .headlineB h1 {
+        margin-bottom: 0;
     }
 
 
 
-    @media(max-width: 1050px) {
-        .popUpEditContent {
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 90Vh;
-        }
+}
 
-        .adjustImgNav {
-            margin-left: 0;
-        }
 
+
+
+
+@media(max-width:470px) {
+    .boardTaskContainer {
+        width: 300px;
+        /* top: 150px; */
     }
 
-    @media(max-width:500px){  /*making the pop up responsive for smart phone*/
-        .popUp{
-            height: calc(100vh - 84px) !important;
-        }
+    .searchAndCreate {
+        width: 420px;
+        height: 55px;
+        gap: 20px;
+    }
+
+
+}
+
+
+@media(max-width:281px) {
+
+    .boardPopUpTitel {
+        font-size: 30px;
+    }
+
+    .headlineB {
+        margin-top: 15vh;
+    }
+
+    .searchAndCreate {
+        width: 250px;
+        height: unset;
+        gap: unset;
+        flex-direction: column;
+    }
+
+
+
+    .status {
+        width: 250px;
+    }
+
+    .task {
+        width: 90%;
+        align-items: center;
+        margin-left: 11px;
+    }
+}
+
+
+
+@media(max-width: 1050px) {
+
+
+    .adjustImgNav {
+        margin-left: 0;
+    }
+
+}
+
+@media(max-width:500px) {
+   
+    .responsiveHeaderShowDetails {
+        transform: translateX(-4.5%);
+    }
+}
+
+@media(max-width:500px) {
+
+    /*making the pop up responsive for smart phone*/
+    /* .popUp {
+        height: calc(100vh - 80px) !important;
+
+    } */
+
+   
 
         .popUpContent {
             width: 100% !important;
@@ -407,24 +441,24 @@
             overflow-y: hidden;
             flex-direction: column;
         }
-        
-        .headerPlusResponsiveBtn{
+
+        .headerPlusResponsiveBtn {
             display: flex !important;
         }
 
-        .taskBtnsResponsive{
+        .taskBtnsResponsive {
             display: flex !important;
         }
 
-        .taskBtnsResponsiveContacts{
+        .taskBtnsResponsiveContacts {
             display: flex !important;
         }
 
-        .taskBtnsOriginal{
+        .taskBtnsOriginal {
             display: none !important;
         }
 
-        .closePopUp{
+        .closePopUp {
             top: 10%;
             right: 11%;
         }
@@ -433,120 +467,129 @@
             display: flex;
         }
 
-        .taskBtnsOriginal{
+        .taskBtnsOriginal {
             display: none;
         }
     }
 
-    @media(max-width:490px){
-        .btnText{
-            display: none !important;
-        }
 
-        .createTaskBtn{
-            width: 90px !important;
-        }
-
-        .clearBtnOriginal{
-            width: 90px !important;   
-        }
-
-        .taskBtnsResponsive{
-            right: 30% !important;
-        }
+@media(max-width:490px) {
+    .btnText {
+        display: none !important;
     }
 
-    @media(max-width:390px){
-        .createTaskBtn{
-            width: 50px !important;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-        }
-
-        .clearBtnOriginal{
-            width: 50px !important;   
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-        }
+    .createTaskBtn {
+        width: 90px !important;
     }
 
-    @media (max-width:1200px){  /*making the headarea Responsive*/
-        .responsiveSubHeadline{
-            display: flex !important;
-        }
+    .clearBtnOriginal {
+        width: 90px !important;
     }
 
-    @media(max-width:660px){
-        .addTaskBtn span{
-            display: none;
-        }
+    .taskBtnsResponsive {
+        right: 30% !important;
+    }
+}
 
-        .inputContainerBoardResponsive{
-            display: flex;
-            margin: auto;
-        }
-
-        .inputContainerBoard{
-            display: none;
-        }
-
-        .btnImg{
-            margin-left: 0;
-        }
+@media(max-width:390px) {
+    .createTaskBtn {
+        width: 50px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
-    @media (max-width:400px) { /*adjusting the Buttons of the add task pop */
-        .clearBtnResponsive {
-            display: none;
-        }
-    
-        .createTaskBtnResponsive {
-            display: none;
-        }
-    
-        .clearBtnResponsiveAD {
-            display: none !important;
-        }
-    
-        .createTaskBtnResponsiveAD {
-            display: none;
-        }
-    
-        .clearBtnResponsive2 {
-            display: flex;
-        }
-    
-        .createTaskBtnResponsive2 {
-            display: flex;
-        }
+    .clearBtnOriginal {
+        width: 50px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+@media (max-width:1200px) {
+
+    /*making the headarea Responsive*/
+    .responsiveSubHeadline {
+        display: flex !important;
+    }
+}
+
+@media(max-width:660px) {
+    .addTaskBtn span {
+        display: none;
     }
 
-    /* adjusting the font sizes of the allTasks Spans */
-
-    @media(max-width:1070px) {
-        .allTasks span {
-            font-size: 19px !important;
-        }
+    .inputContainerBoardResponsive {
+        display: flex;
+        margin: auto;
     }
 
-    @media(max-width:900px) {
-        .allTasks span {
-            font-size: 17px !important;
-        }
+    .inputContainerBoard {
+        display: none;
     }
 
-    @media(max-width:800px) {
-        .allTasks span {
-            font-size: 15px !important;
-        }
+    .btnImg {
+        margin-left: 0;
+    }
+}
+
+@media (max-width:400px) {
+
+    .responsiveHeaderShowDetails{
+        height: 64px;
     }
 
-    @media(max-width:720px) {
-        .allTasks span {
-            font-size: 14px !important;
-        }
+    .responsiveLogoPopUp {
+        margin-top: 14px;
     }
 
-    
+    /*adjusting the Buttons of the add task pop */
+    .clearBtnResponsive {
+        display: none;
+    }
 
+    .createTaskBtnResponsive {
+        display: none;
+    }
 
+    .clearBtnResponsiveAD {
+        display: none !important;
+    }
+
+    .createTaskBtnResponsiveAD {
+        display: none;
+    }
+
+    .clearBtnResponsive2 {
+        display: flex;
+    }
+
+    .createTaskBtnResponsive2 {
+        display: flex;
+    }
+}
+
+/* adjusting the font sizes of the allTasks Spans */
+
+@media(max-width:1070px) {
+    .allTasks span {
+        font-size: 19px !important;
+    }
+}
+
+@media(max-width:900px) {
+    .allTasks span {
+        font-size: 17px !important;
+    }
+}
+
+@media(max-width:800px) {
+    .allTasks span {
+        font-size: 15px !important;
+    }
+}
+
+@media(max-width:720px) {
+    .allTasks span {
+        font-size: 14px !important;
+    }
+}

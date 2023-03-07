@@ -663,7 +663,7 @@ function returnDetailedInterfaceHTML(category, categoryColor, title, description
                 ${category}
             </div>
         </div>
-        <div class="boardPopUpTitel" id="boardPopUpTitel${i}" style="overflow-y:auto" >
+        <div class="boardPopUpTitel" id="boardPopUpTitel${i}"  >    
             ${title}
         </div>
         <div class="boardPopUpDescrition" id="boardPopUpDescrition${i}" style="overflow-y:auto" >
