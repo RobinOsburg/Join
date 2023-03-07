@@ -1,7 +1,22 @@
 /*Responsiveness Add task*/
+@media (min-width:1500px) {
+    .navNewCategoryOriginal{
+        gap: 6px;
+    }
+}
+
+@media (min-width:1800px) {
+    .navNewCategoryOriginal{
+        gap: 10px;
+    }
+}
+
 @media (max-width:1250px) {
     .prio {
         padding: 16px;
+    }
+    .navNewCategoryOriginal{
+        gap: unset;
     }
 }
 

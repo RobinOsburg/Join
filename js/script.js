@@ -8,7 +8,7 @@ function openSection(target){
 }
 
 function logOut(){
-    window.location.href='https://robinosburg.com/Join/index.html';
+    window.location.href="https://robinosburg.com/Join/"
 }
 
 function returnTo(){
@@ -20,7 +20,7 @@ function moveToForgotPw(){
 }
 
 function moveToLogIn(){
-    window.location.href= "https://robinosburg.com/Join/index.html"
+    window.location.href= "https://robinosburg.com/Join/"
 }
 
 function moveToResetPw(){
