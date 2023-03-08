@@ -14,7 +14,7 @@ async function initServer() {
 
 async function clearContacts() {
     allContactsSorted.splice(0, allContactsSorted.length);
-    allContactsUnsorted.splice(0,allContactsUnsorted.length);
+    allContactsUnsorted.splice(0, allContactsUnsorted.length);
     await backendIntegration();
 }
 
@@ -109,8 +109,8 @@ function checkSubtasks() {
  * @param {number} i index of a contact
  * @returns array containing the one contact assigned for the task
  */
-function checkAssignedTo(i){
-    let allAssignedPersonsArray =[];
+function checkAssignedTo(i) {
+    let allAssignedPersonsArray = [];
     allAssignedPersonsArray.push(i);
     return allAssignedPersonsArray;
 }
@@ -183,15 +183,15 @@ function checkPrio() {
  * 
  */
 async function requestNewContact() {
-    document.getElementById('incorrectName').style.display='none'
+    document.getElementById('incorrectName').style.display = 'none'
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
     let phone = document.getElementById('phone').value;
     let initials = createInitials(name)
-    if(name.trim().split(/\s+/).length <2 ){
-        document.getElementById('incorrectName').style.display='flex'
-    }else{
-        addContact(name,email,phone,initials)
+    if (name.trim().split(/\s+/).length < 2) {
+        document.getElementById('incorrectName').style.display = 'flex'
+    } else {
+        addContact(name, email, phone, initials)
     }
 }
 
@@ -203,9 +203,9 @@ async function requestNewContact() {
  * @param {number} phone 
  * @param {string} initials 
  */
-async function addContact(name,email,phone,initials){
+async function addContact(name, email, phone, initials) {
     let colorID = createRandomColor();
-    allContactsUnsorted.push({ "name": name, "email": email, "phone": phone, "initials":initials, "colorID": colorID});
+    allContactsUnsorted.push({ "name": name, "email": email, "phone": phone, "initials": initials, "colorID": colorID });
     closePopUpEditContacts();
     await sortByAlpabet();
 }
@@ -214,7 +214,7 @@ async function addContact(name,email,phone,initials){
  * 
  * @returns a string(rgb) as a color ID for the contact
  */
-function createRandomColor(){
+function createRandomColor() {
     let redPart = Math.round(Math.random() * 255);
     let greenPart = Math.round(Math.random() * 255);
     let bluePart = Math.round(Math.random() * 255);
@@ -268,14 +268,14 @@ function initRender() {
  * if the register is to high it should be set on overflow scroll
  * 
  */
-function checkRegisterHeight(){
-    if(window.innerWidth > 1200){
+function checkRegisterHeight() {
+    if (window.innerWidth > 1200) {
         checkNormalLayout();
     }
-    else{
+    else {
         checkResponsiveLayout();
     }
-   
+
 }
 
 /**
@@ -283,7 +283,7 @@ function checkRegisterHeight(){
  * 
  * @param {number} i index of contact
  */
-function scrollName(i){
+function scrollName(i) {
     let idContact = 'contactName' + `${i}`;
     document.getElementById(idContact).innerHTML = allContactsSorted[i]['name'];
     document.getElementById(idContact).classList.add('showFullName');
@@ -294,10 +294,10 @@ function scrollName(i){
  * 
  * @param {number} i index of contact
  */
-function stopScrolling(i){
+function stopScrolling(i) {
     let idContact = 'contactName' + `${i}`;
-    reduceLength(i,'contactName',15);
-    document.getElementById(idContact).classList.remove('showFullName') 
+    reduceLength(i, 'contactName', 15);
+    document.getElementById(idContact).classList.remove('showFullName')
 }
 
 /**
@@ -319,13 +319,13 @@ function createInitials(name) {
  * 
  * @param {number} i 
  */
-function prepareContactInformation(i){
+function prepareContactInformation(i) {
     let initials = allContactsSorted[i]['initials'];
     let colorID = allContactsSorted[i]['colorID'];
     let name = allContactsSorted[i]['name'];
     let email = allContactsSorted[i]['email'];
     let phone = allContactsSorted[i]['phone'];
-    renderContactPopUp(initials,colorID, name, i, email, phone);
+    renderContactPopUp(initials, colorID, name, i, email, phone);
     checkNameLengthD(i);
 }
 
@@ -334,7 +334,7 @@ function prepareContactInformation(i){
  * 
  * @param {number} i 
  */
-function scrollNameD(i){
+function scrollNameD(i) {
     let idContact = 'contactsNameD' + `${i}`;
     document.getElementById(idContact).innerHTML = allContactsSorted[i]['name'];
     document.getElementById(idContact).classList.add('showFullName');
@@ -345,10 +345,10 @@ function scrollNameD(i){
  * 
  * @param {number} i 
  */
-function stopScrollingD(i){
+function stopScrollingD(i) {
     let idContact = 'contactsNameD' + `${i}`;
-    reduceLength(i,'contactsNameD',15);
-    document.getElementById(idContact).classList.remove('showFullName') 
+    reduceLength(i, 'contactsNameD', 15);
+    document.getElementById(idContact).classList.remove('showFullName')
 }
 
 
@@ -376,12 +376,12 @@ function initEditContact(i) {
  * 
  * @param {number} i 
  */
- function prepareEditContact(i) {
+function prepareEditContact(i) {
     let contactsName = allContactsSorted[i]['name'];
-    let initials =     allContactsSorted[i]['initials'];
+    let initials = allContactsSorted[i]['initials'];
     let contactsEmail = allContactsSorted[i]['email'];
     let contactsPhone = allContactsSorted[i]['phone'];
-    renderEditContact(initials,contactsName, contactsEmail, contactsPhone, i)
+    renderEditContact(initials, contactsName, contactsEmail, contactsPhone, i)
 }
 
 /**
@@ -389,7 +389,7 @@ function initEditContact(i) {
  * 
  * @param {number} i index of contact
  */
-async function saveEdit(i){
+async function saveEdit(i) {
     let newName = document.getElementById('editedName').value;
     let newMail = document.getElementById('editedEmail').value;
     let newPhone = document.getElementById('editedPhone').value;
@@ -402,10 +402,16 @@ async function saveEdit(i){
     initRender();
 }
 
-function responsiveTranslate(){
-    if(window.innerWidth < 880){
+function responsiveTranslate() {
+    if (window.innerWidth < 880) {
         document.getElementById('contactsContainer').style.transform = 'translateX(-100%)';
     }
 }
 
-
+function clearAllContacts() {
+    allContactsSorted = [];
+    backend.setItem('allContactsSorted', JSON.stringify(allContactsSorted));
+    allContactsUnsorted = [];
+    backend.setItem('allContactsUnsorted', JSON.stringify(allContactsUnsorted));
+    initRender();
+}

@@ -160,6 +160,9 @@
 }
 
 @media(max-width:660px){  /*general structure at smartphone screen*/
+
+   
+
     .taskBtnsResponsive{
         display: flex !important;
     }

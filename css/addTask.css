@@ -319,6 +319,13 @@
 }
 
 
+#assignedContacts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 5px;
+}
+
 
 .inviteImg{
     height: 22px;

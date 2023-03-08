@@ -548,6 +548,15 @@ function unSelectAllReworkedPrios(i, allPrioSelected) {
 }
 
 
+function clearAllTasks() {
+  allTasks = [];
+  backend.setItem('allTasks', JSON.stringify(allTasks));
+  divideByStatus();
+}
+
+
+
+
 
 
 
