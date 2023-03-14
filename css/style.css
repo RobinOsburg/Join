@@ -703,6 +703,8 @@ h1 {
 }
 
 .subtasksPopUp{
+    display: flex;
+    flex-direction: column;
     max-height: 75px;
     width: 52%;
     margin-left: 15px;
@@ -1122,7 +1124,7 @@ h1 {
 }
 
 
-.boardPopUpTitel {
+/* .boardPopUpTitel {
     max-height: 140px;
     word-break: break-word;
     font-family: 'Inter';
@@ -1131,7 +1133,7 @@ h1 {
     font-size: 61px;
     line-height: 120%;
     width: 75%;
-}
+} */
 
 
 .boardPopUpDescrition {
@@ -1798,16 +1800,6 @@ x
 }
 
 
-.whiteCheckHookContainer {
-    background-color: green;
-    height: 21px;
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    margin-right: 4px;
-}
 
 
 .whiteCheckHookInDetails {

@@ -117,7 +117,7 @@ function loadSubtaskProgress(i) {
       doneSubtasks++;
     }
   }
-  adjustProgressBar(i, doneSubtasks, allSubtasks);
+  // adjustProgressBar(i, doneSubtasks, allSubtasks);
 }
 
 let currentDraggedElement;
@@ -332,10 +332,9 @@ function prepareSearch(searchLetters) {
     let title = allTasks[i]['title'];
     let description = allTasks[i]['description'];
     let category = allTasks[i]['category'];
-    let assignedTo = allTasks[i]['assignedTo'];
     let dueDate = allTasks[i]['dueDate'];
     let prio = allTasks[i]['prio'];
-    startSearch(i, searchLetters, title, description, category, assignedTo, dueDate, prio);
+    startSearch(i, searchLetters, title, description, category,  dueDate, prio);
   }
 }
 
@@ -351,11 +350,10 @@ function prepareSearch(searchLetters) {
  * @param {string} dueDate 
  * @param {string} prio 
  */
-function startSearch(i, searchLetters, title, description, category, assignedTo, dueDate, prio) {
+function startSearch(i, searchLetters, title, description, category,  dueDate, prio) {
   if (title.toLowerCase().includes(searchLetters)
     || description.toLowerCase().includes(searchLetters)
     || category.toLowerCase().includes(searchLetters)
-    || assignedTo.toLowerCase().includes(searchLetters)
     || dueDate.toLowerCase().includes(searchLetters)
     || prio.toLowerCase().includes(searchLetters)
   ) {
@@ -548,11 +546,19 @@ function unSelectAllReworkedPrios(i, allPrioSelected) {
 }
 
 
-function clearAllTasks() {
-  allTasks = [];
-  backend.setItem('allTasks', JSON.stringify(allTasks));
-  divideByStatus();
-}
+// function clearAllTasks() {
+//   allTasks = [];
+//   backend.setItem('allTasks', JSON.stringify(allTasks));
+//   divideByStatus();
+// }
+
+
+// function deleteTask(index) {
+//   allTasks.splice(index, 1);
+//   backend.setItem('allTasks', JSON.stringify(allTasks));
+//   divideByStatus();
+//   closePopUp('popUpEditContainer');
+// }
 
 
 

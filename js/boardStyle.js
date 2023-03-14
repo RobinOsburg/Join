@@ -23,8 +23,9 @@ function renderTasks(i, j) {
     let description = allTasks[j]['description']
     let category = allTasks[j]['category'];
     let prio = allTasks[j]['prio'];
+    let subtasks = allTasks[j]['subtasks'];
     let categoryColor = allTasks[j]['categoryColor'];
-    taskContainer.innerHTML += returnTaskContainerHTML(j, title, description, category, prio, categoryColor);
+    taskContainer.innerHTML += returnTaskContainerHTML(j, title, description, category, prio,subtasks, categoryColor);
     loadAssignedPersons(j);
     loadSubtaskProgress(j);
     reduceLongText(j);
@@ -74,25 +75,7 @@ function displaySmallAmountOfPersons(allAssignedPersons, assignedToContainer){
     assignedToContainer.innerHTML += returnRestAssignedContacts(restAssignedContacts);
   }
 
-  /**
- * adjusts the progressbar for every task, if a task has subtasks
- * 
- * @param {number} i 
- * @param {number} doneSubtasks 
- * @param {array} allSubtasks 
- */
-function adjustProgressBar(i, doneSubtasks, allSubtasks) {
-    let progressbar = document.getElementById(`progressBar${i}`);
-    let progressDigits = document.getElementById(`progressDigits${i}`)
-    let amountSubtasks = allSubtasks.length
-    let progress = (doneSubtasks / amountSubtasks) * 100 + "%";
-    if (amountSubtasks == 0) {
-      document.getElementById(`progressDisplay${i}`).style.display = "none"
-    } else {
-      progressbar.style.width = progress;
-      progressDigits.innerHTML = `${doneSubtasks}` + '/' + `${amountSubtasks}`;
-    }
-  }
+
 
   /**
  * decides if a title or a description is to long to be displayed completly
@@ -287,27 +270,12 @@ function renderSubtasksInPopUp(i) {
     for (let j = 0; j < subtasks.length; j++) {
       let subtask = subtasks[j]['subtaskName'];
       subtaskContainer.innerHTML += returnSubtaskDetailedHTML(j, subtask);
-      loadGreenCheckbox(i, j)
+      // loadGreenCheckbox(i, j)
     }
   }
 
   
-  /**
- * checks if a subtask has the status done
- * 
- * @param {number} i index of task
- * @param {number} j index of subtask
- */
-function loadGreenCheckbox(i, j) {
-    let subtaskStatus = allTasks[i]['subtasks'][j]['status'];
-    if (subtaskStatus == 'done') {
-      let checkbox = document.getElementById(`greenCheckBox${j}`);
-      checkbox.style.opacity = 1;
-    } else {
-      checkbox = document.getElementById(`greenCheckBox${j}`);
-      checkbox.style.opacity = 0;
-    }
-  }
+
 
   /**
  * if a section of the detailed interface is to high the overflow is set on scroll

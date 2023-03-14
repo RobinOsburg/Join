@@ -1,22 +1,19 @@
-function returnTaskContainerHTML(j, title, description, category, prio, categoryColor) {
+function returnTaskContainerHTML(j, title, description, category, prio, subtasks, categoryColor) {
     return /*html*/`
     <div onclick="showDetails(${j})" id="${j}" draggable="true" class="task" ondragstart="startDragging(${j},event)" ondrag="returnPosition(event)">
-       <div class="category" style="background-color:${categoryColor};">${category}</div>
+       <div class="category" style="background-color:${categoryColor};"><a>${category}</a></div>
        <div class="title" id="title${j}">${title}</div>
        <div class="description" id="description${j}">${description}</div>
-       <div class="progressDisplay" id="progressDisplay${j}">
-           <div class="progress" >
-               <div id="progressBar${j}" class="progressbar" role="progressbar" style="width:25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-           </div>
-           <div class="progressDigits" id="progressDigits${j}"></div>
-       </div>
+      
+        <div class="subtasksAmount">${subtasks.length} Subtasks</div>
+        <div class="progressDigits" id="progressDigits${j}"></div>
+        
        <div class="assignedAndPrio">
-           <div id="assignedToContainer${j}" class="assignedToContainer">
-               
-           </div>
+           <div id="assignedToContainer${j}" class="assignedToContainer"></div>
            <img class="prioBoard" src="assets/img/Add Task/${prio}.png">
+           
        </div>
-    </div>  `
+    </div> `
 }
 
 function returnTaskContainerForSearchHTML(i, title, description, category, assignedTo, prio, categoryColor) {
@@ -155,7 +152,7 @@ function returnInputBoardInnerHTML() {
         `
 }
 
-function returnAssignedToContainerSnippet(assignedPerson, contactsInitials, contactsColor){
+function returnAssignedToContainerSnippet(assignedPerson, contactsInitials, contactsColor) {
     return /*html*/ `
         <div class="initialsBoardCircle" id="${assignedPerson}" style="background-color:${contactsColor}">
             <div class="initialsBoardLetter" >${contactsInitials}</div>
@@ -163,7 +160,7 @@ function returnAssignedToContainerSnippet(assignedPerson, contactsInitials, cont
     `
 }
 
-function returnallAssignedPersonsDisplayHTMl(assignedPerson,assignedInitials,assignedColor){
+function returnallAssignedPersonsDisplayHTMl(assignedPerson, assignedInitials, assignedColor) {
     return /*html*/`
         <div onmouseover="displayCross('removeAssignedContact${assignedPerson}')" onmouseout="hideCross('removeAssignedContact${assignedPerson}')" class="assignedCircleEdit" id="element${assignedPerson}" style="background-color:${assignedColor}">
             <img onclick="removeAssignedContact('element${assignedPerson}')" class="removeAssignedContact" id="removeAssignedContact${assignedPerson}" src="assets/img/Add Task/cross.png" style="display:none">
@@ -172,7 +169,7 @@ function returnallAssignedPersonsDisplayHTMl(assignedPerson,assignedInitials,ass
     `
 }
 
-function returnRestAssignedContacts(restAssignedContacts){
+function returnRestAssignedContacts(restAssignedContacts) {
     return /*html*/`
         <div class="initialsBoardCircle" style="background-color:#2A3647">
             <div class="initialsBoardLetter" >+${restAssignedContacts}</div>
@@ -180,7 +177,7 @@ function returnRestAssignedContacts(restAssignedContacts){
 `
 }
 
-function returnsSubtaskHTML(subtaskCounter, newSubtask){
+function returnsSubtaskHTML(subtaskCounter, newSubtask) {
     return /*html*/ `
     <div class="subtask" id="${subtaskCounter}">
         <div class="subtaskName" >${newSubtask} </div>
@@ -189,7 +186,7 @@ function returnsSubtaskHTML(subtaskCounter, newSubtask){
   `
 }
 
-function returnSubtaskContainerToEditHTML(subtask){
+function returnSubtaskContainerToEditHTML(subtask) {
     return /*html*/ `
     <div>
         <input class="subtaskCheckbox" type="checkbox" name="subtasks" id="${subtask}" value="toDo">
@@ -249,7 +246,7 @@ function returnPopUpContentBoardHTML(id) {
         </button>
 
         <button onclick="requestNewTaskFromBoard('${id}')" class="createTaskBtnResponsive2 grayHighlight" type="submit">
-
+            <span class="mobileCreateTaskBtn">Create Task</span>
             <img class="btnImg" src="assets/img/Add Task/create.png">
         </button>
     </div>
@@ -455,7 +452,7 @@ function returnPopUpContentOriginalHTML() {
         </button>
 
         <button onclick="requestNewTask()" class="createTaskBtnResponsive2 grayHighlight" type="submit">
-
+            <span class="mobileCreateTaskBtn">Create Task</span>
             <img class="btnImg" src="assets/img/Add Task/create.png">
         </button>
     </div>
@@ -687,7 +684,7 @@ function returnDetailedInterfaceHTML(category, categoryColor, title, description
         </div> 
         <div class="subtasksBPopUpContainer">
             <div class="subtaskHeadlineBPopUp">Subtasks:</div>
-            <div class="subtasksPopUp" id="subtasksPopUp${i}" style="overflow-y:auto" ></div>
+            <div class="subtasksPopUp" id="subtasksPopUp${i}"  ></div>
         </div>
         <div class="boardPopUpAssignedTo" >
             Assigned To:
@@ -695,6 +692,9 @@ function returnDetailedInterfaceHTML(category, categoryColor, title, description
         <div class="boardPopUpAssignedToContainer" id="assignedToDetailed${i}">
             
         </div>
+
+        <!-- <button class="deleteBtn" onclick="deleteTask(${i})">Delete</button> -->
+
         <div>
            <img class="popUpContentPencil" onclick="editDetails('${i}')" src="assets/img/Board/pen.png">
         </div>
@@ -712,7 +712,7 @@ function returnDetailedInterfaceHTML(category, categoryColor, title, description
  * @param {string} contactsName 
  * @returns 
  */
-function returnAssignedToDetailed(k, contactsInitials, contactsColor,contactsName){
+function returnAssignedToDetailed(k, contactsInitials, contactsColor, contactsName) {
     return /*html*/`
         <div class="assignedContact" id="assignedContact${k}">
             <div class="assignedContactCircle"style="background-color:${contactsColor}">
@@ -731,12 +731,7 @@ function returnAssignedToDetailed(k, contactsInitials, contactsColor,contactsNam
 
 function returnSubtaskDetailedHTML(j, subtask) {
     return /*html*/`
-          <div class="subtaskWithHookContainer" >
-              <div id="greenCheckBox${j}" class="whiteCheckHookContainer">
-              <img class="whiteCheckHookInDetails" src="assets/img/Board/whiteCheckHook.png">
-            </div>
-              ${subtask}
-          </div>
+          <span><li>${subtask}</li></span>
       `
 }
 

@@ -31,9 +31,9 @@
         margin-top: 0;
     }
 
-    .bigContainer {
+    /* .bigContainer {
         overflow-x: hidden;
-    }
+    } */
 
     .allTasks {
         height: calc(100vh - 84px - 55px - 150px);
@@ -69,7 +69,7 @@
     .allTasks {
         align-items: center;
         justify-content: flex-start;
-        overflow: scroll;
+        overflow: auto;
     }
 }
 
@@ -242,7 +242,7 @@
 
 @media(max-width: 380px) and (max-height: 670px) {
 
-
+    
 
     .boardTaskContainer {
         width: 300px;
@@ -301,8 +301,36 @@
 
 @media(max-width:660px) {
 
+    .boardTaskContainer{
+        height: unset;
+    }
+
+    .boardPopUp{
+        margin-left: unset;
+        margin-top: -50px;
+        /* overflow-x: scroll; */
+    }
+
+    .popUpEditContentArrow{
+        left: 83%;
+    }
+
+    .popUpContentPencil{
+        left: 80%;
+    }
+
+    .boardPopUpCategoryText {
+        font-size: 19px;
+    }
+
+    .boardPopUpDescrition {
+        font-size: 19px;
+    }
+
     .boardPopUpTitel {
-        font-size: 36px}
+        font-size: 29px;
+        width: unset;
+    }
 
     .allTasks {
         flex-direction: column;
@@ -528,8 +556,10 @@
     }
 
     .btnImg {
-        margin-left: 0;
+        margin-left: 0px;
     }
+
+    
 }
 
 @media (max-width:400px) {
@@ -560,7 +590,7 @@
     }
 
     .clearBtnResponsive2 {
-        display: flex;
+        display: none;
     }
 
     .createTaskBtnResponsive2 {

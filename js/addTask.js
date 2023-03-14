@@ -397,19 +397,13 @@ function setPrio(prio, input) {
     choosenPrio = true;
     let button = document.getElementById(input);
     let allPrioSelected = document.querySelectorAll(".prioSelected");
-    if (button.checked == false) {
+    
         for (let i = 0; i < allPrioSelected.length; i++) {
             unSelectAllPrios(i, allPrioSelected);
         }
         highlightPrio(prio);
-        button.checked = true;
-    }
-
-    else {
-        button.checked = false;
-        removeHighlightPrio(prio);
-        choosenPrio = false;
-    }
+        button.checked = true;   
+    
 }
 
 /**
